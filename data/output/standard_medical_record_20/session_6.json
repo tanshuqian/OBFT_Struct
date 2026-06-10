@@ -1,0 +1,339 @@
+{
+  "_comment1": "基本属性与就诊元数据",
+  "sessionId": "session_6",
+  "dov": null,
+  "gwov": "36+3",
+  "age": 41,
+  "eddAge": null,
+  "bmi": null,
+  "_comment2": "核心孕产指标",
+  "gravidity": 5,
+  "parity": 1,
+  "obh": [
+    {
+      "gravidityindex": 1,
+      "year": 2007,
+      "month": null,
+      "vaginalDelivery": 1,
+      "cesareanSection": null,
+      "naturalAbortion": null,
+      "medicalAbortion": null,
+      "surgicalAbortion": null,
+      "currettageAbortion": null,
+      "currettage": null,
+      "biochemicalAbortion": null,
+      "inducedLabor": null,
+      "fetusdeath": null,
+      "preterm": null,
+      "term": null,
+      "forceps": null,
+      "vacuumAssisted": null,
+      "breechMidwifery": null,
+      "hemorrhage": null,
+      "puerperalFever": null,
+      "fetalcount": 1,
+      "hospital": null,
+      "exceptionalcase": "2007年顺产过一个宝宝",
+      "children": []
+    },
+    {
+      "gravidityindex": 2,
+      "year": 2009,
+      "month": null,
+      "vaginalDelivery": null,
+      "cesareanSection": null,
+      "naturalAbortion": null,
+      "medicalAbortion": null,
+      "surgicalAbortion": 1,
+      "currettageAbortion": null,
+      "currettage": null,
+      "biochemicalAbortion": null,
+      "inducedLabor": null,
+      "fetusdeath": null,
+      "preterm": null,
+      "term": null,
+      "forceps": null,
+      "vacuumAssisted": null,
+      "breechMidwifery": null,
+      "hemorrhage": null,
+      "puerperalFever": null,
+      "fetalcount": 1,
+      "hospital": null,
+      "exceptionalcase": "2009年做过一次人工流产",
+      "children": []
+    },
+    {
+      "gravidityindex": 3,
+      "year": 2011,
+      "month": null,
+      "vaginalDelivery": null,
+      "cesareanSection": null,
+      "naturalAbortion": null,
+      "medicalAbortion": null,
+      "surgicalAbortion": null,
+      "currettageAbortion": null,
+      "currettage": null,
+      "biochemicalAbortion": null,
+      "inducedLabor": 1,
+      "fetusdeath": null,
+      "preterm": null,
+      "term": null,
+      "forceps": null,
+      "vacuumAssisted": null,
+      "breechMidwifery": null,
+      "hemorrhage": null,
+      "puerperalFever": null,
+      "fetalcount": 1,
+      "hospital": null,
+      "exceptionalcase": "2011年那时候因为我得了白血病，没办法只能引产了",
+      "children": []
+    },
+    {
+      "gravidityindex": 4,
+      "year": 2015,
+      "month": null,
+      "vaginalDelivery": null,
+      "cesareanSection": null,
+      "naturalAbortion": null,
+      "medicalAbortion": null,
+      "surgicalAbortion": null,
+      "currettageAbortion": null,
+      "currettage": null,
+      "biochemicalAbortion": null,
+      "inducedLabor": 1,
+      "fetusdeath": null,
+      "preterm": null,
+      "term": null,
+      "forceps": null,
+      "vacuumAssisted": null,
+      "breechMidwifery": null,
+      "hemorrhage": null,
+      "puerperalFever": null,
+      "fetalcount": 1,
+      "hospital": null,
+      "exceptionalcase": "2015年那次查出是18三体综合征，也引产了",
+      "children": [
+        {
+          "sequelaNote": "胎儿18三体综合征"
+        }
+      ]
+    }
+  ],
+  "_comment3": "现病史",
+  "hpi": {
+    "lmp": "2022-02-12",
+    "edd": "11-21",
+    "sureEdd": null,
+    "conceiveMode": "PGT术D6囊胚移植",
+    "conceiveModeNote": null,
+    "chiefcomplaint": "发现胎儿生长受限3月余，今来院复查",
+    "otherNote": "合并妊娠期糖尿病（外院OGTT：空腹5.30mmol/L，1h 11.16mmol/L，2h 9.12mmol/L）"
+  },
+  "_comment4": "既往史",
+  "pmh": {
+    "hypertension": {
+      "status": 0,
+      "details": "患者否认高血压病史"
+    },
+    "hypertensionNote": null,
+    "diabetes": {
+      "status": 0,
+      "details": "患者否认孕前糖尿病史"
+    },
+    "diabetesNote": null,
+    "cardiacDisease": {
+      "status": 0,
+      "details": "患者否认心脏病史"
+    },
+    "cardiacDiseaseNote": null,
+    "thyroidDisease": {
+      "status": -1,
+      "details": null
+    },
+    "thyroidDiseaseNote": null,
+    "operationHistory": {
+      "status": -1,
+      "details": null
+    },
+    "operationHistoryNote": null,
+    "allergyDrug": {
+      "status": 0,
+      "details": "患者否认药物过敏史"
+    },
+    "allergyDrugNote": null,
+    "allergyFood": {
+      "status": 1,
+      "details": "患者诉对牛肉过敏"
+    },
+    "allergyFoodNote": null,
+    "allergyOther": {
+      "status": -1,
+      "details": null
+    },
+    "allergyOtherNote": null,
+    "transfusionHistory": {
+      "status": 1,
+      "details": "既往因化疗有输血史"
+    },
+    "transfusionHistoryNote": null,
+    "otherNote": "2011年曾确诊白血病；患者否认肝炎病史"
+  },
+  "_comment5": "月经及婚育史",
+  "additional_medical_history": {
+    "menarche": null,
+    "menstrualCycle": null,
+    "menstrualPeriod": null,
+    "menstrualVolume": null,
+    "dysmenorrhea": {
+      "status": -1,
+      "details": null
+    },
+    "maritalStatus": null,
+    "maritalYears": null,
+    "nearRelation": {
+      "status": -1,
+      "details": null
+    }
+  },
+  "_comment6": "个人史与家族史",
+  "personal_history": {
+    "smoke": {
+      "status": -1,
+      "details": null
+    },
+    "alcohol": {
+      "status": -1,
+      "details": null
+    },
+    "hazardoussubstances": {
+      "status": -1,
+      "details": null
+    },
+    "radioactivity": {
+      "status": -1,
+      "details": null
+    },
+    "medicine": {
+      "status": -1,
+      "details": null
+    }
+  },
+  "fh": {
+    "diabetes": {
+      "status": -1,
+      "details": null
+    },
+    "hypertension": {
+      "status": -1,
+      "details": null
+    },
+    "birthdefects": {
+      "status": -1,
+      "details": null
+    },
+    "heritableDisease": {
+      "status": 1,
+      "details": "2015年妊娠曾确诊胎儿18三体综合征"
+    }
+  },
+  "_comment7": "全身体格检查",
+  "physicalExamination": {
+    "systolic": 116,
+    "diastolic": 73,
+    "systolic2": null,
+    "diastolic2": null,
+    "systolic3": null,
+    "diastolic3": null,
+    "pulse": 80,
+    "heartrate": 80,
+    "weight": null,
+    "preheight": null,
+    "preweight": null,
+    "bmi": null,
+    "skin": {
+      "status": -1,
+      "details": null
+    },
+    "thyroid": {
+      "status": -1,
+      "details": null
+    },
+    "breast": {
+      "status": -1,
+      "details": null
+    },
+    "respiratory": {
+      "status": -1,
+      "details": null
+    },
+    "rales": {
+      "status": -1,
+      "details": null
+    },
+    "heartrhythm": {
+      "status": -1,
+      "details": null
+    },
+    "murmurs": {
+      "status": -1,
+      "details": null
+    },
+    "liver": {
+      "status": -1,
+      "details": null
+    },
+    "spleen": {
+      "status": -1,
+      "details": null
+    },
+    "spine": {
+      "status": -1,
+      "details": null
+    },
+    "physiologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "pathologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "edema": {
+      "status": 0,
+      "details": "双下肢无水肿"
+    },
+    "edemaNote": null,
+    "otherNote": "预估胎儿体重2.1kg"
+  },
+  "_comment8": "产科/妇科专科检查",
+  "gynecologicalExamination": {
+    "fundalHeight": 31,
+    "waistHip": 98,
+    "engagement": null,
+    "vulva": null,
+    "vagina": null,
+    "cervix": null,
+    "uterus": null,
+    "adnexa": null,
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 145,
+        "fetalPosition": "LOA",
+        "position": "左枕前位",
+        "presentation": "头先露"
+      }
+    ]
+  },
+  "_comment9": "医嘱与诊疗计划",
+  "advice": {
+    "prescription": "嘱糖尿病饮食及运动控制血糖；密切观察胎儿生长受限情况，如有不适随时就诊",
+    "exam": null,
+    "appointmentCycle": null,
+    "appointmentType": null,
+    "appointmentDate": null,
+    "appointmentPeriod": null,
+    "visitDate": null,
+    "doctorName": null
+  }
+}

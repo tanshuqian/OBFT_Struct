@@ -1,0 +1,286 @@
+{
+  "sessionId": "test_session_3",
+  "dov": "2026-05-07",
+  "gwov": "37周+2天",
+  "age": 37,
+  "eddAge": null,
+  "bmi": null,
+  "gravidity": 4,
+  "parity": 2,
+  "obh": [
+    {
+      "gravidityindex": null,
+      "year": null,
+      "month": null,
+      "vaginalDelivery": 1,
+      "cesareanSection": 1,
+      "naturalAbortion": 1,
+      "medicalAbortion": null,
+      "surgicalAbortion": null,
+      "currettageAbortion": null,
+      "currettage": null,
+      "biochemicalAbortion": null,
+      "inducedLabor": null,
+      "fetusdeath": null,
+      "preterm": null,
+      "term": null,
+      "forceps": null,
+      "vacuumAssisted": null,
+      "breechMidwifery": null,
+      "hemorrhage": null,
+      "puerperalFever": null,
+      "fetalcount": null,
+      "hospital": null,
+      "exceptionalcase": null,
+      "children": []
+    }
+  ],
+  "hpi": {
+    "lmp": "2026-02-09",
+    "edd": "2026-11-16",
+    "sureEdd": "2026-11-09",
+    "chorionicity": null,
+    "yolksac": {
+      "status": -1,
+      "details": null
+    },
+    "yolksacNote": null,
+    "unclassifiedNote": null,
+    "conceiveMode": "自然受孕",
+    "conceiveModeNote": null,
+    "chiefcomplaint": "常规产检",
+    "sac": {
+      "status": -1,
+      "details": null
+    },
+    "sacNote": null,
+    "hpiNote": null
+  },
+  "pmh": {
+    "hypertension": {
+      "status": 0,
+      "details": "患者否认高血压"
+    },
+    "hypertensionNote": null,
+    "diabetes": {
+      "status": 0,
+      "details": "患者否认糖尿病"
+    },
+    "diabetesNote": null,
+    "cardiacDisease": {
+      "status": 0,
+      "details": "患者否认心脏病"
+    },
+    "cardiacDiseaseNote": null,
+    "operationHistory": {
+      "status": 1,
+      "details": "患者存在剖宫产史"
+    },
+    "operationHistoryNote": null,
+    "allergyDrug": {
+      "status": -1,
+      "details": null
+    },
+    "allergyDrugNote": null,
+    "allergyFood": {
+      "status": -1,
+      "details": null
+    },
+    "allergyFoodNote": null,
+    "allergyOther": {
+      "status": 0,
+      "details": "患者否认过敏史"
+    },
+    "allergyOtherNote": null,
+    "transfusionHistory": {
+      "status": -1,
+      "details": null
+    },
+    "transfusionHistoryNote": null,
+    "nothing": null,
+    "otherNote": [
+      "甲状腺功能减退症"
+    ],
+    "unclassifiedNote": null
+  },
+  "additional_medical_history": {
+    "menarche": null,
+    "menstrualCycle": null,
+    "otherNote": null,
+    "menstrualPeriod": null,
+    "menstrualVolume": null,
+    "dysmenorrhea": {
+      "status": -1,
+      "details": null
+    },
+    "dysmenorrheaNote": null,
+    "maritalStatus": null,
+    "maritalYears": null,
+    "nearRelation": {
+      "status": -1,
+      "details": null
+    },
+    "nearRelationNote": null
+  },
+  "personal_history": {
+    "smoke": {
+      "status": -1,
+      "details": null
+    },
+    "smokeNote": null,
+    "alcohol": {
+      "status": -1,
+      "details": null
+    },
+    "alcoholNote": null,
+    "hazardoussubstances": {
+      "status": -1,
+      "details": null
+    },
+    "hazardoussubstancesNote": null,
+    "radioactivity": {
+      "status": -1,
+      "details": null
+    },
+    "radioactivityNote": null,
+    "medicine": {
+      "status": 1,
+      "details": "患者150ug/天优甲乐"
+    },
+    "medicineNote": null,
+    "otherNote": null
+  },
+  "fh": {
+    "diabetes": {
+      "status": 1,
+      "details": "患者存在家族糖尿病史"
+    },
+    "diabetesNote": null,
+    "hypertension": {
+      "status": 0,
+      "details": "患者否认家族高血压史"
+    },
+    "hypertensionNote": null,
+    "birthdefects": {
+      "status": -1,
+      "details": null
+    },
+    "birthdefectsNote": null,
+    "heritableDisease": {
+      "status": 0,
+      "details": "患者否认遗传病史"
+    },
+    "heritableDiseaseNote": null,
+    "unclassifiedNote": null
+  },
+  "physicalExamination": {
+    "systolic": 112,
+    "diastolic": 66,
+    "preheight": 158.5,
+    "preweight": null,
+    "otherNote": "预估胎儿体重: 3.6kg",
+    "systolic2": null,
+    "diastolic2": null,
+    "systolic3": null,
+    "diastolic3": null,
+    "pulse": null,
+    "heartrate": 78,
+    "weight": 70.0,
+    "bmi": null,
+    "skin": {
+      "status": -1,
+      "details": null
+    },
+    "skinNote": null,
+    "thyroid": {
+      "status": -1,
+      "details": null
+    },
+    "thyroidNote": null,
+    "breast": {
+      "status": -1,
+      "details": null
+    },
+    "breastNote": null,
+    "respiratory": {
+      "status": -1,
+      "details": null
+    },
+    "respiratoryNote": null,
+    "rales": {
+      "status": -1,
+      "details": null
+    },
+    "ralesNote": null,
+    "heartrhythm": {
+      "status": -1,
+      "details": null
+    },
+    "heartrhythmNote": null,
+    "murmurs": {
+      "status": -1,
+      "details": null
+    },
+    "murmursNote": null,
+    "liver": {
+      "status": -1,
+      "details": null
+    },
+    "liverNote": null,
+    "spleen": {
+      "status": -1,
+      "details": null
+    },
+    "spleenNote": null,
+    "spine": {
+      "status": -1,
+      "details": null
+    },
+    "spineNote": null,
+    "physiologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "physiologicalreflectionNote": null,
+    "pathologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "pathologicalreflectionNote": null,
+    "edema": {
+      "status": 0,
+      "details": "双下肢无水肿"
+    },
+    "edemaNote": null
+  },
+  "gynecologicalExamination": {
+    "fundalHeight": "34",
+    "engagement": null,
+    "otherNote": null,
+    "waistHip": "112",
+    "vulva": null,
+    "vagina": null,
+    "cervix": null,
+    "uterus": null,
+    "adnexa": null,
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 142,
+        "fetalPosition": "ROT",
+        "position": "枕右横位",
+        "presentation": "头先露"
+      }
+    ]
+  },
+  "advice": {
+    "prescription": "按时服用优甲乐；数胎动；按时复诊",
+    "exam": null,
+    "appointmentCycle": null,
+    "appointmentType": null,
+    "appointmentDate": null,
+    "appointmentPeriod": null,
+    "visitDate": null,
+    "doctorName": null
+  }
+}

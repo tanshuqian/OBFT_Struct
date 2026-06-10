@@ -1,0 +1,291 @@
+{
+  "_comment0": "医学事实需要状态的字段使用三状态设计status（-1/0/1表示患者未提及/否认存在/承认存在），details为细节说明",
+  
+  "_comment1": "基本属性与就诊元数据",
+  "sessionId": "abb-ddd-eee-fff-ggg",
+  "dov": "2026-04-01",
+  "gwov": "32+0",
+  "age": 35,
+  "eddAge": 36,
+  "bmi": 21.48,
+
+  "_comment2": "核心孕产指标",
+  "gravidity": 2,
+  "parity": 1,
+  "obh": [
+    {
+      "_comment": "既往孕产史，gravidityindex为一次孕产史序号，obh应该是一个数组，记录每次孕产史的详细信息",
+      "gravidityindex": 1,
+      "year": null,
+      "month": null,
+      "vaginalDelivery": 1,
+      "cesareanSection": null,
+      "naturalAbortion": null,
+      "medicalAbortion": null,
+      "surgicalAbortion": null,
+      "currettageAbortion": null,
+      "currettage": null,
+      "biochemicalAbortion": null,
+      "inducedLabor": null,
+      "fetusdeath": null,
+      "preterm": null,
+      "term": 1,
+      "forceps": null,
+      "vacuumAssisted": null,
+      "breechMidwifery": null,
+      "hemorrhage": null,
+      "puerperalFever": null,
+      "fetalcount": 1,
+      "hospital": null,
+      "exceptionalcase": null,
+      "children": [
+        {
+          "childGender": "女",
+          "childLiving": 1,
+          "childDeath": null,
+          "childDeathTime": null,
+          "childDeathNote": null,
+          "neonateWeight": 3.4,
+          "sequelaNote": null
+        }
+      ]
+    }
+  ],
+
+  "_comment3": "现病史",
+  "hpi": {
+    "lmp": "2025-05-08",
+    "edd": "--11-20",
+    "sureEdd": "--11-20",
+    "conceiveMode": "自然受孕/IVF-ET",
+    "conceiveModeNote": null,
+    "chiefcomplaint": null,
+    "otherNote": null
+  },
+
+  "_comment4": "既往史",
+  "pmh": {
+    "hypertension": {
+      "status": "1",
+      "details": "患者自述既往有高血压病史"
+    },
+    "hypertensionNote": null,
+    "diabetes": {
+      "status": "-1",
+      "details": null
+    },
+    "diabetesNote": null,
+    "cardiacDisease": {
+      "status": "-1",
+      "details": null
+    },
+    "cardiacDiseaseNote": null,
+    "thyroidDisease": {
+      "status": "-1",
+      "details": null
+    },
+    "thyroidDiseaseNote": null,
+    "allergyDrug": {
+      "status": "-1",
+      "details": null
+    },
+    "allergyDrugNote": null,
+    "allergyFood": {
+      "status": "0",
+      "details": "患者否认食物过敏史"
+    },
+    "allergyFoodNote": null,
+    "allergyOther": {
+      "status": "1",
+      "details": "患肢自诉花粉过敏"
+    },
+    "allergyOtherNote": null,
+    "transfusionHistory": {
+      "status": "-1",
+      "details": null
+    },
+    "transfusionHistoryNote": null,
+    "operationHistory": {
+      "status": "1",
+      "details": "患者自述有子宫手术史"
+    },
+    "operationHistoryNote": null,
+    "otherNote": null
+  },
+
+  "_comment5": "月经及婚育史",
+  "additional_medical_history": {
+    "menarche": "12",
+    "menstrualCycle": "28",
+    "menstrualPeriod": "7",
+    "menstrualVolume": "中",
+    "dysmenorrhea": {
+      "status": "0",
+      "details": "患者否认痛经"
+    },
+    "maritalStatus": "已婚",
+    "maritalYears": "5",
+    "nearRelation": {
+      "status": "0",
+      "details": "患者否认近亲婚配史"
+    }
+  },
+
+  "_comment6": "个人史与家族史",
+  "personal_history": {
+    "smoke": {
+      "status": "0",
+      "details": "患者否认吸烟史"
+    },
+    "alcohol": {
+      "status": "0",
+      "details": "患者否认饮酒史"
+    },
+    "hazardoussubstances": {
+      "status": "0",
+      "details": "患者否认接触有害物质史"
+    },
+    "radioactivity": {
+      "status": "0",
+      "details": "患者否认接触放射性物质史"
+    },
+    "medicine": {
+      "status": "0",
+      "details": "患者否认服药史"
+    }
+  },
+  "fh": {
+    "diabetes": {
+      "status": "1",
+      "details": "母亲有糖尿病"
+    },
+    "hypertension": {
+      "status": "-1",
+      "details": null
+    },
+    "birthdefects": {
+      "status": "-1",
+      "details": null
+    },
+    "heritableDisease": {
+      "status": "-1",
+      "details": null
+    }
+  },
+
+  "_comment7": "全身体格检查",
+  "physicalExamination": {
+    "systolic": null,
+    "diastolic": null,
+    "systolic2": null,
+    "diastolic2": null,
+    "systolic3": null,
+    "diastolic3": null,
+    "pulse": 66,
+    "heartrate": null,
+    "weight": null,
+    "preheight": 160.0,
+    "preweight": 55.0,
+    "bmi": 21.48,
+    "skin": {
+      "status": "-1",
+      "details": null
+    },
+    "skinNote": null,
+    "thyroid": {
+      "status": "-1",
+      "details": null
+    },
+    "thyroidNote": null,
+    "breast": {
+      "status": "-1",
+      "details": null
+    },
+    "breastNote": null,
+    "respiratory": {
+      "status": "-1",
+      "details": null
+    },
+    "respiratoryNote": null,
+    "rales": {
+      "status": "-1",
+      "details": null
+    },
+    "ralesNote": null,
+
+    "heartrhythm": {
+      "status": "-1",
+      "details": null
+    },
+    "heartrhythmNote": null,
+    "murmurs": {
+      "status": "-1",
+      "details": null
+    },
+    "murmursNote": null,
+    "liver": {
+      "status": "-1",
+      "details": null
+    },
+    "liverNote": null,
+    "spleen": {
+      "status": "-1",
+      "details": null
+    },
+    "spleenNote": null,
+    "spine": {
+      "status": "-1",
+      "details": null
+    },
+    "spineNote": null,
+    "physiologicalreflection": {
+      "status": "-1",
+      "details": null
+    },
+    "physiologicalreflectionNote": null,
+    "pathologicalreflection": {
+      "status": "-1",
+      "details": null
+    },
+    "pathologicalreflectionNote": null,
+    "edema": {
+      "status": "-1",
+      "details": null
+    },
+    "edemaNote": null,
+    "otherNote": null
+  },
+
+    "_comment8": "产科/妇科专科检查",
+  "gynecologicalExamination": {
+    "fundalHeight": "50",
+    "waistHip": "50",
+    "engagement": "未见异常",
+    "vulva": "未见异常",
+    "vagina": "未见异常",
+    "cervix": "未见异常",
+    "uterus": "未见异常",
+    "adnexa": "未见异常",
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": "140",
+        "fetalPosition": null,
+        "position": null,
+        "presentation": null
+      }
+    ]
+  },
+
+  "_comment9": "医嘱与诊疗计划",
+  "advice": {
+    "prescription": "今天的方案是，首先你需要把饮食再严格调整一下，水果尽量用黄瓜、西红柿代替，主食换成杂粮饭。另外，补血的药不能停，如果血红蛋白还上不去，我们可能要换药。今天再加一个B超，评估一下胎儿大小和羊水情况。如果血糖持续不达标，我们就需要考虑启用胰岛素了。",
+    "exam": null,
+    "appointmentCycle": "7",
+    "appointmentType": "1",
+    "appointmentDate": "2026-04-08",
+    "appointmentPeriod": null,
+    "visitDate": "2025-08-07",
+    "doctorName": "张文文"
+  }
+}

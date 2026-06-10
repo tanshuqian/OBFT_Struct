@@ -1,0 +1,283 @@
+{
+  "_comment1": "基本属性与就诊元数据",
+  "sessionId": "session_4",
+  "dov": null,
+  "gwov": "36+2",
+  "age": 33,
+  "eddAge": null,
+  "bmi": null,
+  "_comment2": "核心孕产指标",
+  "gravidity": 3,
+  "parity": 0,
+  "obh": [
+    {
+      "gravidityindex": 1,
+      "year": null,
+      "month": null,
+      "vaginalDelivery": null,
+      "cesareanSection": null,
+      "naturalAbortion": null,
+      "medicalAbortion": null,
+      "surgicalAbortion": 1,
+      "currettageAbortion": null,
+      "currettage": null,
+      "biochemicalAbortion": null,
+      "inducedLabor": null,
+      "fetusdeath": null,
+      "preterm": null,
+      "term": null,
+      "forceps": null,
+      "vacuumAssisted": null,
+      "breechMidwifery": null,
+      "hemorrhage": null,
+      "puerperalFever": null,
+      "fetalcount": 1,
+      "hospital": null,
+      "exceptionalcase": "有过两次人工流产",
+      "children": []
+    },
+    {
+      "gravidityindex": 2,
+      "year": null,
+      "month": null,
+      "vaginalDelivery": null,
+      "cesareanSection": null,
+      "naturalAbortion": null,
+      "medicalAbortion": null,
+      "surgicalAbortion": 1,
+      "currettageAbortion": null,
+      "currettage": null,
+      "biochemicalAbortion": null,
+      "inducedLabor": null,
+      "fetusdeath": null,
+      "preterm": null,
+      "term": null,
+      "forceps": null,
+      "vacuumAssisted": null,
+      "breechMidwifery": null,
+      "hemorrhage": null,
+      "puerperalFever": null,
+      "fetalcount": 1,
+      "hospital": null,
+      "exceptionalcase": "有过两次人工流产",
+      "children": []
+    }
+  ],
+  "_comment3": "现病史",
+  "hpi": {
+    "lmp": null,
+    "edd": null,
+    "sureEdd": null,
+    "conceiveMode": "自然受孕",
+    "conceiveModeNote": null,
+    "chiefcomplaint": "下腹胀痛半小时",
+    "otherNote": null
+  },
+  "_comment4": "既往史",
+  "pmh": {
+    "hypertension": {
+      "status": 0,
+      "details": "患者否认高血压病史"
+    },
+    "hypertensionNote": null,
+    "diabetes": {
+      "status": 0,
+      "details": "患者否认糖尿病及妊娠期糖尿病史"
+    },
+    "diabetesNote": null,
+    "cardiacDisease": {
+      "status": 0,
+      "details": "患者否认心脏病史"
+    },
+    "cardiacDiseaseNote": null,
+    "thyroidDisease": {
+      "status": -1,
+      "details": null
+    },
+    "thyroidDiseaseNote": null,
+    "operationHistory": {
+      "status": -1,
+      "details": null
+    },
+    "operationHistoryNote": null,
+    "allergyDrug": {
+      "status": 0,
+      "details": "患者否认药物过敏史"
+    },
+    "allergyDrugNote": null,
+    "allergyFood": {
+      "status": 0,
+      "details": "患者否认食物过敏史"
+    },
+    "allergyFoodNote": null,
+    "allergyOther": {
+      "status": 0,
+      "details": "患者否认其他过敏史"
+    },
+    "allergyOtherNote": null,
+    "transfusionHistory": {
+      "status": -1,
+      "details": null
+    },
+    "transfusionHistoryNote": null,
+    "otherNote": "患者否认肝炎病史"
+  },
+  "_comment5": "月经及婚育史",
+  "additional_medical_history": {
+    "menarche": null,
+    "menstrualCycle": null,
+    "menstrualPeriod": null,
+    "menstrualVolume": null,
+    "dysmenorrhea": {
+      "status": -1,
+      "details": null
+    },
+    "maritalStatus": null,
+    "maritalYears": null,
+    "nearRelation": {
+      "status": -1,
+      "details": null
+    }
+  },
+  "_comment6": "个人史与家族史",
+  "personal_history": {
+    "smoke": {
+      "status": 0,
+      "details": "患者否认吸烟史"
+    },
+    "alcohol": {
+      "status": 0,
+      "details": "患者否认饮酒史"
+    },
+    "hazardoussubstances": {
+      "status": 0,
+      "details": "患者否认有害化学物质接触史"
+    },
+    "radioactivity": {
+      "status": 0,
+      "details": "患者否认放射性物质接触史"
+    },
+    "medicine": {
+      "status": 1,
+      "details": "服药史：孕期曾使用地塞米松，6mg/12h"
+    }
+  },
+  "fh": {
+    "diabetes": {
+      "status": -1,
+      "details": null
+    },
+    "hypertension": {
+      "status": -1,
+      "details": null
+    },
+    "birthdefects": {
+      "status": -1,
+      "details": null
+    },
+    "heritableDisease": {
+      "status": 0,
+      "details": "否认家族遗传病史"
+    }
+  },
+  "_comment7": "全身体格检查",
+  "physicalExamination": {
+    "systolic": 122,
+    "diastolic": 60,
+    "systolic2": null,
+    "diastolic2": null,
+    "systolic3": null,
+    "diastolic3": null,
+    "pulse": 68,
+    "heartrate": 68,
+    "weight": null,
+    "preheight": null,
+    "preweight": null,
+    "bmi": null,
+    "skin": {
+      "status": -1,
+      "details": null
+    },
+    "thyroid": {
+      "status": -1,
+      "details": null
+    },
+    "breast": {
+      "status": -1,
+      "details": null
+    },
+    "respiratory": {
+      "status": -1,
+      "details": null
+    },
+    "rales": {
+      "status": -1,
+      "details": null
+    },
+    "heartrhythm": {
+      "status": -1,
+      "details": null
+    },
+    "murmurs": {
+      "status": -1,
+      "details": null
+    },
+    "liver": {
+      "status": -1,
+      "details": null
+    },
+    "spleen": {
+      "status": -1,
+      "details": null
+    },
+    "spine": {
+      "status": -1,
+      "details": null
+    },
+    "physiologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "pathologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "edema": {
+      "status": 0,
+      "details": "双下肢无水肿"
+    },
+    "edemaNote": null,
+    "otherNote": null
+  },
+  "_comment8": "产科/妇科专科检查",
+  "gynecologicalExamination": {
+    "fundalHeight": 28,
+    "waistHip": 88,
+    "engagement": null,
+    "vulva": null,
+    "vagina": null,
+    "cervix": null,
+    "uterus": null,
+    "adnexa": null,
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 150,
+        "fetalPosition": "ROT",
+        "position": "枕右横位",
+        "presentation": "头先露"
+      }
+    ]
+  },
+  "_comment9": "医嘱与诊疗计划",
+  "advice": {
+    "prescription": "拟行胎心监护",
+    "exam": null,
+    "appointmentCycle": null,
+    "appointmentType": null,
+    "appointmentDate": null,
+    "appointmentPeriod": null,
+    "visitDate": null,
+    "doctorName": null
+  }
+}

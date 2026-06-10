@@ -1,0 +1,275 @@
+{
+  "sessionId": "session_3",
+  "dov": null,
+  "gwov": "37+2",
+  "age": 37,
+  "eddAge": null,
+  "bmi": null,
+  "gravidity": 2,
+  "parity": 0,
+  "obh": [
+    {
+      "gravidityindex": 1,
+      "year": "2019",
+      "month": null,
+      "vaginalDelivery": null,
+      "cesareanSection": null,
+      "naturalAbortion": null,
+      "medicalAbortion": null,
+      "surgicalAbortion": 1,
+      "currettageAbortion": null,
+      "currettage": null,
+      "biochemicalAbortion": null,
+      "inducedLabor": null,
+      "fetusdeath": null,
+      "preterm": null,
+      "term": null,
+      "forceps": null,
+      "vacuumAssisted": null,
+      "breechMidwifery": null,
+      "hemorrhage": null,
+      "puerperalFever": null,
+      "fetalcount": 1,
+      "hospital": null,
+      "exceptionalcase": "2019年做过一次人工流产",
+      "children": []
+    }
+  ],
+  "hpi": {
+    "lmp": "02-09",
+    "edd": "11-16",
+    "sureEdd": "11-09",
+    "conceiveMode": "自然受孕",
+    "conceiveModeNote": null,
+    "chiefcomplaint": "无不适，常规产检",
+    "otherNote": "患者第一胎分娩方式为顺产: 顺产；患者第二胎分娩方式为剖宫产: 剖宫产；患者否认接触放射物质: 否认；患者本次妊娠胎儿体重估计: 3.6kg；患者既往剖宫产次数: 1"
+  },
+  "pmh": {
+    "hypertension": {
+      "status": 0,
+      "details": "患者否认患者既往高血压病史"
+    },
+    "hypertensionNote": null,
+    "diabetes": {
+      "status": 0,
+      "details": "患者否认患者既往糖尿病及妊娠期糖尿病病史"
+    },
+    "diabetesNote": null,
+    "cardiacDisease": {
+      "status": 0,
+      "details": "患者否认患者既往心脏病病史"
+    },
+    "cardiacDiseaseNote": null,
+    "thyroidDisease": {
+      "status": 1,
+      "details": "患者存在患者存在甲状腺功能减退症病史"
+    },
+    "thyroidDiseaseNote": null,
+    "operationHistory": {
+      "status": -1,
+      "details": null
+    },
+    "operationHistoryNote": null,
+    "allergyDrug": {
+      "status": 0,
+      "details": "患者否认患者药物过敏史"
+    },
+    "allergyDrugNote": null,
+    "allergyFood": {
+      "status": 0,
+      "details": "患者否认患者食物过敏史"
+    },
+    "allergyFoodNote": null,
+    "allergyOther": {
+      "status": -1,
+      "details": null
+    },
+    "allergyOtherNote": null,
+    "transfusionHistory": {
+      "status": -1,
+      "details": null
+    },
+    "transfusionHistoryNote": null,
+    "otherNote": null
+  },
+  "additional_medical_history": {
+    "menarche": null,
+    "menstrualCycle": null,
+    "otherNote": null,
+    "menstrualPeriod": null,
+    "menstrualVolume": null,
+    "dysmenorrhea": {
+      "status": -1,
+      "details": null
+    },
+    "dysmenorrheaNote": null,
+    "maritalStatus": null,
+    "maritalYears": null,
+    "nearRelation": {
+      "status": -1,
+      "details": null
+    },
+    "nearRelationNote": null
+  },
+  "personal_history": {
+    "smoke": {
+      "status": 0,
+      "details": "患者否认患者吸烟史"
+    },
+    "smokeNote": null,
+    "alcohol": {
+      "status": 0,
+      "details": "患者否认患者饮酒史"
+    },
+    "alcoholNote": null,
+    "hazardoussubstances": {
+      "status": 0,
+      "details": "患者否认患者接触有毒物质史"
+    },
+    "hazardoussubstancesNote": null,
+    "radioactivity": {
+      "status": 0,
+      "details": "患者否认放射性接触"
+    },
+    "radioactivityNote": null,
+    "medicine": {
+      "status": 1,
+      "details": "患者150ug/天患者孕期口服优甲乐"
+    },
+    "medicineNote": null,
+    "otherNote": null
+  },
+  "fh": {
+    "diabetes": {
+      "status": 1,
+      "details": "患者存在患者母亲存在糖尿病病史"
+    },
+    "diabetesNote": null,
+    "hypertension": {
+      "status": 0,
+      "details": "患者否认患者家族高血压病史"
+    },
+    "hypertensionNote": null,
+    "birthdefects": {
+      "status": -1,
+      "details": null
+    },
+    "birthdefectsNote": null,
+    "heritableDisease": {
+      "status": 0,
+      "details": "患者否认患者家族遗传病史"
+    },
+    "heritableDiseaseNote": null,
+    "otherNote": null
+  },
+  "physicalExamination": {
+    "systolic": 112,
+    "diastolic": 66,
+    "preheight": 158.5,
+    "preweight": null,
+    "otherNote": null,
+    "systolic2": null,
+    "diastolic2": null,
+    "systolic3": null,
+    "diastolic3": null,
+    "pulse": 78,
+    "heartrate": 78,
+    "weight": 70.0,
+    "bmi": null,
+    "skin": {
+      "status": -1,
+      "details": null
+    },
+    "skinNote": null,
+    "thyroid": {
+      "status": -1,
+      "details": null
+    },
+    "thyroidNote": null,
+    "breast": {
+      "status": -1,
+      "details": null
+    },
+    "breastNote": null,
+    "respiratory": {
+      "status": -1,
+      "details": null
+    },
+    "respiratoryNote": null,
+    "rales": {
+      "status": -1,
+      "details": null
+    },
+    "ralesNote": null,
+    "heartrhythm": {
+      "status": -1,
+      "details": null
+    },
+    "heartrhythmNote": null,
+    "murmurs": {
+      "status": -1,
+      "details": null
+    },
+    "murmursNote": null,
+    "liver": {
+      "status": -1,
+      "details": null
+    },
+    "liverNote": null,
+    "spleen": {
+      "status": -1,
+      "details": null
+    },
+    "spleenNote": null,
+    "spine": {
+      "status": -1,
+      "details": null
+    },
+    "spineNote": null,
+    "physiologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "physiologicalreflectionNote": null,
+    "pathologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "pathologicalreflectionNote": null,
+    "edema": {
+      "status": 0,
+      "details": "患者否认双下肢无水肿"
+    },
+    "edemaNote": null
+  },
+  "gynecologicalExamination": {
+    "fundalHeight": 34.0,
+    "engagement": null,
+    "otherNote": null,
+    "waistHip": 112.0,
+    "vulva": null,
+    "vagina": null,
+    "cervix": null,
+    "uterus": null,
+    "adnexa": null,
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 142,
+        "fetalPosition": "ROT",
+        "position": "患者本次妊娠胎方位为枕右横位",
+        "presentation": "患者胎头先露"
+      }
+    ]
+  },
+  "advice": {
+    "prescription": "医嘱予继续服用优甲乐；医嘱予注意胎动监测",
+    "exam": null,
+    "appointmentCycle": null,
+    "appointmentType": null,
+    "appointmentDate": null,
+    "appointmentPeriod": null,
+    "visitDate": null,
+    "doctorName": null
+  }
+}

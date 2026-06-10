@@ -1,0 +1,234 @@
+{
+  "sessionId": "session_12",
+  "dov": "2026-04-01",
+  "gwov": "33周",
+  "age": null,
+  "eddAge": null,
+  "bmi": null,
+  "gravidity": 2,
+  "parity": null,
+  "obh": {
+    "vaginalDelivery": null,
+    "cesareanSection": 1,
+    "naturalAbortion": null
+  },
+  "hpi": {
+    "lmp": null,
+    "edd": "2026-11-05",
+    "sureEdd": null,
+    "chorionicity": null,
+    "yolksac": {
+      "status": -1,
+      "details": null
+    },
+    "unclassifiedNote": [
+      "血糖异常: 控制得不好 (空腹血糖还好，5.1左右，但餐后有时候到7.5，我在控制饮食，没打胰岛素)",
+      "血糖异常: 控制在6.7以内 (7.5还是偏高，最好控制在6.7以内)",
+      "B超: 胎盘位置正常 (上次B超说胎盘位置正常，也没有出血)"
+    ],
+    "conceiveMode": null,
+    "chiefcomplaint": "上面动得多，下面顶着胃，不太舒服",
+    "sac": {
+      "status": -1,
+      "details": null
+    },
+    "hpiNote": null
+  },
+  "pmh": {
+    "hypertension": {
+      "status": -1,
+      "details": null
+    },
+    "diabetes": {
+      "status": -1,
+      "details": null
+    },
+    "cardiacDisease": {
+      "status": -1,
+      "details": null
+    },
+    "operationHistory": {
+      "status": -1,
+      "details": null
+    },
+    "allergyDrug": {
+      "status": -1,
+      "details": null
+    },
+    "allergyFood": {
+      "status": -1,
+      "details": null
+    },
+    "allergyOther": {
+      "status": -1,
+      "details": null
+    },
+    "medication": [
+      "胰岛素 (如果饮食控制不下来，可能要用胰岛素)"
+    ],
+    "transfusionHistory": {
+      "status": -1,
+      "details": null
+    },
+    "nothing": null,
+    "otherNote": [],
+    "unclassifiedNote": []
+  },
+  "additional_medical_history": {
+    "menarche": null,
+    "menstrualCycle": null,
+    "otherNote": [],
+    "menstrualPeriod": null,
+    "menstrualVolume": null,
+    "dysmenorrhea": {
+      "status": -1,
+      "details": null
+    },
+    "maritalStatus": null,
+    "maritalYears": null,
+    "nearRelation": {
+      "status": -1,
+      "details": null
+    }
+  },
+  "personal_history": {
+    "smoke": {
+      "status": -1,
+      "details": null
+    },
+    "alcohol": {
+      "status": -1,
+      "details": null
+    },
+    "hazardoussubstances": {
+      "status": -1,
+      "details": null
+    },
+    "radioactivity": {
+      "status": -1,
+      "details": null
+    },
+    "medicine": {
+      "status": -1,
+      "details": null
+    }
+  },
+  "fh": {
+    "diabetes": {
+      "status": -1,
+      "details": null
+    },
+    "hypertension": {
+      "status": -1,
+      "details": null
+    },
+    "birthdefects": {
+      "status": -1,
+      "details": null
+    },
+    "heritableDisease": {
+      "status": -1,
+      "details": null
+    },
+    "unclassifiedNote": []
+  },
+  "physicalExamination": {
+    "systolic": null,
+    "diastolic": null,
+    "preheight": null,
+    "preweight": null,
+    "otherNote": [],
+    "systolic2": null,
+    "diastolic2": null,
+    "systolic3": null,
+    "diastolic3": null,
+    "pulse": null,
+    "heartrate": null,
+    "weight": null,
+    "bmi": null,
+    "skin": {
+      "status": -1,
+      "details": null
+    },
+    "thyroid": {
+      "status": -1,
+      "details": null
+    },
+    "breast": {
+      "status": -1,
+      "details": null
+    },
+    "respiratory": {
+      "status": -1,
+      "details": null
+    },
+    "rales": {
+      "status": -1,
+      "details": null
+    },
+    "heartrhythm": {
+      "status": -1,
+      "details": null
+    },
+    "murmurs": {
+      "status": -1,
+      "details": null
+    },
+    "liver": {
+      "status": -1,
+      "details": null
+    },
+    "spleen": {
+      "status": -1,
+      "details": null
+    },
+    "spine": {
+      "status": -1,
+      "details": null
+    },
+    "physiologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "pathologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "edema": {
+      "status": -1,
+      "details": null
+    }
+  },
+  "gynecologicalExamination": {
+    "fundalHeight": null,
+    "engagement": null,
+    "otherNote": [],
+    "waistHip": null,
+    "vulva": null,
+    "vagina": null,
+    "cervix": null,
+    "uterus": null,
+    "adnexa": null,
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 148,
+        "fetalPosition": null,
+        "position": "臀位",
+        "presentation": null
+      }
+    ]
+  },
+  "advice": {
+    "prescription": [
+      "做B超，监测血糖 (今天我们需要做一个B超，看臀位有没有转过来，如果到37周还是臀位，加上你是瘢痕子宫，可能就需要计划剖宫产了。同时要监测血糖)"
+    ],
+    "exam": [],
+    "appointmentCycle": null,
+    "appointmentType": null,
+    "appointmentDate": null,
+    "appointmentPeriod": null,
+    "visitDate": null,
+    "doctorName": null
+  }
+}

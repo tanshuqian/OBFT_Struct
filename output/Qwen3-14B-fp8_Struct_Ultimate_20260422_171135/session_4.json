@@ -1,0 +1,299 @@
+{
+  "sessionId": "session_4",
+  "dov": "2026-04-22",
+  "gwov": "32周+",
+  "age": null,
+  "eddAge": null,
+  "bmi": null,
+  "gravidity": 2,
+  "parity": 1,
+  "obh": [
+    {
+      "gravidityindex": null,
+      "year": null,
+      "month": null,
+      "vaginalDelivery": 1,
+      "cesareanSection": null,
+      "naturalAbortion": null,
+      "medicalAbortion": null,
+      "surgicalAbortion": null,
+      "currettageAbortion": null,
+      "currettage": null,
+      "biochemicalAbortion": null,
+      "inducedLabor": null,
+      "fetusdeath": null,
+      "preterm": null,
+      "term": null,
+      "forceps": null,
+      "vacuumAssisted": null,
+      "breechMidwifery": null,
+      "hemorrhage": null,
+      "puerperalFever": null,
+      "fetalcount": null,
+      "hospital": null,
+      "exceptionalcase": null,
+      "children": [
+        {
+          "neonateWeight": "3.1公斤"
+        }
+      ]
+    }
+  ],
+  "hpi": {
+    "lmp": null,
+    "edd": "2026-11-20",
+    "sureEdd": null,
+    "chorionicity": null,
+    "yolksac": {
+      "status": -1,
+      "details": null
+    },
+    "yolksacNote": null,
+    "unclassifiedNote": [
+      "眩晕: 存在 (有，特别是下午，总是觉得特别累，没什么力气，有时候站起来眼前会发黑)",
+      "乏力: 存在 (有，特别是下午，总是觉得特别累，没什么力气，有时候站起来眼前会发黑)"
+    ],
+    "conceiveMode": null,
+    "conceiveModeNote": null,
+    "chiefcomplaint": null,
+    "sac": {
+      "status": -1,
+      "details": null
+    },
+    "sacNote": null,
+    "hpiNote": "妊娠期糖尿病：血糖控制不好"
+  },
+  "pmh": {
+    "hypertension": {
+      "status": 0,
+      "details": "除了这个，有其他疾病吗？比如高血压、甲状腺问题？没有。"
+    },
+    "hypertensionNote": "除了这个，有其他疾病吗？比如高血压、甲状腺问题？没有。",
+    "diabetes": {
+      "status": 0,
+      "details": "怀孕前没有"
+    },
+    "diabetesNote": "怀孕前没有",
+    "cardiacDisease": {
+      "status": -1,
+      "details": null
+    },
+    "cardiacDiseaseNote": null,
+    "operationHistory": {
+      "status": 0,
+      "details": "都没有"
+    },
+    "operationHistoryNote": "都没有",
+    "allergyDrug": {
+      "status": -1,
+      "details": null
+    },
+    "allergyDrugNote": null,
+    "allergyFood": {
+      "status": -1,
+      "details": null
+    },
+    "allergyFoodNote": null,
+    "allergyOther": {
+      "status": 0,
+      "details": "都没有"
+    },
+    "allergyOtherNote": "都没有",
+    "medication": [
+      "生血宁|贫血 (我吃的是生血宁)"
+    ],
+    "transfusionHistory": {
+      "status": -1,
+      "details": null
+    },
+    "transfusionHistoryNote": null,
+    "nothing": null,
+    "otherNote": [
+      "存在 (血红蛋白偏低)",
+      "轻度 (血红蛋白是101g/L，属于轻度贫血)",
+      "否认 (除了这个，有其他疾病吗？比如高血压、甲状腺问题？没有。)"
+    ],
+    "unclassifiedNote": []
+  },
+  "additional_medical_history": {
+    "menarche": null,
+    "menstrualCycle": null,
+    "otherNote": [],
+    "menstrualPeriod": null,
+    "menstrualVolume": null,
+    "dysmenorrhea": {
+      "status": -1,
+      "details": null
+    },
+    "dysmenorrheaNote": null,
+    "maritalStatus": null,
+    "maritalYears": null,
+    "nearRelation": {
+      "status": -1,
+      "details": null
+    },
+    "nearRelationNote": null
+  },
+  "personal_history": {
+    "smoke": {
+      "status": -1,
+      "details": null
+    },
+    "smokeNote": null,
+    "alcohol": {
+      "status": -1,
+      "details": null
+    },
+    "alcoholNote": null,
+    "hazardoussubstances": {
+      "status": -1,
+      "details": null
+    },
+    "hazardoussubstancesNote": null,
+    "radioactivity": {
+      "status": -1,
+      "details": null
+    },
+    "radioactivityNote": null,
+    "medicine": {
+      "status": -1,
+      "details": null
+    },
+    "medicineNote": null
+  },
+  "fh": {
+    "diabetes": {
+      "status": 1,
+      "details": "我奶奶有糖尿病"
+    },
+    "diabetesNote": "我奶奶有糖尿病",
+    "hypertension": {
+      "status": -1,
+      "details": null
+    },
+    "hypertensionNote": null,
+    "birthdefects": {
+      "status": -1,
+      "details": null
+    },
+    "birthdefectsNote": null,
+    "heritableDisease": {
+      "status": -1,
+      "details": null
+    },
+    "heritableDiseaseNote": null,
+    "unclassifiedNote": []
+  },
+  "physicalExamination": {
+    "systolic": null,
+    "diastolic": null,
+    "preheight": null,
+    "preweight": null,
+    "otherNote": [],
+    "systolic2": null,
+    "diastolic2": null,
+    "systolic3": null,
+    "diastolic3": null,
+    "pulse": null,
+    "heartrate": null,
+    "weight": null,
+    "bmi": null,
+    "skin": {
+      "status": -1,
+      "details": null
+    },
+    "skinNote": null,
+    "thyroid": {
+      "status": -1,
+      "details": null
+    },
+    "thyroidNote": null,
+    "breast": {
+      "status": -1,
+      "details": null
+    },
+    "breastNote": null,
+    "respiratory": {
+      "status": -1,
+      "details": null
+    },
+    "respiratoryNote": null,
+    "rales": {
+      "status": -1,
+      "details": null
+    },
+    "ralesNote": null,
+    "heartrhythm": {
+      "status": -1,
+      "details": null
+    },
+    "heartrhythmNote": null,
+    "murmurs": {
+      "status": -1,
+      "details": null
+    },
+    "murmursNote": null,
+    "liver": {
+      "status": -1,
+      "details": null
+    },
+    "liverNote": null,
+    "spleen": {
+      "status": -1,
+      "details": null
+    },
+    "spleenNote": null,
+    "spine": {
+      "status": -1,
+      "details": null
+    },
+    "spineNote": null,
+    "physiologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "physiologicalreflectionNote": null,
+    "pathologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "pathologicalreflectionNote": null,
+    "edema": {
+      "status": -1,
+      "details": null
+    },
+    "edemaNote": null
+  },
+  "gynecologicalExamination": {
+    "fundalHeight": null,
+    "engagement": null,
+    "otherNote": [],
+    "waistHip": null,
+    "vulva": null,
+    "vagina": null,
+    "cervix": null,
+    "uterus": null,
+    "adnexa": null,
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 140,
+        "fetalPosition": null,
+        "position": null,
+        "presentation": null
+      }
+    ]
+  },
+  "advice": {
+    "prescription": [
+      "饮食严格调整，水果用黄瓜、西红柿代替，主食换成杂粮饭；补血药不能停，若血红蛋白未上升则换药；加做B超评估胎儿大小和羊水情况；若血糖持续不达标则启用胰岛素 (首先你需要把饮食再严格调整一下，水果尽量用黄瓜、西红柿代替，主食换成杂粮饭。另外，补血的药不能停，如果血红蛋白还上不去，我们可能要换药。今天再加一个B超，评估一下胎儿大小和羊水情况。如果血糖持续不达标，我们就需要考虑启用胰岛素了。)"
+    ],
+    "exam": [],
+    "appointmentCycle": null,
+    "appointmentType": null,
+    "appointmentDate": null,
+    "appointmentPeriod": null,
+    "visitDate": null,
+    "doctorName": null
+  }
+}

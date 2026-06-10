@@ -1,0 +1,245 @@
+{
+  "sessionId": "session_5",
+  "dov": "2026-04-01",
+  "gwov": "36周",
+  "age": 41,
+  "eddAge": null,
+  "bmi": null,
+  "gravidity": 1,
+  "parity": 0,
+  "obh": {
+    "vaginalDelivery": null,
+    "cesareanSection": null,
+    "naturalAbortion": null
+  },
+  "hpi": {
+    "lmp": null,
+    "edd": "2026-10-08",
+    "sureEdd": null,
+    "chorionicity": null,
+    "yolksac": {
+      "status": -1,
+      "details": null
+    },
+    "unclassifiedNote": [
+      "TSH偏高: 确诊 (TSH偏高)"
+    ],
+    "conceiveMode": null,
+    "chiefcomplaint": null,
+    "sac": {
+      "status": -1,
+      "details": null
+    },
+    "hpiNote": null
+  },
+  "pmh": {
+    "hypertension": {
+      "status": 1,
+      "details": "有，发现好几年了"
+    },
+    "diabetes": {
+      "status": 0,
+      "details": "没有"
+    },
+    "cardiacDisease": {
+      "status": -1,
+      "details": null
+    },
+    "operationHistory": {
+      "status": -1,
+      "details": null
+    },
+    "allergyDrug": {
+      "status": -1,
+      "details": null
+    },
+    "allergyFood": {
+      "status": -1,
+      "details": null
+    },
+    "allergyOther": {
+      "status": -1,
+      "details": null
+    },
+    "medication": [
+      "拜新同|高血压 (以前吃的是拜新同)",
+      "拉贝洛尔|高血压 (现在一天吃两次，怀孕后医生给我换成了拉贝洛尔)",
+      "优甲乐|甲状腺功能减退 (也在吃药，优甲乐一天一片)"
+    ],
+    "transfusionHistory": {
+      "status": -1,
+      "details": null
+    },
+    "nothing": null,
+    "otherNote": [],
+    "unclassifiedNote": [
+      "甲状腺疾病: 确诊 (我有甲减)",
+      "甲状腺疾病: 服用优甲乐 (优甲乐一天一片)",
+      "甲状腺药物剂量: 50微克 (应该是50微克一片)",
+      "甲状腺药物调整: 可能需要调整 (这个剂量可能需要调整了)"
+    ]
+  },
+  "additional_medical_history": {
+    "menarche": null,
+    "menstrualCycle": null,
+    "otherNote": [],
+    "menstrualPeriod": null,
+    "menstrualVolume": null,
+    "dysmenorrhea": {
+      "status": -1,
+      "details": null
+    },
+    "maritalStatus": null,
+    "maritalYears": null,
+    "nearRelation": {
+      "status": -1,
+      "details": null
+    }
+  },
+  "personal_history": {
+    "smoke": {
+      "status": -1,
+      "details": null
+    },
+    "alcohol": {
+      "status": -1,
+      "details": null
+    },
+    "hazardoussubstances": {
+      "status": -1,
+      "details": null
+    },
+    "radioactivity": {
+      "status": -1,
+      "details": null
+    },
+    "medicine": {
+      "status": -1,
+      "details": null
+    }
+  },
+  "fh": {
+    "diabetes": {
+      "status": -1,
+      "details": null
+    },
+    "hypertension": {
+      "status": 1,
+      "details": "我爸爸有高血压"
+    },
+    "birthdefects": {
+      "status": -1,
+      "details": null
+    },
+    "heritableDisease": {
+      "status": -1,
+      "details": null
+    },
+    "unclassifiedNote": []
+  },
+  "physicalExamination": {
+    "systolic": 135,
+    "diastolic": 85,
+    "preheight": null,
+    "preweight": null,
+    "otherNote": [
+      "血压异常: 有时高有时低 (有时候高有时候低)"
+    ],
+    "systolic2": null,
+    "diastolic2": null,
+    "systolic3": null,
+    "diastolic3": null,
+    "pulse": null,
+    "heartrate": null,
+    "weight": null,
+    "bmi": null,
+    "skin": {
+      "status": -1,
+      "details": null
+    },
+    "thyroid": {
+      "status": -1,
+      "details": null
+    },
+    "breast": {
+      "status": -1,
+      "details": null
+    },
+    "respiratory": {
+      "status": -1,
+      "details": null
+    },
+    "rales": {
+      "status": -1,
+      "details": null
+    },
+    "heartrhythm": {
+      "status": -1,
+      "details": null
+    },
+    "murmurs": {
+      "status": -1,
+      "details": null
+    },
+    "liver": {
+      "status": -1,
+      "details": null
+    },
+    "spleen": {
+      "status": -1,
+      "details": null
+    },
+    "spine": {
+      "status": -1,
+      "details": null
+    },
+    "physiologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "pathologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "edema": {
+      "status": 1,
+      "details": "就是踝部水肿"
+    }
+  },
+  "gynecologicalExamination": {
+    "fundalHeight": null,
+    "engagement": null,
+    "otherNote": [],
+    "waistHip": null,
+    "vulva": null,
+    "vagina": null,
+    "cervix": null,
+    "uterus": null,
+    "adnexa": null,
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 138,
+        "fetalPosition": null,
+        "position": null,
+        "presentation": null
+      }
+    ]
+  },
+  "advice": {
+    "prescription": [
+      "调整优甲乐用量到75微克，两周后复查甲功 (调整优甲乐用量，增加到75微克，两周后复查甲功)",
+      "继续监测血压，拉贝洛尔按时吃 (继续监测血压，拉贝洛尔按时吃)",
+      "出现头痛、视物模糊或水肿加重要马上来医院 (如果出现头痛、视物模糊或水肿加重，要马上来医院)",
+      "查尿蛋白 (今天需要查一个尿蛋白)",
+      "做胎心监护 (做一个胎心监护)"
+    ],
+    "exam": [],
+    "appointmentCycle": null,
+    "appointmentType": null,
+    "appointmentDate": null,
+    "appointmentPeriod": null,
+    "visitDate": null,
+    "doctorName": null
+  }
+}

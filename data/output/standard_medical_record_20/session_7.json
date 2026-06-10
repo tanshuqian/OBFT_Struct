@@ -1,0 +1,230 @@
+{
+  "_comment1": "基本属性与就诊元数据",
+  "sessionId": "session_7",
+  "dov": null,
+  "gwov": "39+3",
+  "age": 43,
+  "eddAge": null,
+  "bmi": null,
+  "_comment2": "核心孕产指标",
+  "gravidity": 1,
+  "parity": 0,
+  "obh": [],
+  "_comment3": "现病史",
+  "hpi": {
+    "lmp": "01-27",
+    "edd": "11-03",
+    "sureEdd": null,
+    "conceiveMode": null,
+    "conceiveModeNote": null,
+    "chiefcomplaint": "阴道流液4小时",
+    "otherNote": null
+  },
+  "_comment4": "既往史",
+  "pmh": {
+    "hypertension": {
+      "status": 0,
+      "details": "患者否认妊娠期高血压病史"
+    },
+    "hypertensionNote": null,
+    "diabetes": {
+      "status": 0,
+      "details": "患者否认妊娠期糖尿病史"
+    },
+    "diabetesNote": null,
+    "cardiacDisease": {
+      "status": 0,
+      "details": "患者否认心脏病史"
+    },
+    "cardiacDiseaseNote": null,
+    "thyroidDisease": {
+      "status": -1,
+      "details": null
+    },
+    "thyroidDiseaseNote": null,
+    "operationHistory": {
+      "status": 0,
+      "details": "患者否认手术史"
+    },
+    "operationHistoryNote": null,
+    "allergyDrug": {
+      "status": 0,
+      "details": "患者否认药物过敏史"
+    },
+    "allergyDrugNote": null,
+    "allergyFood": {
+      "status": 0,
+      "details": "患者否认食物过敏史"
+    },
+    "allergyFoodNote": null,
+    "allergyOther": {
+      "status": 0,
+      "details": "患者否认其他过敏史"
+    },
+    "allergyOtherNote": null,
+    "transfusionHistory": {
+      "status": -1,
+      "details": null
+    },
+    "transfusionHistoryNote": null,
+    "otherNote": "患者否认肝炎病史"
+  },
+  "_comment5": "月经及婚育史",
+  "additional_medical_history": {
+    "menarche": null,
+    "menstrualCycle": null,
+    "menstrualPeriod": null,
+    "menstrualVolume": null,
+    "dysmenorrhea": {
+      "status": -1,
+      "details": null
+    },
+    "maritalStatus": null,
+    "maritalYears": null,
+    "nearRelation": {
+      "status": -1,
+      "details": null
+    }
+  },
+  "_comment6": "个人史与家族史",
+  "personal_history": {
+    "smoke": {
+      "status": -1,
+      "details": null
+    },
+    "alcohol": {
+      "status": -1,
+      "details": null
+    },
+    "hazardoussubstances": {
+      "status": -1,
+      "details": null
+    },
+    "radioactivity": {
+      "status": -1,
+      "details": null
+    },
+    "medicine": {
+      "status": -1,
+      "details": null
+    }
+  },
+  "fh": {
+    "diabetes": {
+      "status": 0,
+      "details": "否认家族糖尿病史"
+    },
+    "hypertension": {
+      "status": 0,
+      "details": "否认家族高血压病史"
+    },
+    "birthdefects": {
+      "status": -1,
+      "details": null
+    },
+    "heritableDisease": {
+      "status": 0,
+      "details": "否认家族遗传病史"
+    }
+  },
+  "_comment7": "全身体格检查",
+  "physicalExamination": {
+    "systolic": 124,
+    "diastolic": 72,
+    "systolic2": null,
+    "diastolic2": null,
+    "systolic3": null,
+    "diastolic3": null,
+    "pulse": 75,
+    "heartrate": 75,
+    "weight": 67.0,
+    "preheight": 163.5,
+    "preweight": null,
+    "bmi": null,
+    "skin": {
+      "status": -1,
+      "details": null
+    },
+    "thyroid": {
+      "status": -1,
+      "details": null
+    },
+    "breast": {
+      "status": -1,
+      "details": null
+    },
+    "respiratory": {
+      "status": -1,
+      "details": null
+    },
+    "rales": {
+      "status": -1,
+      "details": null
+    },
+    "heartrhythm": {
+      "status": -1,
+      "details": null
+    },
+    "murmurs": {
+      "status": -1,
+      "details": null
+    },
+    "liver": {
+      "status": -1,
+      "details": null
+    },
+    "spleen": {
+      "status": -1,
+      "details": null
+    },
+    "spine": {
+      "status": -1,
+      "details": null
+    },
+    "physiologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "pathologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "edema": {
+      "status": 0,
+      "details": "双下肢无水肿"
+    },
+    "edemaNote": null,
+    "otherNote": "预估胎儿体重2.68kg"
+  },
+  "_comment8": "产科/妇科专科检查",
+  "gynecologicalExamination": {
+    "fundalHeight": 29,
+    "waistHip": 101,
+    "engagement": null,
+    "vulva": null,
+    "vagina": null,
+    "cervix": null,
+    "uterus": null,
+    "adnexa": null,
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 143,
+        "fetalPosition": "ROT",
+        "position": "枕右横位",
+        "presentation": "头先露"
+      }
+    ]
+  },
+  "_comment9": "医嘱与诊疗计划",
+  "advice": {
+    "prescription": "拟住院观察；具体分娩方式根据后续产程再评估",
+    "exam": null,
+    "appointmentCycle": null,
+    "appointmentType": null,
+    "appointmentDate": null,
+    "appointmentPeriod": null,
+    "visitDate": null,
+    "doctorName": null
+  }
+}

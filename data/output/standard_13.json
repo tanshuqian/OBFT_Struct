@@ -1,0 +1,1041 @@
+[
+  {
+    "_comment": "Case 1: 孕2产1，32周，确诊妊娠期糖尿病，父亲有糖尿病",
+    "sessionId": "session_1",
+    "dov": "2026-04-01",
+    "gwov": "32周",
+    "age": null,
+    "eddAge": null,
+    "bmi": null,
+    "gravidity": 2,
+    "parity": 1,
+    "obh": {
+      "vaginalDelivery": 1,
+      "cesareanSection": 0,
+      "naturalAbortion": 0
+    },
+    "hpi": {
+      "lmp": null,
+      "edd": "2026-11-30",
+      "sureEdd": "2026-11-30",
+      "conceiveMode": null,
+      "chiefcomplaint": "空腹血糖偏高伴多饮多尿",
+      "hpiNote": "第一胎出生体重4.2kg(巨大儿)。本次孕期糖耐量异常，空腹5.6，餐后8点多。"
+    },
+    "pmh": {
+      "hypertension": {
+        "status": "0",
+        "details": "患者否认高血压"
+      },
+      "diabetes": {
+        "status": "1",
+        "details": "确诊妊娠期糖尿病"
+      },
+      "cardiacDisease": {
+        "status": "-1",
+        "details": null
+      },
+      "allergyDrug": {
+        "status": "0",
+        "details": "患者否认药物过敏"
+      },
+      "allergyFood": {
+        "status": "0",
+        "details": "患者否认食物过敏"
+      },
+      "allergyOther": {
+        "status": "0",
+        "details": "患者否认其他过敏"
+      },
+      "transfusionHistory": {
+        "status": "-1",
+        "details": null
+      },
+      "operationHistory": {
+        "status": "0",
+        "details": "患者否认手术史"
+      },
+      "otherNote": null
+    },
+    "fh": {
+      "diabetes": {
+        "status": "1",
+        "details": "父亲有糖尿病"
+      },
+      "hypertension": {
+        "status": "-1",
+        "details": null
+      },
+      "birthdefects": {
+        "status": "-1",
+        "details": null
+      },
+      "heritableDisease": {
+        "status": "-1",
+        "details": null
+      }
+    },
+    "physicalExamination": {
+      "systolic": null,
+      "diastolic": null,
+      "systolic2": null,
+      "diastolic2": null,
+      "pulse": null,
+      "heartrate": null,
+      "weight": null,
+      "preheight": null,
+      "preweight": null,
+      "bmi": null,
+      "skin": {
+        "status": "-1",
+        "details": null
+      },
+      "thyroid": {
+        "status": "-1",
+        "details": null
+      },
+      "breast": {
+        "status": "-1",
+        "details": null
+      },
+      "respiratory": {
+        "status": "-1",
+        "details": null
+      },
+      "rales": {
+        "status": "-1",
+        "details": null
+      },
+      "heartrhythm": {
+        "status": "-1",
+        "details": null
+      },
+      "murmurs": {
+        "status": "-1",
+        "details": null
+      },
+      "liver": {
+        "status": "-1",
+        "details": null
+      },
+      "spleen": {
+        "status": "-1",
+        "details": null
+      },
+      "spine": {
+        "status": "-1",
+        "details": null
+      },
+      "physiologicalreflection": {
+        "status": "-1",
+        "details": null
+      },
+      "pathologicalreflection": {
+        "status": "-1",
+        "details": null
+      },
+      "edema": {
+        "status": "-1",
+        "details": null
+      },
+      "otherNote": null
+    },
+    "gynecologicalExamination": {
+      "fundalHeight": null,
+      "waistHip": null,
+      "engagement": null,
+      "vulva": null,
+      "vagina": null,
+      "cervix": null,
+      "uterus": null,
+      "adnexa": null,
+      "fetusExam": []
+    },
+    "advice": {
+      "prescription": "控制饮食，限制水果摄入。",
+      "exam": null,
+      "appointmentCycle": null,
+      "appointmentType": null,
+      "appointmentDate": null,
+      "appointmentPeriod": null,
+      "visitDate": null,
+      "doctorName": null
+    }
+  },
+  {
+    "_comment": "case 2: 38岁高龄初产，34周，既往高血压三年伴水肿",
+    "sessionId": "session_2",
+    "dov": "2026-04-01",
+    "gwov": "34周",
+    "age": 38,
+    "eddAge": 38,
+    "bmi": null,
+    "gravidity": 1,
+    "parity": 0,
+    "obh": {
+      "vaginalDelivery": 0,
+      "cesareanSection": 0,
+      "naturalAbortion": 0
+    },
+    "hpi": {
+      "lmp": null,
+      "edd": "2026-09-15",
+      "sureEdd": "2026-09-15",
+      "conceiveMode": null,
+      "chiefcomplaint": "脚部水肿严重",
+      "hpiNote": "警惕妊娠期高血压疾病及子痫前期。"
+    },
+    "pmh": {
+      "hypertension": {
+        "status": "1",
+        "details": "怀孕前确诊高血压三年，曾服厄贝沙坦"
+      },
+      "diabetes": {
+        "status": "0",
+        "details": "患者否认糖尿病"
+      },
+      "cardiacDisease": {
+        "status": "0",
+        "details": "患者否认心脏病"
+      },
+      "allergyDrug": {
+        "status": "0",
+        "details": "患者否认药物过敏"
+      },
+      "allergyFood": {
+        "status": "0",
+        "details": "患者否认食物过敏"
+      },
+      "allergyOther": {
+        "status": "0",
+        "details": "患者否认其他过敏"
+      },
+      "transfusionHistory": {
+        "status": "-1",
+        "details": null
+      },
+      "operationHistory": {
+        "status": "0",
+        "details": "患者否认手术史"
+      },
+      "otherNote": null
+    },
+    "fh": {
+      "diabetes": {
+        "status": "-1",
+        "details": null
+      },
+      "hypertension": {
+        "status": "1",
+        "details": "父母双方均有高血压病史"
+      },
+      "birthdefects": {
+        "status": "-1",
+        "details": null
+      },
+      "heritableDisease": {
+        "status": "-1",
+        "details": null
+      }
+    },
+    "physicalExamination": {
+      "systolic": 140,
+      "diastolic": 90,
+      "systolic2": null,
+      "diastolic2": null,
+      "pulse": null,
+      "heartrate": null,
+      "weight": null,
+      "preheight": null,
+      "preweight": null,
+      "bmi": null,
+      "skin": {
+        "status": "-1",
+        "details": null
+      },
+      "thyroid": {
+        "status": "-1",
+        "details": null
+      },
+      "breast": {
+        "status": "-1",
+        "details": null
+      },
+      "respiratory": {
+        "status": "-1",
+        "details": null
+      },
+      "rales": {
+        "status": "-1",
+        "details": null
+      },
+      "heartrhythm": {
+        "status": "-1",
+        "details": null
+      },
+      "murmurs": {
+        "status": "-1",
+        "details": null
+      },
+      "liver": {
+        "status": "-1",
+        "details": null
+      },
+      "spleen": {
+        "status": "-1",
+        "details": null
+      },
+      "spine": {
+        "status": "-1",
+        "details": null
+      },
+      "physiologicalreflection": {
+        "status": "-1",
+        "details": null
+      },
+      "pathologicalreflection": {
+        "status": "-1",
+        "details": null
+      },
+      "edema": {
+        "status": "1",
+        "details": "脚肿得厉害"
+      },
+      "otherNote": null
+    },
+    "gynecologicalExamination": {
+      "fundalHeight": null,
+      "waistHip": null,
+      "engagement": null,
+      "vulva": null,
+      "vagina": null,
+      "cervix": null,
+      "uterus": null,
+      "adnexa": null,
+      "fetusExam": [
+        {
+          "index": 1,
+          "fetalHeartRate": "142",
+          "fetalPosition": null,
+          "position": null,
+          "presentation": null
+        }
+      ]
+    },
+    "advice": {
+      "prescription": "调整降压药为拉贝洛尔或硝苯地平。",
+      "exam": "查尿蛋白以排除子痫前期",
+      "appointmentCycle": null,
+      "appointmentType": null,
+      "appointmentDate": null,
+      "appointmentPeriod": null,
+      "visitDate": null,
+      "doctorName": null
+    }
+  },
+  {
+    "_comment": "case 3: 孕2产1，30周，双绒双羊双胎，先兆早产",
+    "sessionId": "session_3",
+    "dov": "2026-04-01",
+    "gwov": "30周",
+    "age": null,
+    "eddAge": null,
+    "bmi": null,
+    "gravidity": 2,
+    "parity": 1,
+    "obh": {
+      "vaginalDelivery": 1,
+      "cesareanSection": 0,
+      "naturalAbortion": 0
+    },
+    "hpi": {
+      "lmp": null,
+      "edd": "12-10",
+      "sureEdd": "12-10",
+      "conceiveMode": null,
+      "chiefcomplaint": "肚子阵发性发紧伴分泌物增多，先兆早产",
+      "hpiNote": "双绒双羊双胎妊娠。"
+    },
+    "pmh": {
+      "hypertension": {
+        "status": "0",
+        "details": "患者否认高血压"
+      },
+      "diabetes": {
+        "status": "0",
+        "details": "患者否认糖尿病"
+      },
+      "cardiacDisease": {
+        "status": "-1",
+        "details": null
+      },
+      "allergyDrug": {
+        "status": "0",
+        "details": "患者否认药物过敏"
+      },
+      "allergyFood": {
+        "status": "0",
+        "details": "患者否认食物过敏"
+      },
+      "allergyOther": {
+        "status": "0",
+        "details": "患者否认其他过敏"
+      },
+      "transfusionHistory": {
+        "status": "-1",
+        "details": null
+      },
+      "operationHistory": {
+        "status": "0",
+        "details": "患者否认手术史"
+      },
+      "otherNote": null
+    },
+    "fh": {
+      "diabetes": {
+        "status": "0",
+        "details": "患者否认家族糖尿病"
+      },
+      "hypertension": {
+        "status": "0",
+        "details": "患者否认家族高血压"
+      },
+      "birthdefects": {
+        "status": "-1",
+        "details": null
+      },
+      "heritableDisease": {
+        "status": "-1",
+        "details": null
+      }
+    },
+    "physicalExamination": {
+      "systolic": null,
+      "diastolic": null,
+      "systolic2": null,
+      "diastolic2": null,
+      "pulse": null,
+      "heartrate": null,
+      "weight": null,
+      "preheight": null,
+      "preweight": null,
+      "bmi": null,
+      "skin": {
+        "status": "-1",
+        "details": null
+      },
+      "thyroid": {
+        "status": "-1",
+        "details": null
+      },
+      "breast": {
+        "status": "-1",
+        "details": null
+      },
+      "respiratory": {
+        "status": "-1",
+        "details": null
+      },
+      "rales": {
+        "status": "-1",
+        "details": null
+      },
+      "heartrhythm": {
+        "status": "-1",
+        "details": null
+      },
+      "murmurs": {
+        "status": "-1",
+        "details": null
+      },
+      "liver": {
+        "status": "-1",
+        "details": null
+      },
+      "spleen": {
+        "status": "-1",
+        "details": null
+      },
+      "spine": {
+        "status": "-1",
+        "details": null
+      },
+      "physiologicalreflection": {
+        "status": "-1",
+        "details": null
+      },
+      "pathologicalreflection": {
+        "status": "-1",
+        "details": null
+      },
+      "edema": {
+        "status": "-1",
+        "details": null
+      },
+      "otherNote": null
+    },
+    "gynecologicalExamination": {
+      "fundalHeight": null,
+      "waistHip": null,
+      "engagement": null,
+      "vulva": null,
+      "vagina": null,
+      "cervix": null,
+      "uterus": null,
+      "adnexa": null,
+      "fetusExam": [
+        {
+          "index": 1,
+          "fetalHeartRate": "150",
+          "fetalPosition": null,
+          "position": "左",
+          "presentation": null
+        },
+        {
+          "index": 2,
+          "fetalHeartRate": "145",
+          "fetalPosition": null,
+          "position": "右",
+          "presentation": null
+        }
+      ]
+    },
+    "advice": {
+      "prescription": "办理住院保胎，促胎肺成熟。",
+      "exam": "做B超看宫颈长度",
+      "appointmentCycle": null,
+      "appointmentType": null,
+      "appointmentDate": null,
+      "appointmentPeriod": null,
+      "visitDate": null,
+      "doctorName": null
+    }
+  },
+  {
+    "_comment": "Case 4: 孕2产1，32周+，血糖异常伴贫血",
+    "sessionId": "session_4",
+    "dov": "2026-04-20",
+    "gwov": "32周+",
+    "gravidity": 2,
+    "parity": 1,
+    "obh": {
+      "vaginalDelivery": 1
+    },
+    "hpi": {
+      "edd": "2026-11-20",
+      "unclassifiedNote": [
+        "第一胎出生体重3.1kg",
+        "头晕、乏力、心慌"
+      ]
+    },
+    "pmh": {
+      "diabetes": {
+        "status": 1,
+        "details": "怀孕前没有"
+      },
+      "medication": [
+        "生血宁"
+      ],
+      "unclassifiedNote": [
+        "血红蛋白101g/L，轻度贫血"
+      ]
+    },
+    "fh": {
+      "diabetes": {
+        "status": 1,
+        "details": "奶奶有糖尿病"
+      }
+    },
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 140
+      }
+    ],
+    "advice": {
+      "prescription": [
+        "饮食调整，水果用黄瓜西红柿代替，考虑启用胰岛素"
+      ],
+      "exam": [
+        "加做B超评估胎儿大小和羊水"
+      ]
+    }
+  },
+  {
+    "_comment": "Case 5: 41岁高龄，36周，既往高血压伴甲减",
+    "sessionId": "session_5",
+    "dov": "2026-04-20",
+    "gwov": "36周",
+    "age": 41,
+    "gravidity": 1,
+    "parity": 0,
+    "hpi": {
+      "edd": "2026-10-08",
+      "unclassifiedNote": [
+        "TSH 7.8 偏高"
+      ]
+    },
+    "pmh": {
+      "hypertension": {
+        "status": 1,
+        "details": "发现好几年了，一直吃药"
+      },
+      "medication": [
+        "拜新同",
+        "拉贝洛尔",
+        "优甲乐(50微克/天)"
+      ],
+      "unclassifiedNote": [
+        "甲减"
+      ]
+    },
+    "fh": {
+      "hypertension": {
+        "status": 1,
+        "details": "爸爸有高血压"
+      }
+    },
+    "physicalExamination": {
+      "systolic": 135,
+      "diastolic": 85,
+      "otherNote": [
+        "脚踝有点肿"
+      ]
+    },
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 138
+      }
+    ],
+    "advice": {
+      "prescription": [
+        "优甲乐增加到75微克",
+        "拉贝洛尔按时吃"
+      ],
+      "exam": [
+        "查尿蛋白",
+        "做胎心监护"
+      ]
+    }
+  },
+  {
+    "_comment": "Case 6: 孕2产1，29周，单绒双羊，选择性胎儿生长受限",
+    "sessionId": "session_6",
+    "dov": "2026-04-20",
+    "gwov": "29周",
+    "gravidity": 2,
+    "parity": 1,
+    "obh": {
+      "vaginalDelivery": 1
+    },
+    "hpi": {
+      "edd": "2026-12-05",
+      "chorionicity": "单绒双羊",
+      "unclassifiedNote": [
+        "右边宝宝动得少",
+        "B超提示两个宝宝差一周多，小的羊水少"
+      ]
+    },
+    "pmh": {
+      "hypertension": {
+        "status": 0,
+        "details": "一直挺健康"
+      },
+      "diabetes": {
+        "status": 0,
+        "details": "一直挺健康"
+      }
+    },
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 150
+      },
+      {
+        "index": 2,
+        "fetalHeartRate": 135
+      }
+    ],
+    "advice": {
+      "exam": [
+        "加做B超详细评估生长发育、羊水量和脐动脉血流"
+      ],
+      "prescription": [
+        "血流异常可能需住院保胎或提前终止妊娠"
+      ]
+    }
+  },
+  {
+    "_comment": "Case 7: 孕3产2，34周，瘢痕子宫合并中央性前置胎盘",
+    "sessionId": "session_7",
+    "dov": "2026-04-20",
+    "gwov": "34周",
+    "gravidity": 3,
+    "obh": {
+      "cesareanSection": 2,
+      "naturalAbortion": 0
+    },
+    "hpi": {
+      "edd": "2026-10-25",
+      "chiefcomplaint": "肚子发紧"
+    },
+    "pmh": {
+      "operationHistory": {
+        "status": 1,
+        "details": "两次剖宫产，一次阑尾手术"
+      }
+    },
+    "gynecologicalExamination": {
+      "otherNote": [
+        "中央性前置胎盘",
+        "瘢痕子宫"
+      ]
+    },
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 145
+      }
+    ],
+    "advice": {
+      "prescription": [
+        "绝对卧床休息，不能有性生活",
+        "36周左右多学科会诊制定手术方案"
+      ],
+      "exam": [
+        "B超看胎盘位置变化及植入可能"
+      ]
+    }
+  },
+  {
+    "_comment": "Case 8: 孕1产0，30周，双绒双羊合并妊娠期肝内胆汁淤积症",
+    "sessionId": "session_8",
+    "dov": "2026-04-20",
+    "gwov": "30周",
+    "gravidity": 1,
+    "parity": 0,
+    "hpi": {
+      "chorionicity": "双绒双羊",
+      "chiefcomplaint": "夜间手心脚心瘙痒严重",
+      "unclassifiedNote": [
+        "总胆汁酸35.8umol/L，ICP高危因素"
+      ]
+    },
+    "pmh": {
+      "unclassifiedNote": [
+        "无肝炎或其他肝病史"
+      ]
+    },
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 148
+      },
+      {
+        "index": 2,
+        "fetalHeartRate": 142
+      }
+    ],
+    "advice": {
+      "prescription": [
+        "开药熊去氧胆酸和思美泰"
+      ],
+      "exam": [
+        "每周复查胆汁酸，做胎心监护"
+      ]
+    }
+  },
+  {
+    "_comment": "Case 9: 孕1产0，34周，妊娠期糖尿病打胰岛素，GBS阳性",
+    "sessionId": "session_9",
+    "dov": "2026-04-20",
+    "gwov": "34周",
+    "gravidity": 1,
+    "parity": 0,
+    "hpi": {
+      "edd": "2026-10-15",
+      "chiefcomplaint": "夜间口渴、多尿"
+    },
+    "pmh": {
+      "diabetes": {
+        "status": 1,
+        "details": "确诊妊娠期糖尿病"
+      },
+      "medication": [
+        "地特胰岛素18个单位"
+      ]
+    },
+    "fh": {
+      "diabetes": {
+        "status": 1,
+        "details": "母亲有糖尿病"
+      }
+    },
+    "gynecologicalExamination": {
+      "otherNote": [
+        "GBS检查阳性"
+      ]
+    },
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 138
+      }
+    ],
+    "advice": {
+      "prescription": [
+        "临产时用抗生素预防感染",
+        "地特胰岛素可能加到20单位"
+      ],
+      "exam": [
+        "B超看胎儿大小和羊水量"
+      ]
+    }
+  },
+  {
+    "_comment": "Case 10: 孕2产1，31周，双绒双羊伴妊娠期糖尿病，宫缩发硬",
+    "sessionId": "session_10",
+    "dov": "2026-04-20",
+    "gwov": "31周",
+    "gravidity": 2,
+    "parity": 1,
+    "obh": {
+      "vaginalDelivery": 1
+    },
+    "hpi": {
+      "chorionicity": "双绒双羊",
+      "chiefcomplaint": "肚子频繁发紧发硬，分泌物增多"
+    },
+    "pmh": {
+      "diabetes": {
+        "status": 1,
+        "details": "妊娠期糖尿病，未打胰岛素"
+      },
+      "unclassifiedNote": [
+        "空腹5.9，餐后8点多"
+      ]
+    },
+    "gynecologicalExamination": {
+      "otherNote": [
+        "GBS阳性"
+      ]
+    },
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 152
+      },
+      {
+        "index": 2,
+        "fetalHeartRate": 146
+      }
+    ],
+    "advice": {
+      "prescription": [
+        "可能需住院保胎",
+        "控制血糖",
+        "破水马上用抗生素"
+      ],
+      "exam": [
+        "B超看宫颈长度和胎儿情况"
+      ]
+    }
+  },
+  {
+    "_comment": "Case 11: 40岁高龄初产，36周，妊娠期高血压伴严重水肿、贫血及GBS阳性",
+    "sessionId": "session_11",
+    "dov": "2026-04-20",
+    "gwov": "36周",
+    "age": 40,
+    "gravidity": 1,
+    "parity": 0,
+    "obh": {
+      "vaginalDelivery": 0,
+      "cesareanSection": 0,
+      "naturalAbortion": 0
+    },
+    "hpi": {
+      "edd": "2026-09-20",
+      "sureEdd": "2026-09-20",
+      "chiefcomplaint": "脚踝严重水肿伴夜间睡眠不佳",
+      "unclassifiedNote": [
+        "警惕子痫前期"
+      ]
+    },
+    "pmh": {
+      "hypertension": {
+        "status": 1,
+        "details": "高压有时140多低压90多，服拉贝洛尔后好转"
+      },
+      "diabetes": {
+        "status": 0,
+        "details": "患者否认糖尿病"
+      },
+      "operationHistory": {
+        "status": 0,
+        "details": "患者否认手术史"
+      },
+      "medication": [
+        "拉贝洛尔",
+        "生血宁"
+      ],
+      "unclassifiedNote": [
+        "血红蛋白101g/L，轻度贫血"
+      ]
+    },
+    "fh": {
+      "hypertension": {
+        "status": 1,
+        "details": "父母均有高血压"
+      },
+      "diabetes": {
+        "status": -1,
+        "details": null
+      }
+    },
+    "physicalExamination": {
+      "systolic": 140,
+      "diastolic": 90,
+      "otherNote": [
+        "脚肿得厉害"
+      ]
+    },
+    "gynecologicalExamination": {
+      "otherNote": [
+        "GBS阳性"
+      ]
+    },
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 142
+      }
+    ],
+    "advice": {
+      "prescription": [
+        "继续服用生血宁",
+        "尿蛋白阳性或胎监异常可能需提前终止妊娠",
+        "临产时需要用抗生素"
+      ],
+      "exam": [
+        "查尿蛋白",
+        "做胎心监护",
+        "B超看胎盘和羊水"
+      ]
+    }
+  },
+  {
+    "_comment": "Case 12: 孕2产1，33周，瘢痕子宫合并臀位、妊娠期糖尿病及GBS阳性",
+    "sessionId": "session_12",
+    "dov": "2026-04-20",
+    "gwov": "33周",
+    "gravidity": 2,
+    "parity": 1,
+    "obh": {
+      "cesareanSection": 1
+    },
+    "hpi": {
+      "edd": "2026-11-05",
+      "sureEdd": "2026-11-05",
+      "chiefcomplaint": "感觉上腹部胎动多，下腹部顶着胃不适",
+      "unclassifiedNote": [
+        "餐后血糖有时达7.5，饮食控制中"
+      ]
+    },
+    "pmh": {
+      "diabetes": {
+        "status": 1,
+        "details": "确诊妊娠期糖尿病，未打胰岛素"
+      },
+      "hypertension": {
+        "status": 0,
+        "details": "患者否认"
+      },
+      "operationHistory": {
+        "status": 1,
+        "details": "3年前剖宫产"
+      }
+    },
+    "gynecologicalExamination": {
+      "otherNote": [
+        "瘢痕子宫",
+        "GBS阳性"
+      ]
+    },
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 148,
+        "presentation": "臀位"
+      }
+    ],
+    "advice": {
+      "prescription": [
+        "继续饮食控制，控制不佳可能需用胰岛素",
+        "若37周仍为臀位，可能需计划剖宫产"
+      ],
+      "exam": [
+        "做B超看臀位是否转正"
+      ]
+    }
+  },
+  {
+    "_comment": "Case 13: 孕1产0，30周，IVF受孕，突发胎膜早破合并重度妊娠期糖尿病",
+    "sessionId": "session_13",
+    "dov": "2026-04-20",
+    "gwov": "30周",
+    "gravidity": 1,
+    "parity": 0,
+    "obh": {
+      "vaginalDelivery": 0,
+      "cesareanSection": 0,
+      "naturalAbortion": 0
+    },
+    "hpi": {
+      "edd": "2026-12-20",
+      "sureEdd": "2026-12-20",
+      "conceiveMode": "试管",
+      "chiefcomplaint": "突发阴道流液伴腹部发紧",
+      "unclassifiedNote": [
+        "疑似胎膜早破",
+        "空腹血糖5.2，餐后6.5"
+      ]
+    },
+    "pmh": {
+      "diabetes": {
+        "status": 1,
+        "details": "查出妊娠期糖尿病，在用胰岛素"
+      },
+      "hypertension": {
+        "status": 0,
+        "details": "患者否认高血压"
+      },
+      "operationHistory": {
+        "status": 0,
+        "details": "患者否认手术史"
+      },
+      "medication": [
+        "胰岛素(一天四次，总量约30单位)"
+      ]
+    },
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 148
+      }
+    ],
+    "advice": {
+      "prescription": [
+        "马上办理住院",
+        "用抗生素预防感染",
+        "用促胎肺成熟药物",
+        "尽量保胎至34周以后"
+      ],
+      "exam": [
+        "马上做B超看羊水量",
+        "取分泌物化验是否为羊水"
+      ]
+    }
+  }
+]

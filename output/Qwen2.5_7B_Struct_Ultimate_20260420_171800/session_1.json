@@ -1,0 +1,222 @@
+{
+  "sessionId": "session_1",
+  "dov": "2026-04-01",
+  "gwov": "32周",
+  "age": null,
+  "eddAge": null,
+  "bmi": null,
+  "gravidity": 2,
+  "parity": 1,
+  "obh": {
+    "vaginalDelivery": 1,
+    "cesareanSection": 0,
+    "naturalAbortion": null
+  },
+  "hpi": {
+    "lmp": null,
+    "edd": "2026-11-30",
+    "sureEdd": null,
+    "chorionicity": null,
+    "yolksac": {
+      "status": -1,
+      "details": null
+    },
+    "unclassifiedNote": [
+      "血糖异常: 确诊 (上次糖耐量检查确诊了妊娠期糖尿病)",
+      "血糖异常: 控制不好 (控制得不太好。我有时候忍不住想吃水果，空腹血糖在家测有时候是5.6，餐后有时候到8点多)",
+      "血糖异常: 控制不好 (最近有头晕、心慌或者看东西模糊吗？)"
+    ],
+    "conceiveMode": null,
+    "chiefcomplaint": "特别渴，喝水多，尿也多",
+    "sac": {
+      "status": -1,
+      "details": null
+    },
+    "hpiNote": null
+  },
+  "pmh": {
+    "hypertension": {
+      "status": -1,
+      "details": null
+    },
+    "diabetes": {
+      "status": -1,
+      "details": null
+    },
+    "cardiacDisease": {
+      "status": -1,
+      "details": null
+    },
+    "operationHistory": {
+      "status": -1,
+      "details": null
+    },
+    "allergyDrug": {
+      "status": -1,
+      "details": null
+    },
+    "allergyFood": {
+      "status": -1,
+      "details": null
+    },
+    "allergyOther": {
+      "status": -1,
+      "details": null
+    },
+    "medication": [],
+    "transfusionHistory": {
+      "status": -1,
+      "details": null
+    },
+    "nothing": null,
+    "otherNote": [],
+    "unclassifiedNote": []
+  },
+  "additional_medical_history": {
+    "menarche": null,
+    "menstrualCycle": null,
+    "otherNote": [],
+    "menstrualPeriod": null,
+    "menstrualVolume": null,
+    "dysmenorrhea": {
+      "status": -1,
+      "details": null
+    },
+    "maritalStatus": null,
+    "maritalYears": null,
+    "nearRelation": {
+      "status": -1,
+      "details": null
+    }
+  },
+  "personal_history": {
+    "smoke": {
+      "status": -1,
+      "details": null
+    },
+    "alcohol": {
+      "status": -1,
+      "details": null
+    },
+    "hazardoussubstances": {
+      "status": -1,
+      "details": null
+    },
+    "radioactivity": {
+      "status": -1,
+      "details": null
+    },
+    "medicine": {
+      "status": -1,
+      "details": null
+    }
+  },
+  "fh": {
+    "diabetes": {
+      "status": 1,
+      "details": "我爸爸有糖尿病"
+    },
+    "hypertension": {
+      "status": -1,
+      "details": null
+    },
+    "birthdefects": {
+      "status": -1,
+      "details": null
+    },
+    "heritableDisease": {
+      "status": -1,
+      "details": null
+    },
+    "unclassifiedNote": []
+  },
+  "physicalExamination": {
+    "systolic": null,
+    "diastolic": null,
+    "preheight": null,
+    "preweight": null,
+    "otherNote": [],
+    "systolic2": null,
+    "diastolic2": null,
+    "systolic3": null,
+    "diastolic3": null,
+    "pulse": null,
+    "heartrate": null,
+    "weight": null,
+    "bmi": null,
+    "skin": {
+      "status": -1,
+      "details": null
+    },
+    "thyroid": {
+      "status": -1,
+      "details": null
+    },
+    "breast": {
+      "status": -1,
+      "details": null
+    },
+    "respiratory": {
+      "status": -1,
+      "details": null
+    },
+    "rales": {
+      "status": -1,
+      "details": null
+    },
+    "heartrhythm": {
+      "status": -1,
+      "details": null
+    },
+    "murmurs": {
+      "status": -1,
+      "details": null
+    },
+    "liver": {
+      "status": -1,
+      "details": null
+    },
+    "spleen": {
+      "status": -1,
+      "details": null
+    },
+    "spine": {
+      "status": -1,
+      "details": null
+    },
+    "physiologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "pathologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "edema": {
+      "status": -1,
+      "details": null
+    }
+  },
+  "gynecologicalExamination": {
+    "fundalHeight": null,
+    "engagement": null,
+    "otherNote": [],
+    "waistHip": null,
+    "vulva": null,
+    "vagina": null,
+    "cervix": null,
+    "uterus": null,
+    "adnexa": null,
+    "fetusExam": []
+  },
+  "advice": {
+    "prescription": [],
+    "exam": [],
+    "appointmentCycle": null,
+    "appointmentType": null,
+    "appointmentDate": null,
+    "appointmentPeriod": null,
+    "visitDate": null,
+    "doctorName": null
+  }
+}

@@ -1,0 +1,363 @@
+{
+  "sessionId": "test_session_6",
+  "dov": null,
+  "gwov": "36+3",
+  "age": 41,
+  "eddAge": null,
+  "bmi": null,
+  "gravidity": 5,
+  "parity": 1,
+  "obh": [
+    {
+      "gravidityindex": 1,
+      "year": "2007",
+      "month": null,
+      "vaginalDelivery": 1,
+      "cesareanSection": null,
+      "naturalAbortion": null,
+      "medicalAbortion": null,
+      "surgicalAbortion": null,
+      "currettageAbortion": null,
+      "currettage": null,
+      "biochemicalAbortion": null,
+      "inducedLabor": null,
+      "fetusdeath": null,
+      "preterm": null,
+      "term": null,
+      "forceps": null,
+      "vacuumAssisted": null,
+      "breechMidwifery": null,
+      "hemorrhage": null,
+      "puerperalFever": null,
+      "fetalcount": 1,
+      "hospital": null,
+      "exceptionalcase": "2007年顺产过一个宝宝",
+      "children": []
+    },
+    {
+      "gravidityindex": 2,
+      "year": "2009",
+      "month": null,
+      "vaginalDelivery": null,
+      "cesareanSection": null,
+      "naturalAbortion": null,
+      "medicalAbortion": null,
+      "surgicalAbortion": 1,
+      "currettageAbortion": null,
+      "currettage": null,
+      "biochemicalAbortion": null,
+      "inducedLabor": null,
+      "fetusdeath": null,
+      "preterm": null,
+      "term": null,
+      "forceps": null,
+      "vacuumAssisted": null,
+      "breechMidwifery": null,
+      "hemorrhage": null,
+      "puerperalFever": null,
+      "fetalcount": 1,
+      "hospital": null,
+      "exceptionalcase": "2009年做过一次人工流产",
+      "children": []
+    },
+    {
+      "gravidityindex": 3,
+      "year": "2011",
+      "month": null,
+      "vaginalDelivery": null,
+      "cesareanSection": null,
+      "naturalAbortion": null,
+      "medicalAbortion": null,
+      "surgicalAbortion": null,
+      "currettageAbortion": null,
+      "currettage": null,
+      "biochemicalAbortion": null,
+      "inducedLabor": 1,
+      "fetusdeath": null,
+      "preterm": null,
+      "term": null,
+      "forceps": null,
+      "vacuumAssisted": null,
+      "breechMidwifery": null,
+      "hemorrhage": null,
+      "puerperalFever": null,
+      "fetalcount": 1,
+      "hospital": null,
+      "exceptionalcase": "2011年那时候因为我得了白血病，没办法只能引产了",
+      "children": []
+    },
+    {
+      "gravidityindex": 4,
+      "year": "2015",
+      "month": null,
+      "vaginalDelivery": null,
+      "cesareanSection": null,
+      "naturalAbortion": null,
+      "medicalAbortion": null,
+      "surgicalAbortion": null,
+      "currettageAbortion": null,
+      "currettage": null,
+      "biochemicalAbortion": null,
+      "inducedLabor": 1,
+      "fetusdeath": null,
+      "preterm": null,
+      "term": null,
+      "forceps": null,
+      "vacuumAssisted": null,
+      "breechMidwifery": null,
+      "hemorrhage": null,
+      "puerperalFever": null,
+      "fetalcount": 1,
+      "hospital": null,
+      "exceptionalcase": "2015年那次查出是18三体综合征，也引产了",
+      "children": [
+        {
+          "childGender": null,
+          "childLiving": null,
+          "childDeath": null,
+          "childDeathTime": null,
+          "childDeathNote": null,
+          "neonateWeight": null,
+          "sequelaNote": "胎儿18三体综合征"
+        }
+      ]
+    }
+  ],
+  "hpi": {
+    "lmp": "2022-02-12",
+    "edd": "11-21",
+    "sureEdd": null,
+    "conceiveMode": "D6囊胚",
+    "conceiveModeNote": null,
+    "chiefcomplaint": "胎儿生长受限复查",
+    "otherNote": "白血病: 存在；妊娠期糖尿病"
+  },
+  "pmh": {
+    "hypertension": {
+      "status": 0,
+      "details": "患者否认高血压史"
+    },
+    "hypertensionNote": null,
+    "diabetes": {
+      "status": 0,
+      "details": "患者否认孕前糖尿病史"
+    },
+    "diabetesNote": null,
+    "cardiacDisease": {
+      "status": 0,
+      "details": "患者否认心脏病史"
+    },
+    "cardiacDiseaseNote": null,
+    "thyroidDisease": {
+      "status": -1,
+      "details": null
+    },
+    "thyroidDiseaseNote": null,
+    "operationHistory": {
+      "status": -1,
+      "details": null
+    },
+    "operationHistoryNote": null,
+    "allergyDrug": {
+      "status": 0,
+      "details": "患者否认药物过敏史"
+    },
+    "allergyDrugNote": null,
+    "allergyFood": {
+      "status": 1,
+      "details": "患者存在牛肉过敏"
+    },
+    "allergyFoodNote": null,
+    "allergyOther": {
+      "status": -1,
+      "details": null
+    },
+    "allergyOtherNote": null,
+    "transfusionHistory": {
+      "status": 1,
+      "details": "患者存在输血史"
+    },
+    "transfusionHistoryNote": null,
+    "otherNote": "否认肝炎"
+  },
+  "additional_medical_history": {
+    "menarche": null,
+    "menstrualCycle": null,
+    "otherNote": null,
+    "menstrualPeriod": null,
+    "menstrualVolume": null,
+    "dysmenorrhea": {
+      "status": -1,
+      "details": null
+    },
+    "dysmenorrheaNote": null,
+    "maritalStatus": null,
+    "maritalYears": null,
+    "nearRelation": {
+      "status": -1,
+      "details": null
+    },
+    "nearRelationNote": null
+  },
+  "personal_history": {
+    "smoke": {
+      "status": -1,
+      "details": null
+    },
+    "smokeNote": null,
+    "alcohol": {
+      "status": -1,
+      "details": null
+    },
+    "alcoholNote": null,
+    "hazardoussubstances": {
+      "status": -1,
+      "details": null
+    },
+    "hazardoussubstancesNote": null,
+    "radioactivity": {
+      "status": -1,
+      "details": null
+    },
+    "radioactivityNote": null,
+    "medicine": {
+      "status": -1,
+      "details": null
+    },
+    "medicineNote": null,
+    "otherNote": null
+  },
+  "fh": {
+    "diabetes": {
+      "status": -1,
+      "details": null
+    },
+    "diabetesNote": null,
+    "hypertension": {
+      "status": -1,
+      "details": null
+    },
+    "hypertensionNote": null,
+    "birthdefects": {
+      "status": -1,
+      "details": null
+    },
+    "birthdefectsNote": null,
+    "heritableDisease": {
+      "status": -1,
+      "details": null
+    },
+    "heritableDiseaseNote": null,
+    "otherNote": null
+  },
+  "physicalExamination": {
+    "systolic": 116,
+    "diastolic": 73,
+    "preheight": null,
+    "preweight": null,
+    "otherNote": "预估胎儿体重: 2.1 kg",
+    "systolic2": null,
+    "diastolic2": null,
+    "systolic3": null,
+    "diastolic3": null,
+    "pulse": 80,
+    "heartrate": 80,
+    "weight": null,
+    "bmi": null,
+    "skin": {
+      "status": -1,
+      "details": null
+    },
+    "skinNote": null,
+    "thyroid": {
+      "status": -1,
+      "details": null
+    },
+    "thyroidNote": null,
+    "breast": {
+      "status": -1,
+      "details": null
+    },
+    "breastNote": null,
+    "respiratory": {
+      "status": -1,
+      "details": null
+    },
+    "respiratoryNote": null,
+    "rales": {
+      "status": -1,
+      "details": null
+    },
+    "ralesNote": null,
+    "heartrhythm": {
+      "status": -1,
+      "details": null
+    },
+    "heartrhythmNote": null,
+    "murmurs": {
+      "status": -1,
+      "details": null
+    },
+    "murmursNote": null,
+    "liver": {
+      "status": -1,
+      "details": null
+    },
+    "liverNote": null,
+    "spleen": {
+      "status": -1,
+      "details": null
+    },
+    "spleenNote": null,
+    "spine": {
+      "status": -1,
+      "details": null
+    },
+    "spineNote": null,
+    "physiologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "physiologicalreflectionNote": null,
+    "pathologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "pathologicalreflectionNote": null,
+    "edema": {
+      "status": 0,
+      "details": "双下肢无水肿"
+    },
+    "edemaNote": null
+  },
+  "gynecologicalExamination": {
+    "fundalHeight": 31.0,
+    "engagement": null,
+    "otherNote": null,
+    "waistHip": 98.0,
+    "vulva": null,
+    "vagina": null,
+    "cervix": null,
+    "uterus": null,
+    "adnexa": null,
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 145,
+        "fetalPosition": "LOA",
+        "position": "左枕前位",
+        "presentation": "头先露"
+      }
+    ]
+  },
+  "advice": {
+    "prescription": "糖尿病饮食及运动控制；密切观察胎儿生长受限",
+    "exam": null,
+    "appointmentCycle": null,
+    "appointmentType": null,
+    "appointmentDate": null,
+    "appointmentPeriod": null,
+    "visitDate": null,
+    "doctorName": null
+  }
+}

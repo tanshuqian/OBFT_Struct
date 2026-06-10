@@ -1,0 +1,257 @@
+{
+  "sessionId": "test_session_15",
+  "dov": "2026-05-14",
+  "gwov": "39周加6天",
+  "age": 31,
+  "eddAge": null,
+  "bmi": null,
+  "gravidity": 1,
+  "parity": 0,
+  "obh": [],
+  "hpi": {
+    "lmp": "2026-01-23",
+    "edd": "2026-10-30",
+    "sureEdd": "2026-10-30",
+    "chorionicity": null,
+    "yolksac": {
+      "status": -1,
+      "details": null
+    },
+    "yolksacNote": null,
+    "unclassifiedNote": "接触有害物质史: 否认",
+    "conceiveMode": "自然受孕",
+    "conceiveModeNote": null,
+    "chiefcomplaint": "无不适，常规产检",
+    "sac": {
+      "status": -1,
+      "details": null
+    },
+    "sacNote": null,
+    "hpiNote": "4个多小时"
+  },
+  "pmh": {
+    "hypertension": {
+      "status": 0,
+      "details": "患者否认妊娠期高血压"
+    },
+    "hypertensionNote": null,
+    "diabetes": {
+      "status": 0,
+      "details": "患者否认糖尿病"
+    },
+    "diabetesNote": null,
+    "cardiacDisease": {
+      "status": 0,
+      "details": "患者否认心脏病"
+    },
+    "cardiacDiseaseNote": null,
+    "operationHistory": {
+      "status": 0,
+      "details": "患者否认手术史"
+    },
+    "operationHistoryNote": null,
+    "allergyDrug": {
+      "status": -1,
+      "details": null
+    },
+    "allergyDrugNote": null,
+    "allergyFood": {
+      "status": -1,
+      "details": null
+    },
+    "allergyFoodNote": null,
+    "allergyOther": {
+      "status": 0,
+      "details": "患者否认过敏史"
+    },
+    "allergyOtherNote": null,
+    "transfusionHistory": {
+      "status": 0,
+      "details": "患者否认输血史"
+    },
+    "transfusionHistoryNote": null,
+    "nothing": null,
+    "otherNote": null,
+    "unclassifiedNote": null
+  },
+  "additional_medical_history": {
+    "menarche": null,
+    "menstrualCycle": null,
+    "otherNote": "月经规律性: 存在",
+    "menstrualPeriod": null,
+    "menstrualVolume": null,
+    "dysmenorrhea": {
+      "status": -1,
+      "details": null
+    },
+    "dysmenorrheaNote": null,
+    "maritalStatus": null,
+    "maritalYears": null,
+    "nearRelation": {
+      "status": -1,
+      "details": null
+    },
+    "nearRelationNote": null
+  },
+  "personal_history": {
+    "smoke": {
+      "status": 0,
+      "details": "患者否认吸烟史"
+    },
+    "smokeNote": null,
+    "alcohol": {
+      "status": 0,
+      "details": "患者否认饮酒史"
+    },
+    "alcoholNote": null,
+    "hazardoussubstances": {
+      "status": -1,
+      "details": null
+    },
+    "hazardoussubstancesNote": null,
+    "radioactivity": {
+      "status": -1,
+      "details": null
+    },
+    "radioactivityNote": null,
+    "medicine": {
+      "status": -1,
+      "details": null
+    },
+    "medicineNote": null,
+    "otherNote": null
+  },
+  "fh": {
+    "diabetes": {
+      "status": 0,
+      "details": "患者否认家族糖尿病"
+    },
+    "diabetesNote": null,
+    "hypertension": {
+      "status": 0,
+      "details": "患者否认家族高血压"
+    },
+    "hypertensionNote": null,
+    "birthdefects": {
+      "status": -1,
+      "details": null
+    },
+    "birthdefectsNote": null,
+    "heritableDisease": {
+      "status": 0,
+      "details": "患者否认遗传病"
+    },
+    "heritableDiseaseNote": null,
+    "unclassifiedNote": null
+  },
+  "physicalExamination": {
+    "systolic": 112,
+    "diastolic": 76,
+    "preheight": 155.5,
+    "preweight": null,
+    "otherNote": "预估胎儿体重: 3088g±451g",
+    "systolic2": null,
+    "diastolic2": null,
+    "systolic3": null,
+    "diastolic3": null,
+    "pulse": 80,
+    "heartrate": 80,
+    "weight": 62.0,
+    "bmi": null,
+    "skin": {
+      "status": -1,
+      "details": null
+    },
+    "skinNote": null,
+    "thyroid": {
+      "status": -1,
+      "details": null
+    },
+    "thyroidNote": null,
+    "breast": {
+      "status": -1,
+      "details": null
+    },
+    "breastNote": null,
+    "respiratory": {
+      "status": -1,
+      "details": null
+    },
+    "respiratoryNote": null,
+    "rales": {
+      "status": -1,
+      "details": null
+    },
+    "ralesNote": null,
+    "heartrhythm": {
+      "status": -1,
+      "details": null
+    },
+    "heartrhythmNote": null,
+    "murmurs": {
+      "status": -1,
+      "details": null
+    },
+    "murmursNote": null,
+    "liver": {
+      "status": -1,
+      "details": null
+    },
+    "liverNote": null,
+    "spleen": {
+      "status": -1,
+      "details": null
+    },
+    "spleenNote": null,
+    "spine": {
+      "status": -1,
+      "details": null
+    },
+    "spineNote": null,
+    "physiologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "physiologicalreflectionNote": null,
+    "pathologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "pathologicalreflectionNote": null,
+    "edema": {
+      "status": 0,
+      "details": "双下肢无水肿"
+    },
+    "edemaNote": null
+  },
+  "gynecologicalExamination": {
+    "fundalHeight": 33.0,
+    "engagement": null,
+    "otherNote": null,
+    "waistHip": 98.0,
+    "vulva": null,
+    "vagina": null,
+    "cervix": null,
+    "uterus": null,
+    "adnexa": null,
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 145,
+        "fetalPosition": "ROT",
+        "position": "枕右横位",
+        "presentation": "头先露"
+      }
+    ]
+  },
+  "advice": {
+    "prescription": "观察宫缩；规律宫缩或见红破水急诊就诊指征",
+    "exam": null,
+    "appointmentCycle": null,
+    "appointmentType": null,
+    "appointmentDate": null,
+    "appointmentPeriod": null,
+    "visitDate": null,
+    "doctorName": null
+  }
+}

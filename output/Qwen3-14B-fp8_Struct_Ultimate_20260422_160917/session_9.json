@@ -1,0 +1,269 @@
+{
+  "sessionId": "session_9",
+  "dov": "2026-04-22",
+  "gwov": "34周",
+  "age": null,
+  "eddAge": null,
+  "bmi": null,
+  "gravidity": 1,
+  "parity": 0,
+  "obh": [],
+  "hpi": {
+    "lmp": null,
+    "edd": "2026-10-15",
+    "sureEdd": null,
+    "chorionicity": null,
+    "yolksac": {
+      "status": -1,
+      "details": null
+    },
+    "yolksacNote": null,
+    "unclassifiedNote": [
+      "你上次产检确诊了妊娠期糖尿病",
+      "妊娠期糖尿病：最近血糖控制得怎么样？",
+      "妊娠期糖尿病：我空腹血糖有时候5.8，餐后两小时有时候8.5",
+      "妊娠期糖尿病：我已经在打胰岛素了",
+      "妊娠期糖尿病：睡前打一次地特胰岛素",
+      "妊娠期糖尿病：现在加到18个单位了",
+      "妊娠期糖尿病：有，特别是晚上，总是想喝水。这是血糖控制不好的表现"
+    ],
+    "conceiveMode": null,
+    "conceiveModeNote": null,
+    "chiefcomplaint": null,
+    "sac": {
+      "status": -1,
+      "details": null
+    },
+    "sacNote": null,
+    "hpiNote": null
+  },
+  "pmh": {
+    "hypertension": {
+      "status": -1,
+      "details": null
+    },
+    "hypertensionNote": null,
+    "diabetes": {
+      "status": -1,
+      "details": null
+    },
+    "diabetesNote": null,
+    "cardiacDisease": {
+      "status": -1,
+      "details": null
+    },
+    "cardiacDiseaseNote": null,
+    "operationHistory": {
+      "status": -1,
+      "details": null
+    },
+    "operationHistoryNote": null,
+    "allergyDrug": {
+      "status": -1,
+      "details": null
+    },
+    "allergyDrugNote": null,
+    "allergyFood": {
+      "status": -1,
+      "details": null
+    },
+    "allergyFoodNote": null,
+    "allergyOther": {
+      "status": -1,
+      "details": null
+    },
+    "allergyOtherNote": null,
+    "medication": [],
+    "transfusionHistory": {
+      "status": -1,
+      "details": null
+    },
+    "transfusionHistoryNote": null,
+    "nothing": null,
+    "otherNote": [],
+    "unclassifiedNote": []
+  },
+  "additional_medical_history": {
+    "menarche": null,
+    "menstrualCycle": null,
+    "otherNote": [],
+    "menstrualPeriod": null,
+    "menstrualVolume": null,
+    "dysmenorrhea": {
+      "status": -1,
+      "details": null
+    },
+    "dysmenorrheaNote": null,
+    "maritalStatus": null,
+    "maritalYears": null,
+    "nearRelation": {
+      "status": -1,
+      "details": null
+    },
+    "nearRelationNote": null
+  },
+  "personal_history": {
+    "smoke": {
+      "status": -1,
+      "details": null
+    },
+    "smokeNote": null,
+    "alcohol": {
+      "status": -1,
+      "details": null
+    },
+    "alcoholNote": null,
+    "hazardoussubstances": {
+      "status": -1,
+      "details": null
+    },
+    "hazardoussubstancesNote": null,
+    "radioactivity": {
+      "status": -1,
+      "details": null
+    },
+    "radioactivityNote": null,
+    "medicine": {
+      "status": -1,
+      "details": null
+    },
+    "medicineNote": null
+  },
+  "fh": {
+    "diabetes": {
+      "status": 1,
+      "details": "我妈妈有"
+    },
+    "diabetesNote": "我妈妈有",
+    "hypertension": {
+      "status": -1,
+      "details": null
+    },
+    "hypertensionNote": null,
+    "birthdefects": {
+      "status": -1,
+      "details": null
+    },
+    "birthdefectsNote": null,
+    "heritableDisease": {
+      "status": -1,
+      "details": null
+    },
+    "heritableDiseaseNote": null,
+    "unclassifiedNote": []
+  },
+  "physicalExamination": {
+    "systolic": null,
+    "diastolic": null,
+    "preheight": null,
+    "preweight": null,
+    "otherNote": [],
+    "systolic2": null,
+    "diastolic2": null,
+    "systolic3": null,
+    "diastolic3": null,
+    "pulse": null,
+    "heartrate": null,
+    "weight": null,
+    "bmi": null,
+    "skin": {
+      "status": -1,
+      "details": null
+    },
+    "skinNote": null,
+    "thyroid": {
+      "status": -1,
+      "details": null
+    },
+    "thyroidNote": null,
+    "breast": {
+      "status": -1,
+      "details": null
+    },
+    "breastNote": null,
+    "respiratory": {
+      "status": -1,
+      "details": null
+    },
+    "respiratoryNote": null,
+    "rales": {
+      "status": -1,
+      "details": null
+    },
+    "ralesNote": null,
+    "heartrhythm": {
+      "status": -1,
+      "details": null
+    },
+    "heartrhythmNote": null,
+    "murmurs": {
+      "status": -1,
+      "details": null
+    },
+    "murmursNote": null,
+    "liver": {
+      "status": -1,
+      "details": null
+    },
+    "liverNote": null,
+    "spleen": {
+      "status": -1,
+      "details": null
+    },
+    "spleenNote": null,
+    "spine": {
+      "status": -1,
+      "details": null
+    },
+    "spineNote": null,
+    "physiologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "physiologicalreflectionNote": null,
+    "pathologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "pathologicalreflectionNote": null,
+    "edema": {
+      "status": -1,
+      "details": null
+    },
+    "edemaNote": null
+  },
+  "gynecologicalExamination": {
+    "fundalHeight": null,
+    "engagement": null,
+    "otherNote": [
+      "GBS检查: 阳性 (GBS检查是阳性)"
+    ],
+    "waistHip": null,
+    "vulva": null,
+    "vagina": null,
+    "cervix": null,
+    "uterus": null,
+    "adnexa": null,
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 138,
+        "fetalPosition": null,
+        "position": null,
+        "presentation": null
+      }
+    ]
+  },
+  "advice": {
+    "prescription": [
+      "做B超，调整胰岛素用量，如果空腹血糖控制不住，加地特胰岛素到20个单位 (今天我们先做一个B超，看看胎儿大小和羊水量，然后根据结果调整胰岛素用量。如果空腹血糖还控制不住，我们可能要把地特胰岛素加到20个单位)"
+    ],
+    "exam": [],
+    "appointmentCycle": null,
+    "appointmentType": null,
+    "appointmentDate": null,
+    "appointmentPeriod": null,
+    "visitDate": null,
+    "doctorName": null
+  }
+}

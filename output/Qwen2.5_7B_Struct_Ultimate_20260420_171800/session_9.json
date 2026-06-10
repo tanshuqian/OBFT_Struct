@@ -1,0 +1,237 @@
+{
+  "sessionId": "session_9",
+  "dov": "2026-04-01",
+  "gwov": "34周",
+  "age": null,
+  "eddAge": null,
+  "bmi": null,
+  "gravidity": 1,
+  "parity": 0,
+  "obh": {
+    "vaginalDelivery": null,
+    "cesareanSection": null,
+    "naturalAbortion": null
+  },
+  "hpi": {
+    "lmp": null,
+    "edd": "2026-10-15",
+    "sureEdd": null,
+    "chorionicity": null,
+    "yolksac": {
+      "status": -1,
+      "details": null
+    },
+    "unclassifiedNote": [
+      "血糖异常: 确诊 (上次产检确诊了妊娠期糖尿病)",
+      "血糖异常: 控制不好 (还是不太行。我空腹血糖有时候5.8，餐后两小时有时候8.5，我已经在打胰岛素了，但还是会高)",
+      "血糖异常: 控制不好 (有，特别是晚上，总是想喝水。这是血糖控制不好的表现)",
+      "胎动: 有时候动得特别多 (感觉有时候动得特别多)"
+    ],
+    "conceiveMode": null,
+    "chiefcomplaint": null,
+    "sac": {
+      "status": -1,
+      "details": null
+    },
+    "hpiNote": null
+  },
+  "pmh": {
+    "hypertension": {
+      "status": -1,
+      "details": null
+    },
+    "diabetes": {
+      "status": -1,
+      "details": null
+    },
+    "cardiacDisease": {
+      "status": -1,
+      "details": null
+    },
+    "operationHistory": {
+      "status": -1,
+      "details": null
+    },
+    "allergyDrug": {
+      "status": -1,
+      "details": null
+    },
+    "allergyFood": {
+      "status": -1,
+      "details": null
+    },
+    "allergyOther": {
+      "status": -1,
+      "details": null
+    },
+    "medication": [
+      "地特胰岛素|糖尿病 (睡前打一次地特胰岛素，现在加到18个单位了，空腹还是降不下来)"
+    ],
+    "transfusionHistory": {
+      "status": -1,
+      "details": null
+    },
+    "nothing": null,
+    "otherNote": [],
+    "unclassifiedNote": []
+  },
+  "additional_medical_history": {
+    "menarche": null,
+    "menstrualCycle": null,
+    "otherNote": [],
+    "menstrualPeriod": null,
+    "menstrualVolume": null,
+    "dysmenorrhea": {
+      "status": -1,
+      "details": null
+    },
+    "maritalStatus": null,
+    "maritalYears": null,
+    "nearRelation": {
+      "status": -1,
+      "details": null
+    }
+  },
+  "personal_history": {
+    "smoke": {
+      "status": -1,
+      "details": null
+    },
+    "alcohol": {
+      "status": -1,
+      "details": null
+    },
+    "hazardoussubstances": {
+      "status": -1,
+      "details": null
+    },
+    "radioactivity": {
+      "status": -1,
+      "details": null
+    },
+    "medicine": {
+      "status": -1,
+      "details": null
+    }
+  },
+  "fh": {
+    "diabetes": {
+      "status": 1,
+      "details": "我妈妈有"
+    },
+    "hypertension": {
+      "status": -1,
+      "details": null
+    },
+    "birthdefects": {
+      "status": -1,
+      "details": null
+    },
+    "heritableDisease": {
+      "status": -1,
+      "details": null
+    },
+    "unclassifiedNote": []
+  },
+  "physicalExamination": {
+    "systolic": null,
+    "diastolic": null,
+    "preheight": null,
+    "preweight": null,
+    "otherNote": [],
+    "systolic2": null,
+    "diastolic2": null,
+    "systolic3": null,
+    "diastolic3": null,
+    "pulse": null,
+    "heartrate": null,
+    "weight": null,
+    "bmi": null,
+    "skin": {
+      "status": -1,
+      "details": null
+    },
+    "thyroid": {
+      "status": -1,
+      "details": null
+    },
+    "breast": {
+      "status": -1,
+      "details": null
+    },
+    "respiratory": {
+      "status": -1,
+      "details": null
+    },
+    "rales": {
+      "status": -1,
+      "details": null
+    },
+    "heartrhythm": {
+      "status": -1,
+      "details": null
+    },
+    "murmurs": {
+      "status": -1,
+      "details": null
+    },
+    "liver": {
+      "status": -1,
+      "details": null
+    },
+    "spleen": {
+      "status": -1,
+      "details": null
+    },
+    "spine": {
+      "status": -1,
+      "details": null
+    },
+    "physiologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "pathologicalreflection": {
+      "status": -1,
+      "details": null
+    },
+    "edema": {
+      "status": -1,
+      "details": null
+    }
+  },
+  "gynecologicalExamination": {
+    "fundalHeight": null,
+    "engagement": null,
+    "otherNote": [
+      "GBS阳性: 阳性 (GBS检查是阳性)"
+    ],
+    "waistHip": null,
+    "vulva": null,
+    "vagina": null,
+    "cervix": null,
+    "uterus": null,
+    "adnexa": null,
+    "fetusExam": [
+      {
+        "index": 1,
+        "fetalHeartRate": 138,
+        "fetalPosition": null,
+        "position": null,
+        "presentation": null
+      }
+    ]
+  },
+  "advice": {
+    "prescription": [
+      "临产或破水时用抗生素，今天做B超，调整胰岛素用量，必要时加到20个单位 (今天我们先做一个B超，看看胎儿大小和羊水量，然后根据结果调整胰岛素用量。如果空腹血糖还控制不住，我们可能要把地特胰岛素加到20个单位)"
+    ],
+    "exam": [],
+    "appointmentCycle": null,
+    "appointmentType": null,
+    "appointmentDate": null,
+    "appointmentPeriod": null,
+    "visitDate": null,
+    "doctorName": null
+  }
+}

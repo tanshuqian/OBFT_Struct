@@ -1,0 +1,304 @@
+Compare Report
+pred_dir: output\Stage2_4_After_LLM_20260528_191529
+gold_dir: data\output\standard_medical_record_20
+generated_at: 2026-05-28 19:15:50
+
+Summary
+- missing: 53
+- extra: 63
+- mismatch: 176
+- soft_mismatch: 23
+
+Top fields
+- hpi.chiefcomplaint: 20
+- advice.prescription: 19
+- hpi.otherNote: 17
+- pmh.transfusionHistory.details: 15
+- pmh.operationHistory.details: 14
+- personal_history.hazardoussubstances.details: 13
+- pmh.otherNote: 12
+- personal_history.radioactivity.details: 10
+- physicalExamination.otherNote: 10
+- personal_history.alcohol.details: 8
+- personal_history.alcohol.status: 8
+- personal_history.hazardoussubstances.status: 8
+- personal_history.radioactivity.status: 8
+- personal_history.smoke.details: 8
+- personal_history.smoke.status: 8
+- personal_history.medicine.details: 7
+- pmh.diabetes.details: 7
+- pmh.hypertension.details: 7
+- obh[1].exceptionalcase: 7
+- fh.hypertension.details: 6
+
+session_1:
+  missing=2 extra=0 mismatch=8 soft=1
+  - missing: pmh.allergyFood.details | gold=患者否认食物过敏史 | pred=None
+  - missing: pmh.allergyOther.details | gold=患者否认其他过敏史 | pred=None
+  - mismatch: hpi.chiefcomplaint | gold=过期妊娠伴胎心监护异常 | pred=过期妊娠，胎心监护异常
+  - mismatch: hpi.otherNote | gold=近一周胎心监护反应欠佳 | pred=患者糖耐量检查结果正常: 正常；患者本次妊娠为过期妊娠
+  - mismatch: personal_history.medicine.details | gold=孕期曾口服四环素（已停用），外用异维A酸4次 | pred=患者停经6周多到8周多孕期口服四环素治疗痤疮；患者4次孕期外用异维A酸药膏治疗痤疮
+  - mismatch: pmh.allergyFood.status | gold=0 | pred=-1
+  - mismatch: pmh.allergyOther.status | gold=0 | pred=-1
+  - soft_mismatch: advice.prescription | gold=拟尽快终止妊娠 | pred=尽快终止妊娠
+
+session_2:
+  missing=0 extra=5 mismatch=13 soft=1
+  - extra: personal_history.alcohol.details | gold=None | pred=患者否认饮酒史
+  - extra: personal_history.hazardoussubstances.details | gold=None | pred=患者否认有害化学物质接触史
+  - extra: personal_history.radioactivity.details | gold=None | pred=患者否认放射性物质接触史
+  - extra: personal_history.smoke.details | gold=None | pred=患者否认吸烟史
+  - extra: pmh.transfusionHistory.details | gold=None | pred=患者否认既往输血史
+  - mismatch: advice.prescription | gold=嘱监测胎动；如有临产先兆随时就诊 | pred=注意胎动监测；观察见红、破水、规律腹痛情况随时就诊
+  - mismatch: fh.diabetes.details | gold=家族糖尿病病史（父） | pred=父亲存在糖尿病病史
+  - mismatch: fh.heritableDisease.details | gold=否认家族遗传病史 | pred=否认家族遗传病或先天畸形史
+  - mismatch: fh.hypertension.details | gold=家族高血压病史（母） | pred=母亲存在高血压病史
+  - mismatch: hpi.otherNote | gold=妊娠期贫血（血红蛋白101g/L） | pred=血红蛋白: 101g/L；患者存在贫血
+  - soft_mismatch: hpi.chiefcomplaint | gold=常规产检 | pred=无不适，常规产检
+
+session_3:
+  missing=1 extra=5 mismatch=12 soft=2
+  - missing: pmh.operationHistory.details | gold=既往有剖宫产史 | pred=None
+  - extra: obh[3].fetalcount | gold=None | pred=1
+  - extra: personal_history.alcohol.details | gold=None | pred=患者否认饮酒史
+  - extra: personal_history.hazardoussubstances.details | gold=None | pred=患者否认有害化学物质接触史
+  - extra: personal_history.radioactivity.details | gold=None | pred=患者否认放射性物质接触史
+  - extra: personal_history.smoke.details | gold=None | pred=患者否认吸烟史
+  - mismatch: advice.prescription | gold=嘱按时服用优甲乐；注意数胎动；按时复诊 | pred=继续服用优甲乐；注意胎动监测
+  - mismatch: fh.diabetes.details | gold=家族糖尿病史（母） | pred=母亲存在糖尿病病史
+  - mismatch: obh[1].exceptionalcase | gold=2014年第一胎顺产 | pred=2014年第一胎是顺产的
+  - mismatch: obh[2].exceptionalcase | gold=2017年第二胎剖宫产 | pred=2017年第二胎是剖宫产
+  - mismatch: obh[3].exceptionalcase | gold=2019年人工流产 | pred=2019年做过一次人工流产
+  - soft_mismatch: hpi.chiefcomplaint | gold=常规产检 | pred=无不适，常规产检
+  - soft_mismatch: pmh.thyroidDisease.details | gold=患者存在甲状腺功能减退 | pred=患者存在甲状腺功能减退症病史
+
+session_4:
+  missing=0 extra=3 mismatch=2 soft=2
+  - extra: fh.otherNote | gold=None | pred=患者否认家族精神病史: 否认；患者否认家族肿瘤病史: 否认
+  - extra: hpi.otherNote | gold=None | pred=患者胎头已下降: 存在
+  - extra: obh[2].year | gold=None | pred=2018
+  - mismatch: advice.prescription | gold=拟行胎心监护 | pred=胎心监护检查
+  - mismatch: personal_history.medicine.details | gold=服药史：孕期曾使用地塞米松，6mg/12h | pred=患者6mg/12小时孕期使用地塞米松促胎肺成熟
+  - soft_mismatch: hpi.chiefcomplaint | gold=下腹胀痛半小时 | pred=下腹胀痛
+  - soft_mismatch: pmh.otherNote | gold=患者否认肝炎病史 | pred=否认患者否认肝炎病史
+
+session_5:
+  missing=1 extra=3 mismatch=2 soft=1
+  - missing: advice.prescription | gold=拟行胎心监护；需观察宫缩情况 | pred=None
+  - extra: fh.otherNote | gold=None | pred=患者否认家族精神病史: 否认；患者否认家族肿瘤病史: 否认
+  - extra: hpi.otherNote | gold=None | pred=患者本次妊娠孕周；医嘱予胎心监护检查: 执行；医嘱予观察宫缩情况: 执行；半小时
+  - extra: obh[2].year | gold=None | pred=2018
+  - mismatch: hpi.chiefcomplaint | gold=下腹胀痛半小时 | pred=下腹胀痛；下肢胀痛
+  - mismatch: personal_history.medicine.details | gold=服药史：孕期曾使用地塞米松，6mg/12h | pred=患者6mg/12小时孕期口服地塞米松促胎肺成熟
+  - soft_mismatch: pmh.otherNote | gold=患者否认肝炎病史 | pred=否认患者否认肝炎病史
+
+session_6:
+  missing=2 extra=4 mismatch=11 soft=2
+  - missing: fh.heritableDisease.details | gold=2015年妊娠曾确诊胎儿18三体综合征 | pred=None
+  - missing: obh[4].year | gold=2015 | pred=None
+  - extra: personal_history.alcohol.details | gold=None | pred=患者否认饮酒史
+  - extra: personal_history.hazardoussubstances.details | gold=None | pred=患者否认有害化学物质接触史
+  - extra: personal_history.radioactivity.details | gold=None | pred=患者否认放射性物质接触史
+  - extra: personal_history.smoke.details | gold=None | pred=患者否认吸烟史
+  - mismatch: fh.heritableDisease.status | gold=1 | pred=-1
+  - mismatch: hpi.chiefcomplaint | gold=发现胎儿生长受限3月余，今来院复查 | pred=无不适，常规产检
+  - mismatch: hpi.conceiveMode | gold=PGT术D6囊胚移植 | pred=PGT术后移植D6囊胚
+  - mismatch: hpi.otherNote | gold=合并妊娠期糖尿病（外院OGTT：空腹5.30mmol/L，1h 11.16mmol/L，2h 9.12mmol/L） | pred=患者2011年患有白血病: 2011年；患者存在妊娠期糖尿病病史；患者OGTT空腹血糖值: 5.30mmol/L；患者OGTT1小时血糖值: 11.16mmol/L；患者OGTT2小时血糖值: 9.12mmol/L；医嘱予妊娠期糖尿病饮食控制
+  - mismatch: personal_history.alcohol.status | gold=-1 | pred=0
+  - soft_mismatch: advice.prescription | gold=嘱糖尿病饮食及运动控制血糖；密切观察胎儿生长受限情况，如有不适随时就诊 | pred=运动控制血糖；密切观察胎儿生长受限情况
+  - soft_mismatch: obh[4].exceptionalcase | gold=2015年那次查出是18三体综合征，也引产了 | pred=也引产了
+
+session_7:
+  missing=0 extra=6 mismatch=10 soft=1
+  - extra: hpi.otherNote | gold=None | pred=患者糖耐量检查结果正常: 正常；胎膜早破
+  - extra: personal_history.alcohol.details | gold=None | pred=患者否认饮酒史
+  - extra: personal_history.hazardoussubstances.details | gold=None | pred=患者否认有害化学物质接触史
+  - extra: personal_history.radioactivity.details | gold=None | pred=患者否认放射性物质接触史
+  - extra: personal_history.smoke.details | gold=None | pred=患者否认吸烟史
+  - mismatch: advice.prescription | gold=拟住院观察；具体分娩方式根据后续产程再评估 | pred=住院观察；分娩方式再评估
+  - mismatch: personal_history.alcohol.status | gold=-1 | pred=0
+  - mismatch: personal_history.hazardoussubstances.status | gold=-1 | pred=0
+  - mismatch: personal_history.radioactivity.status | gold=-1 | pred=0
+  - mismatch: personal_history.smoke.status | gold=-1 | pred=0
+  - soft_mismatch: hpi.chiefcomplaint | gold=阴道流液4小时 | pred=阴道流液
+
+session_8:
+  missing=3 extra=1 mismatch=6 soft=0
+  - missing: hpi.otherNote | gold=考虑未足月胎膜早破 | pred=None
+  - missing: hpi.sureEdd | gold=11-23 | pred=None
+  - missing: pmh.otherNote | gold=患者否认肝炎病史 | pred=None
+  - extra: hpi.edd | gold=None | pred=11-23
+  - mismatch: advice.prescription | gold=拟收入院观察保胎 | pred=住院观察保胎
+  - mismatch: fh.diabetes.details | gold=家族糖尿病史（母） | pred=母亲患有糖尿病
+  - mismatch: hpi.chiefcomplaint | gold=阴道流液3小时 | pred=阴道流液；存在未足月胎膜早破
+  - mismatch: pmh.diabetes.details | gold=患者否认糖尿病史 | pred=患者否认糖尿病及妊娠期糖尿病史
+  - mismatch: pmh.operationHistory.details | gold=2020年行开腹子宫肌瘤剔除术 | pred=患者存在既往开腹子宫肌瘤剔除术
+
+session_9:
+  missing=13 extra=2 mismatch=10 soft=4
+  - missing: fh.diabetes.details | gold=否认家族糖尿病史 | pred=None
+  - missing: fh.heritableDisease.details | gold=否认家族遗传病史 | pred=None
+  - missing: hpi.conceiveModeNote | gold=体外受精-胚胎移植（D5囊胚） | pred=None
+  - missing: hpi.edd | gold=11-03 | pred=None
+  - missing: obh[1].exceptionalcase | gold=既往有1次顺产史 | pred=None
+  - extra: hpi.sureEdd | gold=None | pred=11-03
+  - extra: pmh.allergyFood.details | gold=None | pred=患者否认食物过敏史
+  - mismatch: fh.diabetes.status | gold=0 | pred=-1
+  - mismatch: fh.heritableDisease.status | gold=0 | pred=-1
+  - mismatch: gravidity | gold=2 | pred=1
+  - mismatch: hpi.otherNote | gold=确诊妊娠期糖尿病；考虑胎膜早破 | pred=患者存在妊娠期糖尿病；胎膜早破
+  - mismatch: parity | gold=1 | pred=0
+  - soft_mismatch: advice.prescription | gold=拟住院观察 | pred=住院观察
+  - soft_mismatch: hpi.chiefcomplaint | gold=停经39+3周，阴道流液15分钟 | pred=阴道流液
+  - soft_mismatch: hpi.conceiveMode | gold=IVF-ET | pred=IVF
+  - soft_mismatch: physicalExamination.edema.details | gold=双下肢无水肿 | pred=双下肢无水肿情况
+
+session_10:
+  missing=8 extra=6 mismatch=14 soft=0
+  - missing: hpi.sureEdd | gold=11-01 | pred=None
+  - missing: obh[1].children[1].neonateWeight | gold=3.5 | pred=None
+  - missing: obh[1].exceptionalcase | gold=2020年10月顺产1胎（胎儿体重3.5kg） | pred=None
+  - missing: obh[1].fetalcount | gold=1 | pred=None
+  - missing: obh[1].gravidityindex | gold=1 | pred=None
+  - extra: hpi.edd | gold=None | pred=2022-11-01
+  - extra: personal_history.alcohol.details | gold=None | pred=患者否认饮酒史
+  - extra: personal_history.hazardoussubstances.details | gold=None | pred=患者否认有害化学物质接触史
+  - extra: personal_history.radioactivity.details | gold=None | pred=患者否认放射性物质接触史
+  - extra: personal_history.smoke.details | gold=None | pred=患者否认吸烟史
+  - mismatch: advice.prescription | gold=嘱继续饮食控制；严密监测血糖 | pred=饮食控制；血糖监测
+  - mismatch: fh.diabetes.details | gold=家族糖尿病史（父） | pred=父亲患有糖尿病
+  - mismatch: gravidity | gold=2 | pred=1
+  - mismatch: hpi.chiefcomplaint | gold=发现血糖升高2月余 | pred=无不适，常规产检
+  - mismatch: hpi.otherNote | gold=确诊妊娠期糖尿病 | pred=患者存在血糖升高情况: 血糖升高2月余；患者诊断为妊娠期糖尿病；患者存在妊娠期糖尿病病史
+
+session_11:
+  missing=1 extra=6 mismatch=7 soft=1
+  - missing: hpi.otherNote | gold=OGTT无异常；阴道流液考虑胎膜早破 | pred=None
+  - extra: hpi.edd | gold=None | pred=10-26
+  - extra: obh[1].exceptionalcase | gold=None | pred=希望能顺产
+  - extra: obh[1].fetalcount | gold=None | pred=1
+  - extra: obh[1].gravidityindex | gold=None | pred=1
+  - extra: obh[1].vaginalDelivery | gold=None | pred=1
+  - mismatch: gravidity | gold=1 | pred=2
+  - mismatch: hpi.chiefcomplaint | gold=下腹紧缩感伴阴道流液1+小时 | pred=阵发性宫缩伴阴道流液一个多小时前
+  - mismatch: parity | gold=0 | pred=1
+  - mismatch: personal_history.radioactivity.details | gold=患者否认放射性物质接触史 | pred=患者否认放射性接触
+  - mismatch: pmh.diabetes.details | gold=患者否认糖尿病史 | pred=患者否认糖尿病及妊娠期糖尿病史
+  - soft_mismatch: advice.prescription | gold=拟办理住院待产 | pred=住院待产
+
+session_12:
+  missing=1 extra=4 mismatch=11 soft=0
+  - missing: hpi.otherNote | gold=伴胸闷气短 | pred=None
+  - extra: personal_history.alcohol.details | gold=None | pred=患者否认饮酒史
+  - extra: personal_history.hazardoussubstances.details | gold=None | pred=患者否认有害化学物质接触史
+  - extra: personal_history.radioactivity.details | gold=None | pred=患者否认放射性物质接触史
+  - extra: personal_history.smoke.details | gold=None | pred=患者否认吸烟史
+  - mismatch: advice.prescription | gold=暂予观察；继续定期产检；如有规律腹痛、见红或破水及时就诊 | pred=继续定期产检；出现规律腹痛或见红破水时及时就诊
+  - mismatch: hpi.chiefcomplaint | gold=阵发性腹痛1小时余 | pred=阵发性腹痛；存在胸闷气短症状胸闷气短
+  - mismatch: personal_history.alcohol.status | gold=-1 | pred=0
+  - mismatch: personal_history.hazardoussubstances.status | gold=-1 | pred=0
+  - mismatch: personal_history.radioactivity.status | gold=-1 | pred=0
+
+session_13:
+  missing=4 extra=9 mismatch=12 soft=2
+  - missing: advice.prescription | gold=因巨大儿拟行剖宫产术终止妊娠 | pred=None
+  - missing: hpi.conceiveModeNote | gold=体外受精-胚胎移植术后 | pred=None
+  - missing: physicalExamination.preheight | gold=165 | pred=None
+  - missing: physicalExamination.weight | gold=71 | pred=None
+  - extra: hpi.edd | gold=None | pred=11-03
+  - extra: obh[1].cesareanSection | gold=None | pred=1
+  - extra: obh[1].exceptionalcase | gold=None | pred=我们计划给您做剖宫产术来终止妊娠
+  - extra: obh[1].fetalcount | gold=None | pred=1
+  - extra: obh[1].gravidityindex | gold=None | pred=1
+  - mismatch: fh.hypertension.details | gold=家族高血压病史（母） | pred=母亲存在高血压病史
+  - mismatch: gravidity | gold=1 | pred=2
+  - mismatch: hpi.chiefcomplaint | gold=近期无明显不适，自觉腹部沉重感 | pred=近期无明显不适；腹部沉重感
+  - mismatch: hpi.otherNote | gold=预估胎儿体重偏大（巨大儿） | pred=患者糖耐量测试结果正常: 正常
+  - mismatch: parity | gold=0 | pred=1
+  - soft_mismatch: physicalExamination.edema.details | gold=双下肢无水肿 | pred=双下肢无水肿情况
+  - soft_mismatch: pmh.otherNote | gold=患者否认肝炎病史 | pred=否认患者否认肝炎病史
+
+session_14:
+  missing=1 extra=1 mismatch=7 soft=1
+  - missing: hpi.otherNote | gold=患者诉糖耐量试验（OGTT）无异常 | pred=None
+  - extra: pmh.allergyOther.details | gold=None | pred=患者否认其他过敏史
+  - mismatch: advice.prescription | gold=嘱观察宫缩频率及强度；若出现规律宫缩、见红或破水，需及时就诊 | pred=观察宫缩频率和强度；出现规律宫缩或见红破水时急诊就诊
+  - mismatch: personal_history.hazardoussubstances.details | gold=患者否认有害物质接触史 | pred=患者否认有害化学物质接触史
+  - mismatch: physicalExamination.otherNote | gold=预估胎儿体重3088g（±451g） | pred=预估胎儿体重3.088kg±0.451Kg
+  - mismatch: pmh.allergyOther.status | gold=-1 | pred=0
+  - mismatch: pmh.hypertension.details | gold=患者否认高血压病史 | pred=患者否认妊娠期高血压病史
+  - soft_mismatch: hpi.chiefcomplaint | gold=下腹紧缩感4小时余 | pred=下腹紧缩感
+
+session_15:
+  missing=1 extra=1 mismatch=6 soft=1
+  - missing: hpi.otherNote | gold=患者诉糖耐量试验（OGTT）无异常 | pred=None
+  - extra: pmh.allergyOther.details | gold=None | pred=患者否认其他过敏史
+  - mismatch: advice.prescription | gold=嘱观察宫缩频率及强度；若出现规律宫缩、见红或破水，需及时就诊 | pred=观察宫缩频率和强度；出现规律宫缩或见红破水时急诊就诊
+  - mismatch: personal_history.hazardoussubstances.details | gold=患者否认有害物质接触史 | pred=患者否认有害化学物质接触史
+  - mismatch: physicalExamination.otherNote | gold=预估胎儿体重3088g（±451g） | pred=预估胎儿体重3.088kg±0.451Kg
+  - mismatch: pmh.allergyOther.status | gold=-1 | pred=0
+  - mismatch: pmh.operationHistory.details | gold=患者否认手术史 | pred=患者否认既往手术史
+  - soft_mismatch: hpi.chiefcomplaint | gold=下腹紧缩感4小时余 | pred=下腹紧缩感
+
+session_16:
+  missing=1 extra=4 mismatch=11 soft=1
+  - missing: age | gold=29 | pred=None
+  - extra: personal_history.alcohol.details | gold=None | pred=患者否认饮酒史
+  - extra: personal_history.hazardoussubstances.details | gold=None | pred=患者否认有害化学物质接触史
+  - extra: personal_history.radioactivity.details | gold=None | pred=患者否认放射性物质接触史
+  - extra: personal_history.smoke.details | gold=None | pred=患者否认吸烟史
+  - mismatch: advice.prescription | gold=嘱观察宫缩情况；若出现规律腹痛或破水及时来院就诊准备住院 | pred=观察宫缩情况；出现规律腹痛或破水时随时就诊住院
+  - mismatch: hpi.chiefcomplaint | gold=阴道血性分泌物3小时 | pred=血性分泌物；见红症状
+  - mismatch: personal_history.alcohol.status | gold=-1 | pred=0
+  - mismatch: personal_history.hazardoussubstances.status | gold=-1 | pred=0
+  - mismatch: personal_history.medicine.details | gold=患者否认近期服药史 | pred=患者否认孕期服药史
+  - soft_mismatch: physicalExamination.otherNote | gold=预估胎儿体重2.7kg | pred=预估胎儿体重2.7kg；预估胎儿体重合适
+
+session_17:
+  missing=3 extra=1 mismatch=12 soft=1
+  - missing: obh[1].children[1].neonateWeight | gold=3.5 | pred=None
+  - missing: obh[2].children[1].neonateWeight | gold=3.5 | pred=None
+  - missing: personal_history.medicine.details | gold=患者诉目前未服用降糖药物 | pred=None
+  - extra: physicalExamination.otherNote | gold=None | pred=预估胎儿体重3.5kg
+  - mismatch: advice.prescription | gold=嘱严密监测血压；若出现规律腹痛、见红或破水等临产先兆，需及时急诊就医 | pred=患者注意临产征兆；血压监测
+  - mismatch: fh.hypertension.details | gold=否认家族高血压史 | pred=否认家族高血压病史
+  - mismatch: hpi.otherNote | gold=合并妊娠期糖尿病（目前未行药物治疗） | pred=患者存在妊娠期糖尿病病史；患者通过饮食及运动控制血糖: 饮食及运动控制
+  - mismatch: obh[1].exceptionalcase | gold=既往有2次顺产史（新生儿体重约3.5kg）；否认流产史 | pred=都是顺产的
+  - mismatch: obh[2].exceptionalcase | gold=既往有2次顺产史（新生儿体重约3.5kg）；否认流产史 | pred=都是顺产的
+  - soft_mismatch: hpi.chiefcomplaint | gold=常规产检 | pred=常规产检常规产检
+
+session_18:
+  missing=8 extra=1 mismatch=10 soft=1
+  - missing: advice.prescription | gold=拟行宫颈条件综合评估 | pred=None
+  - missing: obh[1].children[1].neonateWeight | gold=2.7 | pred=None
+  - missing: obh[2].exceptionalcase | gold=2020年自然流产1次 | pred=None
+  - missing: obh[2].fetalcount | gold=1 | pred=None
+  - missing: obh[2].gravidityindex | gold=2 | pred=None
+  - extra: physicalExamination.otherNote | gold=None | pred=预估胎儿体重2.7kg
+  - mismatch: fh.hypertension.details | gold=否认家族高血压史 | pred=否认家族高血压病史
+  - mismatch: gravidity | gold=3 | pred=2
+  - mismatch: hpi.chiefcomplaint | gold=规律下腹痛2+小时 | pred=规律性腹痛
+  - mismatch: hpi.otherNote | gold=患者诉孕期糖耐量试验（OGTT）无异常 | pred=患者既往OGTT检查结果正常: OGTT正常
+  - mismatch: personal_history.hazardoussubstances.details | gold=患者否认有害物质接触史 | pred=患者否认有害化学物质接触史
+  - soft_mismatch: obh[1].exceptionalcase | gold=2019年顺产1胎（新生儿体重2.7kg） | pred=顺产
+
+session_19:
+  missing=3 extra=1 mismatch=6 soft=0
+  - missing: hpi.conceiveModeNote | gold=经人工授精（IUI）辅助生殖技术受孕 | pred=None
+  - missing: hpi.otherNote | gold=伴不规律宫缩；患者诉孕期糖耐量试验（OGTT）无异常 | pred=None
+  - missing: pmh.otherNote | gold=患者否认肝炎病史 | pred=None
+  - extra: advice.exam | gold=None | pred=胎心监护检查
+  - mismatch: advice.prescription | gold=拟行胎儿电子监护（NST）以评估宫缩情况；嘱若出现规律宫缩、胎膜早破（破水）或见红等临产先兆，须立即就诊 | pred=出现规律宫缩或破水见红时随时急诊就诊
+  - mismatch: fh.hypertension.details | gold=否认家族高血压史 | pred=否认家族高血压病史
+  - mismatch: hpi.chiefcomplaint | gold=下腹紧缩感6小时 | pred=阵发性宫缩；描述宫缩无规律性；下腹紧缩感
+  - mismatch: hpi.conceiveMode | gold=辅助生殖技术 | pred=IUI（宫腔内人工授精）
+  - mismatch: pmh.operationHistory.details | gold=2018年行左侧乳腺纤维瘤切除术 | pred=患者2018年既往左侧乳腺纤维瘤切除术
+
+session_20:
+  missing=0 extra=0 mismatch=6 soft=1
+  - mismatch: additional_medical_history.otherNote | gold=月经规律 | pred=患者月经周期规则
+  - mismatch: fh.hypertension.details | gold=否认家族高血压史 | pred=否认家族高血压病史
+  - mismatch: hpi.chiefcomplaint | gold=阵发性下腹痛4小时余 | pred=阵发性腹痛4个多小时
+  - mismatch: pmh.operationHistory.details | gold=患者否认手术史 | pred=患者否认既往手术史
+  - mismatch: pmh.thyroidDisease.details | gold=患者存在甲状腺结节 | pred=患者存在既往甲状腺结节病史
+  - soft_mismatch: physicalExamination.edema.details | gold=双下肢无水肿 | pred=存在双下肢无水肿

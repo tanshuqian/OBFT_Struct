@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b4ff2fc1-947c-4c0d-8a7f-6959cd7dc923" name="PostStruct2.0">
+        <fileTransfer rootFolder="/root/autodl-tmp/PostStruct2.0" accessType="SFTP" host="connect.cqa1.seetacloud.com" port="10809" sshConfigId="2992967c-7b32-4910-9541-b0610c685534" sshConfig="root@connect.cqa1.seetacloud.com:10809 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="2bb6251e-38a8-452e-97e0-74514fe74a19" name="PostStruct2.0_14B">
+        <fileTransfer rootFolder="/root/autodl-tmp/PostStruct2.0" accessType="SFTP" host="connect.cqa1.seetacloud.com" port="10809" sshConfigId="2992967c-7b32-4910-9541-b0610c685534" sshConfig="root@connect.cqa1.seetacloud.com:10809 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

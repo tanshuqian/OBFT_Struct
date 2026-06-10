@@ -1,0 +1,2214 @@
+{
+  "pred_dir": "output\\Stage2_4_After_LLM_20260528_191232",
+  "gold_dir": "data\\output\\standard_medical_record_20",
+  "generated_at": "2026-05-28 19:12:44",
+  "sessions": {
+    "session_1": {
+      "missing": [
+        {
+          "path": "pmh.allergyFood.details",
+          "gold": "患者否认食物过敏史",
+          "pred": null
+        },
+        {
+          "path": "pmh.allergyOther.details",
+          "gold": "患者否认其他过敏史",
+          "pred": null
+        }
+      ],
+      "extra": [],
+      "mismatch": [
+        {
+          "path": "fh.hypertension.details",
+          "gold": "否认家族高血压病史",
+          "pred": "否认家族高血压史"
+        },
+        {
+          "path": "hpi.chiefcomplaint",
+          "gold": "过期妊娠伴胎心监护异常",
+          "pred": "过期妊娠，胎心监护异常"
+        },
+        {
+          "path": "hpi.otherNote",
+          "gold": "近一周胎心监护反应欠佳",
+          "pred": "患者糖耐量检查结果正常: 正常；患者本次妊娠为过期妊娠"
+        },
+        {
+          "path": "personal_history.medicine.details",
+          "gold": "孕期曾口服四环素（已停用），外用异维A酸4次",
+          "pred": "患者停经6周多到8周多孕期口服四环素治疗痤疮；患者4次孕期外用异维A酸药膏治疗痤疮"
+        },
+        {
+          "path": "pmh.allergyFood.status",
+          "gold": 0,
+          "pred": -1
+        },
+        {
+          "path": "pmh.allergyOther.status",
+          "gold": 0,
+          "pred": -1
+        },
+        {
+          "path": "pmh.cardiacDisease.details",
+          "gold": "患者否认妊娠合并心脏病史",
+          "pred": "患者否认孕期心脏病病史"
+        },
+        {
+          "path": "pmh.diabetes.details",
+          "gold": "患者否认妊娠期糖尿病史",
+          "pred": "患者否认孕期糖尿病及妊娠期糖尿病病史"
+        },
+        {
+          "path": "pmh.hypertension.details",
+          "gold": "患者否认妊娠期高血压疾病史",
+          "pred": "患者否认孕期高血压病史"
+        }
+      ],
+      "soft_mismatch": [
+        {
+          "path": "advice.prescription",
+          "gold": "拟尽快终止妊娠",
+          "pred": "尽快终止妊娠"
+        }
+      ],
+      "counts": {
+        "missing": 2,
+        "extra": 0,
+        "mismatch": 9,
+        "soft_mismatch": 1
+      }
+    },
+    "session_2": {
+      "missing": [],
+      "extra": [
+        {
+          "path": "personal_history.alcohol.details",
+          "gold": null,
+          "pred": "患者否认饮酒史"
+        },
+        {
+          "path": "personal_history.hazardoussubstances.details",
+          "gold": null,
+          "pred": "患者否认工作生活环境接触有害化学物质史"
+        },
+        {
+          "path": "personal_history.radioactivity.details",
+          "gold": null,
+          "pred": "患者否认工作生活环境放射性物质接触史"
+        },
+        {
+          "path": "personal_history.smoke.details",
+          "gold": null,
+          "pred": "患者否认吸烟史"
+        },
+        {
+          "path": "pmh.transfusionHistory.details",
+          "gold": null,
+          "pred": "患者否认既往输血史"
+        }
+      ],
+      "mismatch": [
+        {
+          "path": "advice.prescription",
+          "gold": "嘱监测胎动；如有临产先兆随时就诊",
+          "pred": "注意胎动监测；观察见红、破水、规律腹痛情况随时就诊"
+        },
+        {
+          "path": "fh.diabetes.details",
+          "gold": "家族糖尿病病史（父）",
+          "pred": "父亲存在糖尿病病史"
+        },
+        {
+          "path": "fh.heritableDisease.details",
+          "gold": "否认家族遗传病史",
+          "pred": "否认家族遗传病或先天畸形史"
+        },
+        {
+          "path": "fh.hypertension.details",
+          "gold": "家族高血压病史（母）",
+          "pred": "母亲存在高血压病史"
+        },
+        {
+          "path": "hpi.otherNote",
+          "gold": "妊娠期贫血（血红蛋白101g/L）",
+          "pred": "血红蛋白: 101g/L；患者存在贫血"
+        },
+        {
+          "path": "personal_history.alcohol.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.hazardoussubstances.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.radioactivity.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.smoke.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "physicalExamination.otherNote",
+          "gold": "预估胎儿体重2991g",
+          "pred": "预估胎儿体重2.991kg"
+        },
+        {
+          "path": "pmh.diabetes.details",
+          "gold": "患者否认妊娠期糖尿病史",
+          "pred": "患者否认糖尿病及妊娠期糖尿病史"
+        },
+        {
+          "path": "pmh.hypertension.details",
+          "gold": "患者否认妊娠期高血压疾病史",
+          "pred": "患者否认妊娠期高血压病史"
+        },
+        {
+          "path": "pmh.transfusionHistory.status",
+          "gold": -1,
+          "pred": 0
+        }
+      ],
+      "soft_mismatch": [
+        {
+          "path": "hpi.chiefcomplaint",
+          "gold": "常规产检",
+          "pred": "无不适，常规产检"
+        }
+      ],
+      "counts": {
+        "missing": 0,
+        "extra": 5,
+        "mismatch": 13,
+        "soft_mismatch": 1
+      }
+    },
+    "session_3": {
+      "missing": [
+        {
+          "path": "pmh.operationHistory.details",
+          "gold": "既往有剖宫产史",
+          "pred": null
+        }
+      ],
+      "extra": [
+        {
+          "path": "obh[3].fetalcount",
+          "gold": null,
+          "pred": 1
+        },
+        {
+          "path": "personal_history.alcohol.details",
+          "gold": null,
+          "pred": "患者否认饮酒史"
+        },
+        {
+          "path": "personal_history.hazardoussubstances.details",
+          "gold": null,
+          "pred": "患者否认有害物质接触史"
+        },
+        {
+          "path": "personal_history.radioactivity.details",
+          "gold": null,
+          "pred": "患者否认放射性物质接触史"
+        },
+        {
+          "path": "personal_history.smoke.details",
+          "gold": null,
+          "pred": "患者否认吸烟史"
+        }
+      ],
+      "mismatch": [
+        {
+          "path": "advice.prescription",
+          "gold": "嘱按时服用优甲乐；注意数胎动；按时复诊",
+          "pred": "继续服用优甲乐；注意胎动监测"
+        },
+        {
+          "path": "fh.diabetes.details",
+          "gold": "家族糖尿病史（母）",
+          "pred": "母亲存在糖尿病病史"
+        },
+        {
+          "path": "fh.hypertension.details",
+          "gold": "否认家族高血压病史",
+          "pred": "否认家族高血压史"
+        },
+        {
+          "path": "obh[1].exceptionalcase",
+          "gold": "2014年第一胎顺产",
+          "pred": "2014年第一胎是顺产的"
+        },
+        {
+          "path": "obh[2].exceptionalcase",
+          "gold": "2017年第二胎剖宫产",
+          "pred": "2017年第二胎是剖宫产"
+        },
+        {
+          "path": "obh[3].exceptionalcase",
+          "gold": "2019年人工流产",
+          "pred": "2019年做过一次人工流产"
+        },
+        {
+          "path": "personal_history.alcohol.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.hazardoussubstances.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.medicine.details",
+          "gold": "服药史：口服优甲乐，150ug/天",
+          "pred": "患者150ug/天孕期口服优甲乐"
+        },
+        {
+          "path": "personal_history.radioactivity.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.smoke.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "pmh.cardiacDisease.details",
+          "gold": "患者否认心脏病史",
+          "pred": "患者否认既往心脏病病史"
+        },
+        {
+          "path": "pmh.diabetes.details",
+          "gold": "患者否认糖尿病史",
+          "pred": "患者否认既往糖尿病及妊娠期糖尿病病史"
+        },
+        {
+          "path": "pmh.hypertension.details",
+          "gold": "患者否认高血压病史",
+          "pred": "患者否认既往高血压病史"
+        },
+        {
+          "path": "pmh.operationHistory.status",
+          "gold": 1,
+          "pred": -1
+        }
+      ],
+      "soft_mismatch": [
+        {
+          "path": "hpi.chiefcomplaint",
+          "gold": "常规产检",
+          "pred": "无不适，常规产检"
+        },
+        {
+          "path": "pmh.thyroidDisease.details",
+          "gold": "患者存在甲状腺功能减退",
+          "pred": "患者存在甲状腺功能减退症病史"
+        }
+      ],
+      "counts": {
+        "missing": 1,
+        "extra": 5,
+        "mismatch": 15,
+        "soft_mismatch": 2
+      }
+    },
+    "session_4": {
+      "missing": [],
+      "extra": [
+        {
+          "path": "fh.otherNote",
+          "gold": null,
+          "pred": "患者否认家族精神病史: 否认；患者否认家族肿瘤病史: 否认"
+        },
+        {
+          "path": "hpi.otherNote",
+          "gold": null,
+          "pred": "患者胎头已下降: 存在"
+        },
+        {
+          "path": "obh[2].year",
+          "gold": null,
+          "pred": "2018"
+        }
+      ],
+      "mismatch": [
+        {
+          "path": "advice.prescription",
+          "gold": "拟行胎心监护",
+          "pred": "胎心监护检查"
+        },
+        {
+          "path": "personal_history.hazardoussubstances.details",
+          "gold": "患者否认有害化学物质接触史",
+          "pred": "患者否认有害物质接触史"
+        },
+        {
+          "path": "personal_history.medicine.details",
+          "gold": "服药史：孕期曾使用地塞米松，6mg/12h",
+          "pred": "患者6mg/12小时孕期使用地塞米松促胎肺成熟"
+        },
+        {
+          "path": "pmh.cardiacDisease.details",
+          "gold": "患者否认心脏病史",
+          "pred": "患者否认既往心脏病病史"
+        },
+        {
+          "path": "pmh.diabetes.details",
+          "gold": "患者否认糖尿病及妊娠期糖尿病史",
+          "pred": "患者否认既往糖尿病及妊娠期糖尿病病史"
+        },
+        {
+          "path": "pmh.hypertension.details",
+          "gold": "患者否认高血压病史",
+          "pred": "患者否认既往高血压病史"
+        }
+      ],
+      "soft_mismatch": [
+        {
+          "path": "hpi.chiefcomplaint",
+          "gold": "下腹胀痛半小时",
+          "pred": "下腹胀痛"
+        },
+        {
+          "path": "pmh.otherNote",
+          "gold": "患者否认肝炎病史",
+          "pred": "否认患者否认肝炎病史"
+        }
+      ],
+      "counts": {
+        "missing": 0,
+        "extra": 3,
+        "mismatch": 6,
+        "soft_mismatch": 2
+      }
+    },
+    "session_5": {
+      "missing": [
+        {
+          "path": "advice.prescription",
+          "gold": "拟行胎心监护；需观察宫缩情况",
+          "pred": null
+        }
+      ],
+      "extra": [
+        {
+          "path": "fh.otherNote",
+          "gold": null,
+          "pred": "患者否认家族精神病史: 否认；患者否认家族肿瘤病史: 否认"
+        },
+        {
+          "path": "hpi.otherNote",
+          "gold": null,
+          "pred": "患者本次妊娠孕周；医嘱予胎心监护检查: 执行；医嘱予观察宫缩情况: 执行；半小时"
+        },
+        {
+          "path": "obh[2].year",
+          "gold": null,
+          "pred": "2018"
+        }
+      ],
+      "mismatch": [
+        {
+          "path": "hpi.chiefcomplaint",
+          "gold": "下腹胀痛半小时",
+          "pred": "下腹胀痛；下肢胀痛"
+        },
+        {
+          "path": "personal_history.hazardoussubstances.details",
+          "gold": "患者否认有害化学物质接触史",
+          "pred": "患者否认有害物质接触史"
+        },
+        {
+          "path": "personal_history.medicine.details",
+          "gold": "服药史：孕期曾使用地塞米松，6mg/12h",
+          "pred": "患者6mg/12小时孕期口服地塞米松促胎肺成熟"
+        },
+        {
+          "path": "pmh.cardiacDisease.details",
+          "gold": "患者否认心脏病史",
+          "pred": "患者否认既往心脏病病史"
+        },
+        {
+          "path": "pmh.diabetes.details",
+          "gold": "患者否认糖尿病及妊娠期糖尿病史",
+          "pred": "患者否认既往糖尿病及妊娠期糖尿病病史"
+        },
+        {
+          "path": "pmh.hypertension.details",
+          "gold": "患者否认高血压病史",
+          "pred": "患者否认既往高血压病史"
+        }
+      ],
+      "soft_mismatch": [
+        {
+          "path": "pmh.otherNote",
+          "gold": "患者否认肝炎病史",
+          "pred": "否认患者否认肝炎病史"
+        }
+      ],
+      "counts": {
+        "missing": 1,
+        "extra": 3,
+        "mismatch": 6,
+        "soft_mismatch": 1
+      }
+    },
+    "session_6": {
+      "missing": [
+        {
+          "path": "fh.heritableDisease.details",
+          "gold": "2015年妊娠曾确诊胎儿18三体综合征",
+          "pred": null
+        },
+        {
+          "path": "obh[4].year",
+          "gold": 2015,
+          "pred": null
+        }
+      ],
+      "extra": [
+        {
+          "path": "personal_history.alcohol.details",
+          "gold": null,
+          "pred": "患者否认饮酒史"
+        },
+        {
+          "path": "personal_history.hazardoussubstances.details",
+          "gold": null,
+          "pred": "患者否认有毒物质接触史"
+        },
+        {
+          "path": "personal_history.radioactivity.details",
+          "gold": null,
+          "pred": "患者否认放射物质接触史"
+        },
+        {
+          "path": "personal_history.smoke.details",
+          "gold": null,
+          "pred": "患者否认吸烟史"
+        }
+      ],
+      "mismatch": [
+        {
+          "path": "fh.heritableDisease.status",
+          "gold": 1,
+          "pred": -1
+        },
+        {
+          "path": "hpi.chiefcomplaint",
+          "gold": "发现胎儿生长受限3月余，今来院复查",
+          "pred": "无不适，常规产检"
+        },
+        {
+          "path": "hpi.conceiveMode",
+          "gold": "PGT术D6囊胚移植",
+          "pred": "PGT术后移植D6囊胚"
+        },
+        {
+          "path": "hpi.otherNote",
+          "gold": "合并妊娠期糖尿病（外院OGTT：空腹5.30mmol/L，1h 11.16mmol/L，2h 9.12mmol/L）",
+          "pred": "患者2011年患有白血病: 2011年；患者存在妊娠期糖尿病病史；患者OGTT空腹血糖值: 5.30mmol/L；患者OGTT1小时血糖值: 11.16mmol/L；患者OGTT2小时血糖值: 9.12mmol/L；医嘱予妊娠期糖尿病饮食控制"
+        },
+        {
+          "path": "personal_history.alcohol.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.hazardoussubstances.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.radioactivity.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.smoke.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "pmh.allergyFood.details",
+          "gold": "患者诉对牛肉过敏",
+          "pred": "患者存在牛肉过敏史"
+        },
+        {
+          "path": "pmh.cardiacDisease.details",
+          "gold": "患者否认心脏病史",
+          "pred": "患者否认既往心脏病病史"
+        },
+        {
+          "path": "pmh.hypertension.details",
+          "gold": "患者否认高血压病史",
+          "pred": "患者否认既往高血压病史"
+        },
+        {
+          "path": "pmh.otherNote",
+          "gold": "2011年曾确诊白血病；患者否认肝炎病史",
+          "pred": "否认患者否认既往肝炎病史"
+        },
+        {
+          "path": "pmh.transfusionHistory.details",
+          "gold": "既往因化疗有输血史",
+          "pred": "患者存在输血史"
+        }
+      ],
+      "soft_mismatch": [
+        {
+          "path": "advice.prescription",
+          "gold": "嘱糖尿病饮食及运动控制血糖；密切观察胎儿生长受限情况，如有不适随时就诊",
+          "pred": "运动控制血糖；密切观察胎儿生长受限情况"
+        },
+        {
+          "path": "obh[4].exceptionalcase",
+          "gold": "2015年那次查出是18三体综合征，也引产了",
+          "pred": "也引产了"
+        }
+      ],
+      "counts": {
+        "missing": 2,
+        "extra": 4,
+        "mismatch": 13,
+        "soft_mismatch": 2
+      }
+    },
+    "session_7": {
+      "missing": [],
+      "extra": [
+        {
+          "path": "hpi.otherNote",
+          "gold": null,
+          "pred": "患者糖耐量检查结果正常: 正常；胎膜早破"
+        },
+        {
+          "path": "personal_history.alcohol.details",
+          "gold": null,
+          "pred": "患者否认饮酒史"
+        },
+        {
+          "path": "personal_history.hazardoussubstances.details",
+          "gold": null,
+          "pred": "患者否认接触有害化学物质史"
+        },
+        {
+          "path": "personal_history.radioactivity.details",
+          "gold": null,
+          "pred": "患者否认放射性物质接触史"
+        },
+        {
+          "path": "personal_history.smoke.details",
+          "gold": null,
+          "pred": "患者否认吸烟史"
+        },
+        {
+          "path": "pmh.transfusionHistory.details",
+          "gold": null,
+          "pred": "患者否认既往输血史"
+        }
+      ],
+      "mismatch": [
+        {
+          "path": "advice.prescription",
+          "gold": "拟住院观察；具体分娩方式根据后续产程再评估",
+          "pred": "住院观察；分娩方式再评估"
+        },
+        {
+          "path": "fh.hypertension.details",
+          "gold": "否认家族高血压病史",
+          "pred": "否认家族高血压史"
+        },
+        {
+          "path": "personal_history.alcohol.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.hazardoussubstances.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.radioactivity.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.smoke.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "pmh.cardiacDisease.details",
+          "gold": "患者否认心脏病史",
+          "pred": "患者否认既往心脏病病史"
+        },
+        {
+          "path": "pmh.diabetes.details",
+          "gold": "患者否认妊娠期糖尿病史",
+          "pred": "患者否认既往糖尿病及妊娠期糖尿病病史"
+        },
+        {
+          "path": "pmh.hypertension.details",
+          "gold": "患者否认妊娠期高血压病史",
+          "pred": "患者否认既往高血压病史"
+        },
+        {
+          "path": "pmh.operationHistory.details",
+          "gold": "患者否认手术史",
+          "pred": "患者否认既往手术史"
+        },
+        {
+          "path": "pmh.otherNote",
+          "gold": "患者否认肝炎病史",
+          "pred": "否认患者否认既往肝炎病史"
+        },
+        {
+          "path": "pmh.transfusionHistory.status",
+          "gold": -1,
+          "pred": 0
+        }
+      ],
+      "soft_mismatch": [
+        {
+          "path": "hpi.chiefcomplaint",
+          "gold": "阴道流液4小时",
+          "pred": "阴道流液"
+        }
+      ],
+      "counts": {
+        "missing": 0,
+        "extra": 6,
+        "mismatch": 12,
+        "soft_mismatch": 1
+      }
+    },
+    "session_8": {
+      "missing": [
+        {
+          "path": "hpi.otherNote",
+          "gold": "考虑未足月胎膜早破",
+          "pred": null
+        },
+        {
+          "path": "hpi.sureEdd",
+          "gold": "11-23",
+          "pred": null
+        },
+        {
+          "path": "pmh.otherNote",
+          "gold": "患者否认肝炎病史",
+          "pred": null
+        }
+      ],
+      "extra": [
+        {
+          "path": "hpi.edd",
+          "gold": null,
+          "pred": "11-23"
+        }
+      ],
+      "mismatch": [
+        {
+          "path": "advice.prescription",
+          "gold": "拟收入院观察保胎",
+          "pred": "住院观察保胎"
+        },
+        {
+          "path": "fh.diabetes.details",
+          "gold": "家族糖尿病史（母）",
+          "pred": "母亲患有糖尿病"
+        },
+        {
+          "path": "hpi.chiefcomplaint",
+          "gold": "阴道流液3小时",
+          "pred": "阴道流液；存在未足月胎膜早破"
+        },
+        {
+          "path": "personal_history.hazardoussubstances.details",
+          "gold": "患者否认有害化学物质接触史",
+          "pred": "患者否认接触有害化学物质史"
+        },
+        {
+          "path": "pmh.cardiacDisease.details",
+          "gold": "患者否认心脏病史",
+          "pred": "患者否认既往心脏病病史"
+        },
+        {
+          "path": "pmh.diabetes.details",
+          "gold": "患者否认糖尿病史",
+          "pred": "患者否认既往糖尿病及妊娠期糖尿病病史"
+        },
+        {
+          "path": "pmh.hypertension.details",
+          "gold": "患者否认高血压病史",
+          "pred": "患者否认既往高血压病史"
+        },
+        {
+          "path": "pmh.operationHistory.details",
+          "gold": "2020年行开腹子宫肌瘤剔除术",
+          "pred": "患者存在既往开腹子宫肌瘤剔除术"
+        },
+        {
+          "path": "pmh.transfusionHistory.details",
+          "gold": "患者否认输血史",
+          "pred": "患者否认既往输血史"
+        }
+      ],
+      "soft_mismatch": [],
+      "counts": {
+        "missing": 3,
+        "extra": 1,
+        "mismatch": 9,
+        "soft_mismatch": 0
+      }
+    },
+    "session_9": {
+      "missing": [
+        {
+          "path": "fh.diabetes.details",
+          "gold": "否认家族糖尿病史",
+          "pred": null
+        },
+        {
+          "path": "fh.heritableDisease.details",
+          "gold": "否认家族遗传病史",
+          "pred": null
+        },
+        {
+          "path": "hpi.conceiveModeNote",
+          "gold": "体外受精-胚胎移植（D5囊胚）",
+          "pred": null
+        },
+        {
+          "path": "hpi.edd",
+          "gold": "11-03",
+          "pred": null
+        },
+        {
+          "path": "obh[1].exceptionalcase",
+          "gold": "既往有1次顺产史",
+          "pred": null
+        },
+        {
+          "path": "obh[1].fetalcount",
+          "gold": 1,
+          "pred": null
+        },
+        {
+          "path": "obh[1].gravidityindex",
+          "gold": 1,
+          "pred": null
+        },
+        {
+          "path": "obh[1].vaginalDelivery",
+          "gold": 1,
+          "pred": null
+        },
+        {
+          "path": "physicalExamination.diastolic",
+          "gold": 88,
+          "pred": null
+        },
+        {
+          "path": "physicalExamination.heartrate",
+          "gold": 98,
+          "pred": null
+        },
+        {
+          "path": "physicalExamination.otherNote",
+          "gold": "预估胎儿体重3.2kg",
+          "pred": null
+        },
+        {
+          "path": "physicalExamination.pulse",
+          "gold": 98,
+          "pred": null
+        },
+        {
+          "path": "physicalExamination.systolic",
+          "gold": 132,
+          "pred": null
+        }
+      ],
+      "extra": [
+        {
+          "path": "hpi.sureEdd",
+          "gold": null,
+          "pred": "11-03"
+        },
+        {
+          "path": "pmh.allergyFood.details",
+          "gold": null,
+          "pred": "患者否认食物过敏史"
+        }
+      ],
+      "mismatch": [
+        {
+          "path": "fh.diabetes.status",
+          "gold": 0,
+          "pred": -1
+        },
+        {
+          "path": "fh.heritableDisease.status",
+          "gold": 0,
+          "pred": -1
+        },
+        {
+          "path": "fh.hypertension.details",
+          "gold": "否认家族高血压病史",
+          "pred": "否认家族高血压史"
+        },
+        {
+          "path": "gravidity",
+          "gold": 2,
+          "pred": 1
+        },
+        {
+          "path": "hpi.otherNote",
+          "gold": "确诊妊娠期糖尿病；考虑胎膜早破",
+          "pred": "患者存在妊娠期糖尿病；胎膜早破"
+        },
+        {
+          "path": "parity",
+          "gold": 1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.hazardoussubstances.details",
+          "gold": "患者否认有害物质接触史",
+          "pred": "患者否认有毒物质接触史"
+        },
+        {
+          "path": "personal_history.radioactivity.details",
+          "gold": "患者否认放射性物质接触史",
+          "pred": "患者否认放射物质接触史"
+        },
+        {
+          "path": "pmh.allergyDrug.details",
+          "gold": "患者诉对优思明过敏",
+          "pred": "患者优思明存在药物过敏史"
+        },
+        {
+          "path": "pmh.allergyFood.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "pmh.cardiacDisease.details",
+          "gold": "患者否认心脏病史",
+          "pred": "患者否认孕期心脏病病史"
+        },
+        {
+          "path": "pmh.hypertension.details",
+          "gold": "患者否认高血压病史",
+          "pred": "患者否认孕期高血压病史"
+        },
+        {
+          "path": "pmh.operationHistory.details",
+          "gold": "患者否认手术史",
+          "pred": "患者否认既往手术史"
+        },
+        {
+          "path": "pmh.transfusionHistory.details",
+          "gold": "患者否认输血史",
+          "pred": "患者否认既往输血史"
+        }
+      ],
+      "soft_mismatch": [
+        {
+          "path": "advice.prescription",
+          "gold": "拟住院观察",
+          "pred": "住院观察"
+        },
+        {
+          "path": "hpi.chiefcomplaint",
+          "gold": "停经39+3周，阴道流液15分钟",
+          "pred": "阴道流液"
+        },
+        {
+          "path": "hpi.conceiveMode",
+          "gold": "IVF-ET",
+          "pred": "IVF"
+        },
+        {
+          "path": "physicalExamination.edema.details",
+          "gold": "双下肢无水肿",
+          "pred": "双下肢无水肿情况"
+        }
+      ],
+      "counts": {
+        "missing": 13,
+        "extra": 2,
+        "mismatch": 14,
+        "soft_mismatch": 4
+      }
+    },
+    "session_10": {
+      "missing": [
+        {
+          "path": "hpi.sureEdd",
+          "gold": "11-01",
+          "pred": null
+        },
+        {
+          "path": "obh[1].children[1].neonateWeight",
+          "gold": 3.5,
+          "pred": null
+        },
+        {
+          "path": "obh[1].exceptionalcase",
+          "gold": "2020年10月顺产1胎（胎儿体重3.5kg）",
+          "pred": null
+        },
+        {
+          "path": "obh[1].fetalcount",
+          "gold": 1,
+          "pred": null
+        },
+        {
+          "path": "obh[1].gravidityindex",
+          "gold": 1,
+          "pred": null
+        },
+        {
+          "path": "obh[1].month",
+          "gold": 10,
+          "pred": null
+        },
+        {
+          "path": "obh[1].vaginalDelivery",
+          "gold": 1,
+          "pred": null
+        },
+        {
+          "path": "obh[1].year",
+          "gold": 2020,
+          "pred": null
+        }
+      ],
+      "extra": [
+        {
+          "path": "hpi.edd",
+          "gold": null,
+          "pred": "2022-11-01"
+        },
+        {
+          "path": "personal_history.alcohol.details",
+          "gold": null,
+          "pred": "患者否认饮酒史"
+        },
+        {
+          "path": "personal_history.hazardoussubstances.details",
+          "gold": null,
+          "pred": "患者否认接触特殊化学品史"
+        },
+        {
+          "path": "personal_history.radioactivity.details",
+          "gold": null,
+          "pred": "患者否认放射性物质接触史"
+        },
+        {
+          "path": "personal_history.smoke.details",
+          "gold": null,
+          "pred": "患者否认吸烟史"
+        },
+        {
+          "path": "physicalExamination.otherNote",
+          "gold": null,
+          "pred": "预估胎儿体重3.5kg；预估胎儿体重还可以"
+        }
+      ],
+      "mismatch": [
+        {
+          "path": "advice.prescription",
+          "gold": "嘱继续饮食控制；严密监测血糖",
+          "pred": "饮食控制；血糖监测"
+        },
+        {
+          "path": "fh.diabetes.details",
+          "gold": "家族糖尿病史（父）",
+          "pred": "父亲患有糖尿病"
+        },
+        {
+          "path": "gravidity",
+          "gold": 2,
+          "pred": 1
+        },
+        {
+          "path": "hpi.chiefcomplaint",
+          "gold": "发现血糖升高2月余",
+          "pred": "无不适，常规产检"
+        },
+        {
+          "path": "hpi.otherNote",
+          "gold": "确诊妊娠期糖尿病",
+          "pred": "患者存在血糖升高情况: 血糖升高2月余；患者诊断为妊娠期糖尿病；患者存在妊娠期糖尿病病史"
+        },
+        {
+          "path": "parity",
+          "gold": 1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.alcohol.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.hazardoussubstances.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.radioactivity.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.smoke.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "physicalExamination.preheight",
+          "gold": 160.0,
+          "pred": 1.6
+        },
+        {
+          "path": "pmh.cardiacDisease.details",
+          "gold": "患者否认心脏病史",
+          "pred": "患者否认既往心脏病病史"
+        },
+        {
+          "path": "pmh.hypertension.details",
+          "gold": "患者否认高血压病史",
+          "pred": "患者否认既往高血压病史"
+        },
+        {
+          "path": "pmh.operationHistory.details",
+          "gold": "2021年8月行阴道息肉切除术",
+          "pred": "患者2021年8月阴道息肉切除术既往手术史"
+        },
+        {
+          "path": "pmh.otherNote",
+          "gold": "患者否认肝炎病史",
+          "pred": "否认患者否认既往肝炎病史"
+        },
+        {
+          "path": "pmh.transfusionHistory.details",
+          "gold": "患者否认输血史",
+          "pred": "患者否认既往输血史"
+        }
+      ],
+      "soft_mismatch": [],
+      "counts": {
+        "missing": 8,
+        "extra": 6,
+        "mismatch": 16,
+        "soft_mismatch": 0
+      }
+    },
+    "session_11": {
+      "missing": [
+        {
+          "path": "hpi.otherNote",
+          "gold": "OGTT无异常；阴道流液考虑胎膜早破",
+          "pred": null
+        }
+      ],
+      "extra": [
+        {
+          "path": "hpi.edd",
+          "gold": null,
+          "pred": "10-26"
+        },
+        {
+          "path": "obh[1].exceptionalcase",
+          "gold": null,
+          "pred": "希望能顺产"
+        },
+        {
+          "path": "obh[1].fetalcount",
+          "gold": null,
+          "pred": 1
+        },
+        {
+          "path": "obh[1].gravidityindex",
+          "gold": null,
+          "pred": 1
+        },
+        {
+          "path": "obh[1].vaginalDelivery",
+          "gold": null,
+          "pred": 1
+        },
+        {
+          "path": "pmh.transfusionHistory.details",
+          "gold": null,
+          "pred": "患者否认既往输血史"
+        }
+      ],
+      "mismatch": [
+        {
+          "path": "fh.hypertension.details",
+          "gold": "否认家族高血压病史",
+          "pred": "否认家族高血压史"
+        },
+        {
+          "path": "gravidity",
+          "gold": 1,
+          "pred": 2
+        },
+        {
+          "path": "hpi.chiefcomplaint",
+          "gold": "下腹紧缩感伴阴道流液1+小时",
+          "pred": "阵发性宫缩伴阴道流液一个多小时前"
+        },
+        {
+          "path": "parity",
+          "gold": 0,
+          "pred": 1
+        },
+        {
+          "path": "personal_history.hazardoussubstances.details",
+          "gold": "患者否认有害化学物质接触史",
+          "pred": "患者否认有毒物质接触史"
+        },
+        {
+          "path": "personal_history.radioactivity.details",
+          "gold": "患者否认放射性物质接触史",
+          "pred": "患者否认放射性接触"
+        },
+        {
+          "path": "pmh.cardiacDisease.details",
+          "gold": "患者否认心脏病史",
+          "pred": "患者否认既往心脏病病史"
+        },
+        {
+          "path": "pmh.diabetes.details",
+          "gold": "患者否认糖尿病史",
+          "pred": "患者否认既往糖尿病及妊娠期糖尿病病史"
+        },
+        {
+          "path": "pmh.hypertension.details",
+          "gold": "患者否认高血压病史",
+          "pred": "患者否认既往高血压病史"
+        },
+        {
+          "path": "pmh.operationHistory.details",
+          "gold": "患者否认手术史",
+          "pred": "患者否认既往手术史"
+        },
+        {
+          "path": "pmh.transfusionHistory.status",
+          "gold": -1,
+          "pred": 0
+        }
+      ],
+      "soft_mismatch": [
+        {
+          "path": "advice.prescription",
+          "gold": "拟办理住院待产",
+          "pred": "住院待产"
+        }
+      ],
+      "counts": {
+        "missing": 1,
+        "extra": 6,
+        "mismatch": 11,
+        "soft_mismatch": 1
+      }
+    },
+    "session_12": {
+      "missing": [
+        {
+          "path": "hpi.otherNote",
+          "gold": "伴胸闷气短",
+          "pred": null
+        }
+      ],
+      "extra": [
+        {
+          "path": "personal_history.alcohol.details",
+          "gold": null,
+          "pred": "患者否认饮酒史"
+        },
+        {
+          "path": "personal_history.hazardoussubstances.details",
+          "gold": null,
+          "pred": "患者否认有害物质接触史"
+        },
+        {
+          "path": "personal_history.radioactivity.details",
+          "gold": null,
+          "pred": "患者否认放射性物质接触史"
+        },
+        {
+          "path": "personal_history.smoke.details",
+          "gold": null,
+          "pred": "患者否认吸烟史"
+        }
+      ],
+      "mismatch": [
+        {
+          "path": "advice.prescription",
+          "gold": "暂予观察；继续定期产检；如有规律腹痛、见红或破水及时就诊",
+          "pred": "继续定期产检；出现规律腹痛或见红破水时及时就诊"
+        },
+        {
+          "path": "fh.hypertension.details",
+          "gold": "否认家族高血压病史",
+          "pred": "否认家族高血压史"
+        },
+        {
+          "path": "hpi.chiefcomplaint",
+          "gold": "阵发性腹痛1小时余",
+          "pred": "阵发性腹痛；存在胸闷气短症状胸闷气短"
+        },
+        {
+          "path": "personal_history.alcohol.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.hazardoussubstances.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.radioactivity.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.smoke.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "physicalExamination.otherNote",
+          "gold": "预估胎儿体重3591g（±531g）",
+          "pred": "3.591kg+-0.531kg"
+        },
+        {
+          "path": "pmh.cardiacDisease.details",
+          "gold": "门诊拟诊妊娠合并心脏病",
+          "pred": "患者存在妊娠合并心脏病诊断史"
+        },
+        {
+          "path": "pmh.diabetes.details",
+          "gold": "患者否认糖尿病及妊娠期糖尿病史",
+          "pred": "患者否认既往糖尿病及妊娠期糖尿病病史"
+        },
+        {
+          "path": "pmh.hypertension.details",
+          "gold": "患者否认高血压病史",
+          "pred": "患者否认既往高血压病史"
+        },
+        {
+          "path": "pmh.operationHistory.details",
+          "gold": "患者否认手术史",
+          "pred": "患者否认既往手术史"
+        },
+        {
+          "path": "pmh.otherNote",
+          "gold": "患者否认肝炎病史",
+          "pred": "否认患者否认既往肝炎病史"
+        },
+        {
+          "path": "pmh.transfusionHistory.details",
+          "gold": "患者否认输血史",
+          "pred": "患者否认既往输血史"
+        }
+      ],
+      "soft_mismatch": [],
+      "counts": {
+        "missing": 1,
+        "extra": 4,
+        "mismatch": 14,
+        "soft_mismatch": 0
+      }
+    },
+    "session_13": {
+      "missing": [
+        {
+          "path": "advice.prescription",
+          "gold": "因巨大儿拟行剖宫产术终止妊娠",
+          "pred": null
+        },
+        {
+          "path": "hpi.conceiveModeNote",
+          "gold": "体外受精-胚胎移植术后",
+          "pred": null
+        },
+        {
+          "path": "physicalExamination.preheight",
+          "gold": 165,
+          "pred": null
+        },
+        {
+          "path": "physicalExamination.weight",
+          "gold": 71,
+          "pred": null
+        }
+      ],
+      "extra": [
+        {
+          "path": "hpi.edd",
+          "gold": null,
+          "pred": "11-03"
+        },
+        {
+          "path": "obh[1].cesareanSection",
+          "gold": null,
+          "pred": 1
+        },
+        {
+          "path": "obh[1].exceptionalcase",
+          "gold": null,
+          "pred": "我们计划给您做剖宫产术来终止妊娠"
+        },
+        {
+          "path": "obh[1].fetalcount",
+          "gold": null,
+          "pred": 1
+        },
+        {
+          "path": "obh[1].gravidityindex",
+          "gold": null,
+          "pred": 1
+        },
+        {
+          "path": "personal_history.alcohol.details",
+          "gold": null,
+          "pred": "患者否认饮酒史"
+        },
+        {
+          "path": "personal_history.hazardoussubstances.details",
+          "gold": null,
+          "pred": "患者否认有毒物质接触史"
+        },
+        {
+          "path": "personal_history.radioactivity.details",
+          "gold": null,
+          "pred": "患者否认放射物质接触史"
+        },
+        {
+          "path": "personal_history.smoke.details",
+          "gold": null,
+          "pred": "患者否认吸烟史"
+        }
+      ],
+      "mismatch": [
+        {
+          "path": "fh.hypertension.details",
+          "gold": "家族高血压病史（母）",
+          "pred": "母亲存在高血压病史"
+        },
+        {
+          "path": "gravidity",
+          "gold": 1,
+          "pred": 2
+        },
+        {
+          "path": "hpi.chiefcomplaint",
+          "gold": "近期无明显不适，自觉腹部沉重感",
+          "pred": "近期无明显不适；腹部沉重感"
+        },
+        {
+          "path": "hpi.otherNote",
+          "gold": "预估胎儿体重偏大（巨大儿）",
+          "pred": "患者糖耐量测试结果正常: 正常"
+        },
+        {
+          "path": "parity",
+          "gold": 0,
+          "pred": 1
+        },
+        {
+          "path": "personal_history.alcohol.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.hazardoussubstances.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.radioactivity.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.smoke.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "physicalExamination.otherNote",
+          "gold": "预估胎儿体重4287g（±643g）",
+          "pred": "预估胎儿体重4287g±643g；预估胎儿体重存在"
+        },
+        {
+          "path": "pmh.cardiacDisease.details",
+          "gold": "患者否认心脏病史",
+          "pred": "患者否认心脏病病史"
+        },
+        {
+          "path": "pmh.diabetes.details",
+          "gold": "患者否认糖尿病及妊娠期糖尿病史",
+          "pred": "患者否认糖尿病及妊娠期糖尿病病史"
+        },
+        {
+          "path": "pmh.hypertension.details",
+          "gold": "患者否认妊娠期高血压疾病史",
+          "pred": "患者血压情况正常史"
+        },
+        {
+          "path": "pmh.hypertension.status",
+          "gold": 0,
+          "pred": 1
+        }
+      ],
+      "soft_mismatch": [
+        {
+          "path": "physicalExamination.edema.details",
+          "gold": "双下肢无水肿",
+          "pred": "双下肢无水肿情况"
+        },
+        {
+          "path": "pmh.otherNote",
+          "gold": "患者否认肝炎病史",
+          "pred": "否认患者否认肝炎病史"
+        }
+      ],
+      "counts": {
+        "missing": 4,
+        "extra": 9,
+        "mismatch": 14,
+        "soft_mismatch": 2
+      }
+    },
+    "session_14": {
+      "missing": [
+        {
+          "path": "hpi.otherNote",
+          "gold": "患者诉糖耐量试验（OGTT）无异常",
+          "pred": null
+        }
+      ],
+      "extra": [
+        {
+          "path": "pmh.allergyOther.details",
+          "gold": null,
+          "pred": "患者否认其他过敏史"
+        }
+      ],
+      "mismatch": [
+        {
+          "path": "advice.prescription",
+          "gold": "嘱观察宫缩频率及强度；若出现规律宫缩、见红或破水，需及时就诊",
+          "pred": "观察宫缩频率和强度；出现规律宫缩或见红破水时急诊就诊"
+        },
+        {
+          "path": "fh.hypertension.details",
+          "gold": "否认家族高血压病史",
+          "pred": "否认家族高血压史"
+        },
+        {
+          "path": "physicalExamination.otherNote",
+          "gold": "预估胎儿体重3088g（±451g）",
+          "pred": "预估胎儿体重3.088kg±0.451Kg"
+        },
+        {
+          "path": "pmh.allergyOther.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "pmh.cardiacDisease.details",
+          "gold": "患者否认心脏病史",
+          "pred": "患者否认既往心脏病病史"
+        },
+        {
+          "path": "pmh.diabetes.details",
+          "gold": "患者否认糖尿病及妊娠期糖尿病史",
+          "pred": "患者否认既往糖尿病及妊娠期糖尿病病史"
+        },
+        {
+          "path": "pmh.hypertension.details",
+          "gold": "患者否认高血压病史",
+          "pred": "患者否认妊娠期高血压病史"
+        },
+        {
+          "path": "pmh.operationHistory.details",
+          "gold": "患者否认手术史",
+          "pred": "患者否认既往手术史"
+        },
+        {
+          "path": "pmh.transfusionHistory.details",
+          "gold": "患者否认输血史",
+          "pred": "患者否认既往输血史"
+        }
+      ],
+      "soft_mismatch": [
+        {
+          "path": "hpi.chiefcomplaint",
+          "gold": "下腹紧缩感4小时余",
+          "pred": "下腹紧缩感"
+        }
+      ],
+      "counts": {
+        "missing": 1,
+        "extra": 1,
+        "mismatch": 9,
+        "soft_mismatch": 1
+      }
+    },
+    "session_15": {
+      "missing": [
+        {
+          "path": "hpi.otherNote",
+          "gold": "患者诉糖耐量试验（OGTT）无异常",
+          "pred": null
+        }
+      ],
+      "extra": [
+        {
+          "path": "pmh.allergyOther.details",
+          "gold": null,
+          "pred": "患者否认其他过敏史"
+        }
+      ],
+      "mismatch": [
+        {
+          "path": "advice.prescription",
+          "gold": "嘱观察宫缩频率及强度；若出现规律宫缩、见红或破水，需及时就诊",
+          "pred": "观察宫缩频率和强度；出现规律宫缩或见红破水时急诊就诊"
+        },
+        {
+          "path": "fh.hypertension.details",
+          "gold": "否认家族高血压病史",
+          "pred": "否认家族高血压史"
+        },
+        {
+          "path": "physicalExamination.otherNote",
+          "gold": "预估胎儿体重3088g（±451g）",
+          "pred": "预估胎儿体重3.088kg±0.451Kg"
+        },
+        {
+          "path": "pmh.allergyOther.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "pmh.cardiacDisease.details",
+          "gold": "患者否认心脏病史",
+          "pred": "患者否认既往心脏病病史"
+        },
+        {
+          "path": "pmh.diabetes.details",
+          "gold": "患者否认糖尿病及妊娠期糖尿病史",
+          "pred": "患者否认既往糖尿病及妊娠期糖尿病病史"
+        },
+        {
+          "path": "pmh.operationHistory.details",
+          "gold": "患者否认手术史",
+          "pred": "患者否认既往手术史"
+        },
+        {
+          "path": "pmh.transfusionHistory.details",
+          "gold": "患者否认输血史",
+          "pred": "患者否认既往输血史"
+        }
+      ],
+      "soft_mismatch": [
+        {
+          "path": "hpi.chiefcomplaint",
+          "gold": "下腹紧缩感4小时余",
+          "pred": "下腹紧缩感"
+        }
+      ],
+      "counts": {
+        "missing": 1,
+        "extra": 1,
+        "mismatch": 8,
+        "soft_mismatch": 1
+      }
+    },
+    "session_16": {
+      "missing": [
+        {
+          "path": "age",
+          "gold": 29,
+          "pred": null
+        }
+      ],
+      "extra": [
+        {
+          "path": "personal_history.alcohol.details",
+          "gold": null,
+          "pred": "患者否认饮酒史"
+        },
+        {
+          "path": "personal_history.hazardoussubstances.details",
+          "gold": null,
+          "pred": "患者否认接触有毒有害化学品史"
+        },
+        {
+          "path": "personal_history.radioactivity.details",
+          "gold": null,
+          "pred": "患者否认放射性物质接触史"
+        },
+        {
+          "path": "personal_history.smoke.details",
+          "gold": null,
+          "pred": "患者否认吸烟史"
+        }
+      ],
+      "mismatch": [
+        {
+          "path": "advice.prescription",
+          "gold": "嘱观察宫缩情况；若出现规律腹痛或破水及时来院就诊准备住院",
+          "pred": "观察宫缩情况；出现规律腹痛或破水时随时就诊住院"
+        },
+        {
+          "path": "hpi.chiefcomplaint",
+          "gold": "阴道血性分泌物3小时",
+          "pred": "血性分泌物；见红症状"
+        },
+        {
+          "path": "personal_history.alcohol.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.hazardoussubstances.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.medicine.details",
+          "gold": "患者否认近期服药史",
+          "pred": "患者否认孕期服药史"
+        },
+        {
+          "path": "personal_history.radioactivity.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "personal_history.smoke.status",
+          "gold": -1,
+          "pred": 0
+        },
+        {
+          "path": "pmh.cardiacDisease.details",
+          "gold": "患者否认心脏病史",
+          "pred": "患者否认既往心脏病病史"
+        },
+        {
+          "path": "pmh.diabetes.details",
+          "gold": "患者否认糖尿病及妊娠期糖尿病史",
+          "pred": "患者否认既往糖尿病及妊娠期糖尿病病史"
+        },
+        {
+          "path": "pmh.hypertension.details",
+          "gold": "患者否认妊娠期高血压病史",
+          "pred": "患者否认既往高血压病史"
+        },
+        {
+          "path": "pmh.operationHistory.details",
+          "gold": "患者否认手术史",
+          "pred": "患者否认既往手术史"
+        },
+        {
+          "path": "pmh.otherNote",
+          "gold": "既往有乙型病毒性肝炎病史",
+          "pred": "患者存在乙肝表面抗原阳性: 乙肝表面抗原阳性；患者存在乙肝病史: 乙肝"
+        },
+        {
+          "path": "pmh.transfusionHistory.details",
+          "gold": "患者否认输血史",
+          "pred": "患者否认既往输血史"
+        }
+      ],
+      "soft_mismatch": [
+        {
+          "path": "physicalExamination.otherNote",
+          "gold": "预估胎儿体重2.7kg",
+          "pred": "预估胎儿体重2.7kg；预估胎儿体重合适"
+        }
+      ],
+      "counts": {
+        "missing": 1,
+        "extra": 4,
+        "mismatch": 13,
+        "soft_mismatch": 1
+      }
+    },
+    "session_17": {
+      "missing": [
+        {
+          "path": "obh[1].children[1].neonateWeight",
+          "gold": 3.5,
+          "pred": null
+        },
+        {
+          "path": "obh[2].children[1].neonateWeight",
+          "gold": 3.5,
+          "pred": null
+        },
+        {
+          "path": "personal_history.medicine.details",
+          "gold": "患者诉目前未服用降糖药物",
+          "pred": null
+        }
+      ],
+      "extra": [
+        {
+          "path": "physicalExamination.otherNote",
+          "gold": null,
+          "pred": "预估胎儿体重3.5kg"
+        }
+      ],
+      "mismatch": [
+        {
+          "path": "advice.prescription",
+          "gold": "嘱严密监测血压；若出现规律腹痛、见红或破水等临产先兆，需及时急诊就医",
+          "pred": "患者注意临产征兆；血压监测"
+        },
+        {
+          "path": "hpi.otherNote",
+          "gold": "合并妊娠期糖尿病（目前未行药物治疗）",
+          "pred": "患者存在妊娠期糖尿病病史；患者通过饮食及运动控制血糖: 饮食及运动控制"
+        },
+        {
+          "path": "obh[1].exceptionalcase",
+          "gold": "既往有2次顺产史（新生儿体重约3.5kg）；否认流产史",
+          "pred": "都是顺产的"
+        },
+        {
+          "path": "obh[2].exceptionalcase",
+          "gold": "既往有2次顺产史（新生儿体重约3.5kg）；否认流产史",
+          "pred": "都是顺产的"
+        },
+        {
+          "path": "personal_history.hazardoussubstances.details",
+          "gold": "患者否认有害物质接触史",
+          "pred": "患者否认有毒物质接触史"
+        },
+        {
+          "path": "personal_history.medicine.status",
+          "gold": 0,
+          "pred": -1
+        },
+        {
+          "path": "personal_history.radioactivity.details",
+          "gold": "患者否认放射性物质接触史",
+          "pred": "患者否认放射物质接触史"
+        },
+        {
+          "path": "pmh.cardiacDisease.details",
+          "gold": "患者否认心脏病史",
+          "pred": "患者否认既往心脏病病史"
+        },
+        {
+          "path": "pmh.diabetes.details",
+          "gold": "患者否认孕前糖尿病史",
+          "pred": "患者否认未服用降糖药物治疗妊娠期糖尿病史"
+        },
+        {
+          "path": "pmh.hypertension.details",
+          "gold": "患者否认原发性高血压病史",
+          "pred": "患者否认既往高血压病史"
+        },
+        {
+          "path": "pmh.operationHistory.details",
+          "gold": "患者否认手术史",
+          "pred": "患者否认既往手术史"
+        },
+        {
+          "path": "pmh.otherNote",
+          "gold": "患者否认肝炎病史",
+          "pred": "否认患者否认既往肝炎病史"
+        },
+        {
+          "path": "pmh.transfusionHistory.details",
+          "gold": "患者否认输血史",
+          "pred": "患者否认既往输血史"
+        }
+      ],
+      "soft_mismatch": [
+        {
+          "path": "hpi.chiefcomplaint",
+          "gold": "常规产检",
+          "pred": "常规产检常规产检"
+        }
+      ],
+      "counts": {
+        "missing": 3,
+        "extra": 1,
+        "mismatch": 13,
+        "soft_mismatch": 1
+      }
+    },
+    "session_18": {
+      "missing": [
+        {
+          "path": "advice.prescription",
+          "gold": "拟行宫颈条件综合评估",
+          "pred": null
+        },
+        {
+          "path": "obh[1].children[1].neonateWeight",
+          "gold": 2.7,
+          "pred": null
+        },
+        {
+          "path": "obh[2].exceptionalcase",
+          "gold": "2020年自然流产1次",
+          "pred": null
+        },
+        {
+          "path": "obh[2].fetalcount",
+          "gold": 1,
+          "pred": null
+        },
+        {
+          "path": "obh[2].gravidityindex",
+          "gold": 2,
+          "pred": null
+        },
+        {
+          "path": "obh[2].naturalAbortion",
+          "gold": 1,
+          "pred": null
+        },
+        {
+          "path": "obh[2].year",
+          "gold": 2020,
+          "pred": null
+        },
+        {
+          "path": "pmh.transfusionHistory.details",
+          "gold": "患者否认输血史",
+          "pred": null
+        }
+      ],
+      "extra": [
+        {
+          "path": "physicalExamination.otherNote",
+          "gold": null,
+          "pred": "预估胎儿体重2.7kg"
+        }
+      ],
+      "mismatch": [
+        {
+          "path": "gravidity",
+          "gold": 3,
+          "pred": 2
+        },
+        {
+          "path": "hpi.chiefcomplaint",
+          "gold": "规律下腹痛2+小时",
+          "pred": "规律性腹痛"
+        },
+        {
+          "path": "hpi.otherNote",
+          "gold": "患者诉孕期糖耐量试验（OGTT）无异常",
+          "pred": "患者既往OGTT检查结果正常: OGTT正常"
+        },
+        {
+          "path": "personal_history.hazardoussubstances.details",
+          "gold": "患者否认有害物质接触史",
+          "pred": "患者否认有毒物质接触史"
+        },
+        {
+          "path": "personal_history.medicine.details",
+          "gold": "服药史：目前规律口服左乙拉西坦（开普兰），0.25g/天",
+          "pred": "患者0.25/天孕期口服开普兰"
+        },
+        {
+          "path": "personal_history.radioactivity.details",
+          "gold": "患者否认放射性物质接触史",
+          "pred": "患者否认放射性接触"
+        },
+        {
+          "path": "pmh.cardiacDisease.details",
+          "gold": "患者否认心脏病史",
+          "pred": "患者否认既往心脏病病史"
+        },
+        {
+          "path": "pmh.diabetes.details",
+          "gold": "患者否认糖尿病及妊娠期糖尿病史",
+          "pred": "患者否认既往糖尿病及妊娠期糖尿病病史"
+        },
+        {
+          "path": "pmh.hypertension.details",
+          "gold": "患者否认高血压病史",
+          "pred": "患者否认既往高血压病史"
+        },
+        {
+          "path": "pmh.operationHistory.details",
+          "gold": "2017年行宫颈锥切术",
+          "pred": "患者存在宫颈锥切术史"
+        },
+        {
+          "path": "pmh.otherNote",
+          "gold": "既往癫痫病史（6岁发病，癫痫大发作）",
+          "pred": "患者存在既往癫痫大发作病史"
+        },
+        {
+          "path": "pmh.transfusionHistory.status",
+          "gold": 0,
+          "pred": -1
+        }
+      ],
+      "soft_mismatch": [
+        {
+          "path": "obh[1].exceptionalcase",
+          "gold": "2019年顺产1胎（新生儿体重2.7kg）",
+          "pred": "顺产"
+        }
+      ],
+      "counts": {
+        "missing": 8,
+        "extra": 1,
+        "mismatch": 12,
+        "soft_mismatch": 1
+      }
+    },
+    "session_19": {
+      "missing": [
+        {
+          "path": "hpi.conceiveModeNote",
+          "gold": "经人工授精（IUI）辅助生殖技术受孕",
+          "pred": null
+        },
+        {
+          "path": "hpi.otherNote",
+          "gold": "伴不规律宫缩；患者诉孕期糖耐量试验（OGTT）无异常",
+          "pred": null
+        },
+        {
+          "path": "pmh.otherNote",
+          "gold": "患者否认肝炎病史",
+          "pred": null
+        }
+      ],
+      "extra": [
+        {
+          "path": "advice.exam",
+          "gold": null,
+          "pred": "胎心监护检查"
+        }
+      ],
+      "mismatch": [
+        {
+          "path": "advice.prescription",
+          "gold": "拟行胎儿电子监护（NST）以评估宫缩情况；嘱若出现规律宫缩、胎膜早破（破水）或见红等临产先兆，须立即就诊",
+          "pred": "出现规律宫缩或破水见红时随时急诊就诊"
+        },
+        {
+          "path": "hpi.chiefcomplaint",
+          "gold": "下腹紧缩感6小时",
+          "pred": "阵发性宫缩；描述宫缩无规律性；下腹紧缩感"
+        },
+        {
+          "path": "hpi.conceiveMode",
+          "gold": "辅助生殖技术",
+          "pred": "IUI（宫腔内人工授精）"
+        },
+        {
+          "path": "personal_history.hazardoussubstances.details",
+          "gold": "患者否认有害化学物质接触史",
+          "pred": "患者否认有毒物质接触史"
+        },
+        {
+          "path": "personal_history.radioactivity.details",
+          "gold": "患者否认放射性物质接触史",
+          "pred": "患者否认放射物质接触史"
+        },
+        {
+          "path": "pmh.cardiacDisease.details",
+          "gold": "患者否认心脏病史",
+          "pred": "患者否认既往心脏病病史"
+        },
+        {
+          "path": "pmh.diabetes.details",
+          "gold": "患者否认糖尿病及妊娠期糖尿病史",
+          "pred": "患者否认既往糖尿病及妊娠期糖尿病病史"
+        },
+        {
+          "path": "pmh.hypertension.details",
+          "gold": "患者否认高血压病史",
+          "pred": "患者否认既往高血压病史"
+        },
+        {
+          "path": "pmh.operationHistory.details",
+          "gold": "2018年行左侧乳腺纤维瘤切除术",
+          "pred": "患者2018年既往左侧乳腺纤维瘤切除术"
+        },
+        {
+          "path": "pmh.transfusionHistory.details",
+          "gold": "患者否认输血史",
+          "pred": "患者否认既往输血史"
+        }
+      ],
+      "soft_mismatch": [],
+      "counts": {
+        "missing": 3,
+        "extra": 1,
+        "mismatch": 10,
+        "soft_mismatch": 0
+      }
+    },
+    "session_20": {
+      "missing": [],
+      "extra": [],
+      "mismatch": [
+        {
+          "path": "additional_medical_history.otherNote",
+          "gold": "月经规律",
+          "pred": "患者月经周期规则"
+        },
+        {
+          "path": "hpi.chiefcomplaint",
+          "gold": "阵发性下腹痛4小时余",
+          "pred": "阵发性腹痛4个多小时"
+        },
+        {
+          "path": "personal_history.hazardoussubstances.details",
+          "gold": "患者否认有害化学物质接触史",
+          "pred": "患者否认有害物质接触史"
+        },
+        {
+          "path": "pmh.cardiacDisease.details",
+          "gold": "患者否认心脏病史",
+          "pred": "患者否认本次妊娠期心脏病病史"
+        },
+        {
+          "path": "pmh.hypertension.details",
+          "gold": "患者否认高血压病史",
+          "pred": "患者否认本次妊娠期高血压病史"
+        },
+        {
+          "path": "pmh.operationHistory.details",
+          "gold": "患者否认手术史",
+          "pred": "患者否认既往手术史"
+        },
+        {
+          "path": "pmh.thyroidDisease.details",
+          "gold": "患者存在甲状腺结节",
+          "pred": "患者存在既往甲状腺结节病史"
+        },
+        {
+          "path": "pmh.transfusionHistory.details",
+          "gold": "患者否认输血史",
+          "pred": "患者否认既往输血史"
+        }
+      ],
+      "soft_mismatch": [
+        {
+          "path": "physicalExamination.edema.details",
+          "gold": "双下肢无水肿",
+          "pred": "存在双下肢无水肿"
+        }
+      ],
+      "counts": {
+        "missing": 0,
+        "extra": 0,
+        "mismatch": 8,
+        "soft_mismatch": 1
+      }
+    }
+  },
+  "summary": {
+    "missing": 53,
+    "extra": 63,
+    "mismatch": 225,
+    "soft_mismatch": 23
+  },
+  "field_counts": {
+    "hpi.chiefcomplaint": 20,
+    "advice.prescription": 19,
+    "pmh.cardiacDisease.details": 19,
+    "pmh.hypertension.details": 19,
+    "hpi.otherNote": 17,
+    "personal_history.hazardoussubstances.details": 17,
+    "pmh.diabetes.details": 16,
+    "pmh.transfusionHistory.details": 15,
+    "pmh.operationHistory.details": 14,
+    "personal_history.radioactivity.details": 13,
+    "pmh.otherNote": 12,
+    "fh.hypertension.details": 10,
+    "physicalExamination.otherNote": 10,
+    "personal_history.alcohol.details": 8,
+    "personal_history.alcohol.status": 8,
+    "personal_history.hazardoussubstances.status": 8,
+    "personal_history.radioactivity.status": 8,
+    "personal_history.smoke.details": 8,
+    "personal_history.smoke.status": 8,
+    "personal_history.medicine.details": 7,
+    "obh[1].exceptionalcase": 7,
+    "fh.diabetes.details": 5,
+    "hpi.edd": 5,
+    "gravidity": 5,
+    "pmh.transfusionHistory.status": 4,
+    "obh[1].fetalcount": 4,
+    "obh[1].gravidityindex": 4,
+    "parity": 4,
+    "pmh.allergyFood.details": 3,
+    "pmh.allergyOther.details": 3,
+    "pmh.allergyOther.status": 3,
+    "fh.heritableDisease.details": 3,
+    "obh[2].exceptionalcase": 3,
+    "obh[2].year": 3,
+    "hpi.conceiveMode": 3,
+    "hpi.sureEdd": 3,
+    "hpi.conceiveModeNote": 3,
+    "obh[1].vaginalDelivery": 3,
+    "physicalExamination.edema.details": 3,
+    "obh[1].children[1].neonateWeight": 3,
+    "pmh.allergyFood.status": 2,
+    "pmh.thyroidDisease.details": 2,
+    "fh.otherNote": 2,
+    "fh.heritableDisease.status": 2,
+    "physicalExamination.preheight": 2,
+    "obh[3].exceptionalcase": 1,
+    "obh[3].fetalcount": 1,
+    "pmh.operationHistory.status": 1,
+    "obh[4].exceptionalcase": 1,
+    "obh[4].year": 1,
+    "fh.diabetes.status": 1,
+    "physicalExamination.diastolic": 1,
+    "physicalExamination.heartrate": 1,
+    "physicalExamination.pulse": 1,
+    "physicalExamination.systolic": 1,
+    "pmh.allergyDrug.details": 1,
+    "obh[1].month": 1,
+    "obh[1].year": 1,
+    "obh[1].cesareanSection": 1,
+    "physicalExamination.weight": 1,
+    "pmh.hypertension.status": 1,
+    "age": 1,
+    "obh[2].children[1].neonateWeight": 1,
+    "personal_history.medicine.status": 1,
+    "obh[2].fetalcount": 1,
+    "obh[2].gravidityindex": 1,
+    "obh[2].naturalAbortion": 1,
+    "advice.exam": 1,
+    "additional_medical_history.otherNote": 1
+  }
+}
