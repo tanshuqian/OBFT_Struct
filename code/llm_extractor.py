@@ -5,7 +5,7 @@ from openai import OpenAI
 from utils import clean_json_string
 
 MODEL_PATH = "/root/autodl-tmp/model/Qwen/Qwen3-14B-FP8/"
-SYS_PROMPT_FILE = os.path.join(os.path.dirname(__file__), "..", "prompt", "extract_prompt_up_0604.txt")
+SYS_PROMPT_FILE = os.path.join(os.path.dirname(__file__), "..", "prompt", "extract_prompt.txt")
 USER_PROMPT_FILE = os.path.join(os.path.dirname(__file__), "..", "prompt", "user_prompt.txt")
 
 
@@ -27,11 +27,12 @@ class LLMExtractor:
     def __init__(self, base_url: str | None = None, model_name: str | None = None, print_raw: bool = False):
         base_url = base_url or os.getenv("VLLM_BASE_URL", "http://localhost:8000/v1")
         model_name = model_name or os.getenv("VLLM_MODEL_NAME", "qwen3")
+        api_key = os.getenv("LLM_API_KEY", "none")
 
         print(f"🚀 正在连接到 vLLM API 服务 ({base_url}) ...")
         self.client = OpenAI(
             base_url=base_url,
-            api_key="none"
+            api_key=api_key,
         )
         self.model_name = model_name
         self.print_raw = print_raw

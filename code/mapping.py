@@ -1314,7 +1314,10 @@ def route_and_transform(extracted_tags: list, dov: str) -> dict:
                         complaint = f"{term_text}{val}"
                     complaint = _clean_complaint_text(str(complaint))
                     if complaint:
-                        patch_data[domain][field] = _append_text(patch_data[domain].get(field), complaint)
+                        # 过滤 LLM 误标的值占位符噪音（"存在""否认"等不应作为主诉）
+                        _noise = {"存在", "无", "有", "是", "否认", "疼痛", "不适", "症状", "未提及"}
+                        if complaint.strip() not in _noise:
+                            patch_data[domain][field] = _append_text(patch_data[domain].get(field), complaint)
             elif domain == "gynecologicalExamination" and field in ("fundalHeight", "waistHip"):
                 number = _parse_number(val)
                 patch_data[domain][field] = float(number) if number is not None else None
@@ -1352,10 +1355,6 @@ def route_and_transform(extracted_tags: list, dov: str) -> dict:
 
     # 不再自动由孕周推算预产期：原文未提及预产期时，edd 应为 null 而非凭空推算
     # 注：infer_edd_from_gw 仅用于交叉校验，不用于生成新数据
-
-    # 规则分块：主诉兜底
-    if not patch_data["hpi"].get("chiefcomplaint"):
-        patch_data["hpi"]["chiefcomplaint"] = "无不适，常规产检"
 
     # 规则分块：过敏兜底（药物/食物均否认时补齐其他过敏）
     allergy_drug = patch_data["pmh"].get("allergyDrug")

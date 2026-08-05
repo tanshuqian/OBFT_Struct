@@ -1,6 +1,7 @@
 import argparse
 import json
 import os
+import re
 import time
 from datetime import datetime
 from pathlib import Path
@@ -47,13 +48,87 @@ def split_into_sessions(text: str) -> List[str]:
 
 
 def parse_input_file(filepath: Path) -> List[dict]:
-    """解析原始对话文件，返回 [{session_id, text}, ...]。"""
+    """解析原始对话文件，返回 [{session_id, text}, ...]。
+    支持两种模式：
+    - 目录模式：每个 .txt 文件视为一个独立会话（适配 0728dialog 格式）
+    - 单文件模式：按 end 标记切分多个会话（原有行为）
+    """
+    if filepath.is_dir():
+        return _parse_dialog_directory(filepath)
+
     content = filepath.read_text(encoding="utf-8")
     sessions = split_into_sessions(content)
     return [
         {"session_id": f"session_{idx}", "text": session_text}
         for idx, session_text in enumerate(sessions, start=1)
     ]
+
+
+def _parse_dialog_directory(dirpath: Path) -> List[dict]:
+    """解析 0728dialog 格式目录，每个 .txt 文件作为一个独立会话。"""
+    sessions: List[dict] = []
+    for txt_file in sorted(dirpath.glob("*.txt")):
+        session = _parse_single_dialog_file(txt_file)
+        if session:
+            sessions.append(session)
+    return sessions
+
+
+def _parse_chinese_date(date_str: str) -> Optional[str]:
+    """将中文日期字符串（如 "2026年7月28日 14:36:27"）转为 ISO 格式 "2026-07-28"。"""
+    m = re.match(r"(\d{4})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日", date_str)
+    if m:
+        y, mo, d = m.groups()
+        return f"{int(y):04d}-{int(mo):02d}-{int(d):02d}"
+    return None
+
+
+def _parse_single_dialog_file(filepath: Path) -> Optional[dict]:
+    """解析单个 0728dialog 格式的对话文件。
+
+    文件头部包含元数据（录音名、时间、主题、参会人），之后为对话内容。
+    跳过头部，提取录音名称作为 session_id、对话文本作为 text，
+    并从头部时间行中提取就诊日期 (dov)。
+    """
+    content = filepath.read_text(encoding="utf-8")
+    lines = content.splitlines()
+
+    # 第一行是录音名称（如 "标准录音 1"），用作 session_id
+    recording_name = lines[0].strip() if lines else filepath.stem
+
+    # 从头部时间行提取就诊日期，用于后续日期标准化
+    extracted_dov: Optional[str] = None
+    for line in lines[:6]:  # 头部元数据在前 6 行内
+        stripped = line.strip()
+        if stripped.startswith("时间:") or stripped.startswith("时间："):
+            date_str = stripped[3:].strip()  # 去掉 "时间:" / "时间：" 前缀
+            extracted_dov = _parse_chinese_date(date_str)
+            if extracted_dov:
+                break
+
+    # 找到第一个 "讲话人" 行 —— 从这里开始才是对话内容
+    dialog_start = 0
+    for i, line in enumerate(lines):
+        if line.strip().startswith("讲话人"):
+            dialog_start = i
+            break
+
+    if dialog_start == 0:
+        print(f"  [跳过] 未在 {filepath.name} 中找到对话内容（无'讲话人'标记）")
+        return None
+
+    dialog_lines = [line.rstrip() for line in lines[dialog_start:]]
+    dialog_text = "\n".join(dialog_lines).strip()
+
+    if not dialog_text:
+        print(f"  [跳过] {filepath.name} 对话内容为空")
+        return None
+
+    result: dict = {"session_id": recording_name, "text": dialog_text}
+    if extracted_dov:
+        result["dov"] = extracted_dov
+        print(f"  [头部] 从 {filepath.name} 提取到就诊日期: {extracted_dov}")
+    return result
 
 
 def infer_dov_from_tags(extracted_tags: List[dict]) -> Optional[str]:
@@ -137,13 +212,18 @@ class MainStructEngine(PostStructureStage24):
             print(f"  > [阶段三] 状态机日志:")
             self._apply_patch(current_state, patch_dict)
 
+        # 会话级别兜底：所有切片处理完后，若仍无主诉则填充默认值
+        if not current_state.hpi.chiefcomplaint:
+            current_state.hpi.chiefcomplaint = "无不适，常规产检"
+            print(f"  > [兜底] 无主诉信息，设为默认值")
+
         return total_llm_time
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Run LLM extraction + structured record workflow.")
     repo_root = get_repo_root()
-    default_input = repo_root / "data" / "input" / "dialog_head5.txt"
+    default_input = repo_root / "data" / "input" / "0728dialog"
     default_output = repo_root / "output" / f"MainStruct_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
 
     parser.add_argument("--input", default=str(default_input), help="Path to raw dialog text file.")
@@ -191,7 +271,7 @@ def main() -> int:
         text = session["text"]
         print(f"\n========== 开始处理 {sid} ({idx}/{len(sessions)}) ==========")
 
-        engine.init_session(sid, args.dov)
+        engine.init_session(sid, args.dov or session.get("dov"))
         llm_time = engine.process_raw_session(sid, text)
         total_llm_time += llm_time
 

@@ -92,6 +92,20 @@ class PostStructureStage24:
                                 setattr(domain_model, field, merged)
                                 continue
 
+                            # chiefcomplaint：去噪、去重、累积
+                            if field == "chiefcomplaint" and isinstance(value, str):
+                                _noise = {"存在", "无", "有", "是", "否认", "疼痛", "不适", "症状", "未提及"}
+                                if value.strip() in _noise:
+                                    continue  # 过滤 LLM 误标的值占位符
+                                if isinstance(current_value, str) and current_value:
+                                    if value in current_value:
+                                        continue  # 去重
+                                    merged = _append_text(current_value, value)
+                                    setattr(domain_model, field, merged)
+                                else:
+                                    setattr(domain_model, field, value)
+                                continue
+
                             if isinstance(current_value, list):
                                 if domain == "obh" and field == "children":
                                     for item in value:
