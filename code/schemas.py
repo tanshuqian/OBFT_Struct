@@ -9,12 +9,21 @@ class StatusDetail(BaseModel):
 
 class OBHChild(BaseModel):
     childGender: Optional[int] = None
-    childLiving: Optional[bool] = None
-    childDeath: Optional[bool] = None
+    childLiving: int = Field(default=-1, description="-1:未提及, 0:否, 1:是")
+    childDeath: int = Field(default=-1, description="-1:未提及, 0:否, 1:是")
     childDeathTime: Optional[str] = None
     childDeathNote: Optional[str] = None
     neonateWeight: Optional[str] = None
     sequelaNote: Optional[str] = None
+
+    @field_validator('childLiving', 'childDeath', mode='before')
+    def normalize_tristate(cls, v):
+        # Java 端只接受 int 三状态，兼容历史 bool/None 入参
+        if v is None:
+            return -1
+        if isinstance(v, bool):
+            return 1 if v else 0
+        return v
 
 
 class OBHEntry(BaseModel):
