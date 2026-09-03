@@ -441,6 +441,20 @@ def _parse_int_or_range(value: str) -> int | None:
     return int(number) if number is not None else None
 
 
+def _parse_fetal_count(val: str, term_text: str) -> int | None:
+    """胎数类型校验+转换："第一胎"→1、"双胎/双胞胎"→2、纯数字直转；无法解析返回 None。"""
+    text = f"{term_text or ''} {val or ''}"
+    cn_map = {"一": 1, "单": 1, "双": 2, "两": 2, "二": 2, "三": 3, "四": 4, "五": 5, "六": 6}
+    for cn, num in cn_map.items():
+        if f"{cn}胎" in text or f"{cn}胞胎" in text or f"{cn}个宝宝" in text or f"{cn}个胎儿" in text:
+            return num
+    number = _parse_number(str(val))
+    if number is not None:
+        n = int(number)
+        return n if 1 <= n <= 10 else None
+    return None
+
+
 def _resolve_fetus_index(key: str, fallback_index: int) -> int:
     """根据关键词中的'左/右'确定胎儿索引"""
     if "左" in key:
@@ -1071,13 +1085,17 @@ def route_and_transform(extracted_tags: list, dov: str) -> dict:
             # 尝试从 val 中提取数值心率
             try:
                 val_int = int(''.join(filter(str.isdigit, str(val))))
-                if val_int >= 60:  # 合理心率范围
-                    _update_fetus_exam(patch_data, index, {"fetalHeartRate": val_int})
-                    if "左" not in key and "右" not in key:
-                        dynamic_fetus_idx += 1
+                if val_int < 60:  # 合理心率范围外视为定性描述
+                    raise ValueError
+                _update_fetus_exam(patch_data, index, {"fetalHeartRate": val_int})
+                if "左" not in key and "右" not in key:
+                    dynamic_fetus_idx += 1
             except (ValueError, TypeError):
-                pass
-            # 定性胎心（如"正常"/"存在"）不增加 fetus_idx，不创建多余条目
+                # 定性胎心（如"正常"）不建胎儿条目，保留至现病史备注，避免事实丢失
+                note = str(term_text or "")
+                if note and note not in ("存在", "正常", "未见异常", "无异常"):
+                    patch_data["hpi"]["otherNote"] = _append_text(
+                        patch_data["hpi"].get("otherNote"), note)
             continue
 
         # [特殊规则] 胎儿结构字段
@@ -1190,9 +1208,12 @@ def route_and_transform(extracted_tags: list, dov: str) -> dict:
                     patch_data[domain][field] = ""
             display_key = term_text or key
             if field in list_fields:
-                patch_data[domain][field].append(f"{display_key}: {val}")
+                patch_data[domain][field].append(display_key)
             else:
-                patch_data[domain][field] = _append_text(patch_data[domain].get(field), f"{display_key}: {val}")
+                # *Note 只保留 term（term 已内嵌全部描述与状态），去除冗余的 value
+                if _is_negated(str(val)) and term_text and not _is_negated(str(term_text)):
+                    display_key = f"否认{display_key}"
+                patch_data[domain][field] = _append_text(patch_data[domain].get(field), str(display_key))
             continue
 
         parts = path.split(".")
@@ -1200,6 +1221,13 @@ def route_and_transform(extracted_tags: list, dov: str) -> dict:
             domain, field = "root", parts[0]
         else:
             domain, field = parts[0], parts[-1]
+
+        # [特殊规则] 胎数 fetalcount：类型校验+转换，防止字符串写入 int 字段导致序列化报错
+        if field == "fetalcount":
+            count = _parse_fetal_count(val, term_text)
+            if count is not None:
+                patch_data[domain][field] = count
+            continue
 
         # [列表字段] 追加到 list_fields
         if field in list_fields:
@@ -1324,11 +1352,12 @@ def route_and_transform(extracted_tags: list, dov: str) -> dict:
             elif field in ("prescription", "exam"):
                 patch_data[domain][field] = _append_text(patch_data[domain].get(field), _format_value_term(val, term_text))
             elif field == "otherNote":
-                display = _pick_value(val, term_text)
-                # BUG 3: 保留否认语义，如"否认"+"肝炎"→"否认肝炎"
-                if _is_negated(str(val)) and term_text and display == term_text:
-                    display = f"{val}{term_text}"
-                patch_data[domain][field] = _append_text(patch_data[domain].get(field), str(display))
+                # *Note 只保留 term（term 已内嵌全部描述与状态），去除冗余的 value
+                display = str(term_text or key)
+                # 仅当 value 为否定且 term 未含否定语义时，前置"否认"防止语义反转
+                if _is_negated(str(val)) and term_text and not _is_negated(str(term_text)):
+                    display = f"否认{display}"
+                patch_data[domain][field] = _append_text(patch_data[domain].get(field), display)
             elif domain == "personal_history" and field == "medicine":
                 incoming = _status_from_value(val, term_text or key, key, domain, field)
                 existing = patch_data[domain].get(field)

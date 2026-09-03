@@ -32,8 +32,12 @@ def parse_input_file(filepath: str):
 def split_into_chunks(text: str, lines_per_chunk: int = 4) -> list:
     lines = [line.strip() for line in text.split('\n') if line.strip()]
     chunks = []
-    for i in range(0, len(lines), lines_per_chunk):
+    i = 0
+    while i < len(lines):
         chunks.append("\n".join(lines[i:i + lines_per_chunk]))
+        if i + lines_per_chunk >= len(lines):
+            break
+        i += max(1, lines_per_chunk - 1)  # 重叠1条，防止相邻切片边界语义断裂
     return chunks
 
 

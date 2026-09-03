@@ -12,6 +12,7 @@ os.environ.setdefault("OMP_NUM_THREADS", "4")
 from llm_extractor import LLMExtractor
 from mapping import route_and_transform
 from stage2_4_after_llm import PostStructureStage24
+from utils import dedup_extracted_tags
 
 
 def get_repo_root() -> Path:
@@ -49,11 +50,15 @@ def split_into_sessions(text: str) -> List[str]:
 
 def parse_input_file(filepath: Path) -> List[dict]:
     """解析原始对话文件，返回 [{session_id, text}, ...]。
-    支持两种模式：
+    支持三种模式：
+    - JSON 目录模式：每个 .json 文件视为一个独立会话（适配 0812UnitTest 格式），
+      结果回写到源文件的 entity / postStruct 字段
     - 目录模式：每个 .txt 文件视为一个独立会话（适配 0728dialog 格式）
     - 单文件模式：按 end 标记切分多个会话（原有行为）
     """
     if filepath.is_dir():
+        if next(filepath.glob("*.json"), None) is not None:
+            return _parse_json_directory(filepath)
         return _parse_dialog_directory(filepath)
 
     content = filepath.read_text(encoding="utf-8")
@@ -62,6 +67,28 @@ def parse_input_file(filepath: Path) -> List[dict]:
         {"session_id": f"session_{idx}", "text": session_text}
         for idx, session_text in enumerate(sessions, start=1)
     ]
+
+
+def _parse_json_directory(dirpath: Path) -> List[dict]:
+    """解析 0812UnitTest 格式目录，每个 .json 文件作为一个独立会话。
+    文本取自 txt 字段；source_file 记录源文件路径，用于结果回写。"""
+    sessions: List[dict] = []
+    for json_file in sorted(dirpath.glob("*.json")):
+        try:
+            data = json.loads(json_file.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError) as exc:
+            print(f"  [跳过] 读取 {json_file.name} 失败: {exc}")
+            continue
+        text = str(data.get("txt") or "").strip()
+        if len(text) < 10:
+            print(f"  [跳过] {json_file.name} 文本过短")
+            continue
+        sessions.append({
+            "session_id": json_file.stem,
+            "text": text,
+            "source_file": json_file,
+        })
+    return sessions
 
 
 def _parse_dialog_directory(dirpath: Path) -> List[dict]:
@@ -178,14 +205,19 @@ class MainStructEngine(PostStructureStage24):
     def split_into_chunks(self, text: str) -> List[str]:
         lines = [line.strip() for line in text.split("\n") if line.strip()]
         chunks: List[str] = []
-        for i in range(0, len(lines), self.lines_per_chunk):
+        i = 0
+        while i < len(lines):
             chunks.append("\n".join(lines[i:i + self.lines_per_chunk]))
+            if i + self.lines_per_chunk >= len(lines):
+                break
+            i += max(1, self.lines_per_chunk - 1)  # 重叠1条，防止相邻切片边界语义断裂
         return chunks
 
-    def process_raw_session(self, session_id: str, full_text: str) -> float:
+    def process_raw_session(self, session_id: str, full_text: str):
         current_state = self.state_buffer[session_id]
         chunks = self.split_into_chunks(full_text)
         total_llm_time = 0.0
+        all_tags: List[dict] = []
 
         for idx, chunk in enumerate(chunks):
             print(f"\n  [{session_id}] --- 处理切片 {idx + 1}/{len(chunks)} ---")
@@ -193,6 +225,7 @@ class MainStructEngine(PostStructureStage24):
 
             extracted_tags, inference_time = self.llm.extract(chunk)
             total_llm_time += inference_time
+            all_tags.extend(extracted_tags)
 
             print("  > [阶段一] LLM 提取:")
             for item in extracted_tags:
@@ -217,7 +250,8 @@ class MainStructEngine(PostStructureStage24):
             current_state.hpi.chiefcomplaint = "无不适，常规产检"
             print(f"  > [兜底] 无主诉信息，设为默认值")
 
-        return total_llm_time
+        all_tags = dedup_extracted_tags(all_tags)  # 重叠切片带来的跨切片重复在此收敛
+        return total_llm_time, all_tags
 
 
 def main() -> int:
@@ -272,10 +306,24 @@ def main() -> int:
         print(f"\n========== 开始处理 {sid} ({idx}/{len(sessions)}) ==========")
 
         engine.init_session(sid, args.dov or session.get("dov"))
-        llm_time = engine.process_raw_session(sid, text)
+        llm_time, all_tags = engine.process_raw_session(sid, text)
         total_llm_time += llm_time
 
         final_state = engine.state_buffer[sid].to_output_dict()
+
+        source_file = session.get("source_file")
+        if source_file is not None:
+            # 0812UnitTest 格式：entity / postStruct 回写至源文件
+            source_data = json.loads(source_file.read_text(encoding="utf-8"))
+            source_data["entity"] = all_tags
+            source_data["postStruct"] = final_state
+            source_file.write_text(
+                json.dumps(source_data, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
+            print(f"✅ {sid} 结构化完成，entity/postStruct 已回写至源文件: {source_file}")
+            continue
+
         output_file = output_dir / f"{sid}.json"
         output_file.write_text(
             json.dumps(final_state, ensure_ascii=False, indent=2),

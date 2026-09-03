@@ -138,16 +138,21 @@ class PostStructureStage24:
             ]
             return sum(_sum_obh_field(entries, field) for field in abortion_fields)
 
-        def _sum_delivery_modes(entries: list) -> int:
-            delivery_fields = [
+        def _is_delivery_entry(entry) -> bool:
+            # 条目级判定分娩：任一分娩方式或孕龄（早产/足月）>0 即计 1 次产次。
+            # 避免"足月顺产"（term+vaginalDelivery 同条）按字段求和被双算
+            delivery_markers = [
                 "vaginalDelivery", "cesareanSection", "forceps",
-                "vacuumAssisted", "breechMidwifery"
+                "vacuumAssisted", "breechMidwifery", "preterm", "term"
             ]
-            return sum(_sum_obh_field(entries, field) for field in delivery_fields)
+            return any(
+                isinstance(getattr(entry, field, None), (int, float)) and getattr(entry, field, None) > 0
+                for field in delivery_markers
+            )
 
         obh_entries = state.obh if isinstance(state.obh, list) else []
         a_count = _sum_abortion(obh_entries)
-        delivery_count = _sum_delivery_modes(obh_entries)
+        delivery_count = sum(1 for entry in obh_entries if _is_delivery_entry(entry))
 
         if obh_entries:
             # 有 OBH 条目时：每个条目代表一次既往妊娠，+1 为当前妊娠

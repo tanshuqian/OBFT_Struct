@@ -2,10 +2,11 @@ import json
 import os
 import time
 from openai import OpenAI
-from utils import clean_json_string
+from utils import clean_json_string, dedup_extracted_tags
 
 MODEL_PATH = "/root/autodl-tmp/model/Qwen/Qwen3-14B-FP8/"
-SYS_PROMPT_FILE = os.path.join(os.path.dirname(__file__), "..", "prompt", "extract_prompt.txt")
+_SYS_PROMPT_DEFAULT = os.path.join(os.path.dirname(__file__), "..", "prompt", "extract_prompt_up_0824_role.txt")
+SYS_PROMPT_FILE = os.getenv("LLM_SYS_PROMPT_FILE", _SYS_PROMPT_DEFAULT)
 USER_PROMPT_FILE = os.path.join(os.path.dirname(__file__), "..", "prompt", "user_prompt.txt")
 
 
@@ -73,6 +74,7 @@ class LLMExtractor:
 
 
         parsed_data = extract_json_array(raw_output)
+        parsed_data = dedup_extracted_tags(parsed_data)
         if return_raw:
             return parsed_data, inference_time, raw_output
         return parsed_data, inference_time

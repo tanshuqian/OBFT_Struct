@@ -67,3 +67,27 @@ def clean_json_string(raw_str: str) -> str:
     cleaned = re.sub(r'```json', '', cleaned)
     cleaned = re.sub(r'```', '', cleaned)
     return cleaned.strip()
+
+
+def dedup_extracted_tags(tags: list) -> list:
+    """按 (key, term, value) 精确去重，绝不以 raw 为键（泛化否认拆分合法共用同一 raw）。
+
+    规则：
+    1. 保留首次出现位置；同组重复时 raw 取最长者（信息最完整），不合并字符串；
+    2. 畸形条目（非 dict / 缺 key|term|value）原样放行；
+    3. 返回新列表，不修改输入。
+    """
+    out: list = []
+    canonical: dict = {}
+    for item in tags:
+        if not isinstance(item, dict) or not all(k in item for k in ("key", "term", "value")):
+            out.append(item)
+            continue
+        triple = tuple(str(item[k]).strip() for k in ("key", "term", "value"))
+        idx = canonical.get(triple)
+        if idx is None:
+            canonical[triple] = len(out)
+            out.append(dict(item))
+        elif len(str(item.get("raw") or "")) > len(str(out[idx].get("raw") or "")):
+            out[idx] = dict(item)  # 仅升级 raw 为更完整版本
+    return out
