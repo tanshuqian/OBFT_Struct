@@ -42,7 +42,7 @@
         {
           "childGender": "女",
           "childLiving": 1,
-          "childDeath": null,
+          "childDeath": -1,
           "childDeathTime": null,
           "childDeathNote": null,
           "neonateWeight": 3.4,
@@ -110,6 +110,11 @@
       "details": "患者自述有子宫手术史"
     },
     "operationHistoryNote": null,
+    "infectiousHistory": {
+      "status": "-1",
+      "details": null
+    },
+    "infectiousHistoryNote": null,
     "otherNote": null
   },
 

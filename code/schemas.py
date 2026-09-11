@@ -82,6 +82,8 @@ class PMH(BaseModel):
     allergyOtherNote: Optional[str] = None
     transfusionHistory: StatusDetail = Field(default_factory=StatusDetail)
     transfusionHistoryNote: Optional[str] = None
+    infectiousHistory: StatusDetail = Field(default_factory=StatusDetail)
+    infectiousHistoryNote: Optional[str] = None
     otherNote: Optional[str] = None
 
 # 【补充缺失的类】：月经及婚育史

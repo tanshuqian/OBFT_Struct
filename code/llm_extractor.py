@@ -5,7 +5,7 @@ from openai import OpenAI
 from utils import clean_json_string, dedup_extracted_tags
 
 MODEL_PATH = "/root/autodl-tmp/model/Qwen/Qwen3-14B-FP8/"
-_SYS_PROMPT_DEFAULT = os.path.join(os.path.dirname(__file__), "..", "prompt", "extract_prompt_up_0824_role.txt")
+_SYS_PROMPT_DEFAULT = os.path.join(os.path.dirname(__file__), "..", "prompt", "extract_prompt_up_0911_role.txt")
 SYS_PROMPT_FILE = os.getenv("LLM_SYS_PROMPT_FILE", _SYS_PROMPT_DEFAULT)
 USER_PROMPT_FILE = os.path.join(os.path.dirname(__file__), "..", "prompt", "user_prompt.txt")
 

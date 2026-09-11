@@ -20,7 +20,14 @@ KEY_SYNONYMS = {
     "pmh.operationHistory": ["手术史", "既往手术史", "外科手术史"],
 
     "pmh.thyroidDisease": ["甲状腺疾病", "甲状腺", "甲减", "甲亢", "桥本", "甲状腺功能减退", "甲状腺功能亢进"],
-    "pmh.otherNote": ["既往史其他", "既往史补充", "既往史备注", "贫血", "肝炎", "癫痫"],
+    "pmh.otherNote": ["既往史其他", "既往史补充", "既往史备注", "贫血", "癫痫"],
+
+    # 传染病史自 pmh.otherNote 迁出：乙肝/肝炎/梅毒/HIV/结核等统一落位 pmh.infectiousHistory。
+    # 检验态 key（乙肝五项/两对半/表面抗原/梅毒抗体/HIV筛查等）故意不收，继续走兜底防检验结果误写成病史。
+    "pmh.infectiousHistory": ["传染病史", "传染病", "传染性疾病", "传染病病史",
+                              "乙肝", "乙肝病史", "乙型肝炎", "丙肝", "丙型肝炎",
+                              "肝炎", "肝炎病史", "梅毒", "梅毒病史",
+                              "HIV", "hiv", "艾滋病", "结核", "结核病史", "肺结核"],
 
     "additional_medical_history.menarche": ["初潮", "月经初潮", "初潮年龄"],
     "additional_medical_history.menstrualCycle": ["月经周期", "经期周期"],

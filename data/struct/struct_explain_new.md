@@ -94,9 +94,11 @@
   * *allergyOtherNote: 其他过敏史备注  
   * transfusionHistory: 输血史  
   * *transfusionHistoryNote: 输血史备注  
+  * infectiousHistory: 传染病史（乙肝/丙肝/梅毒/HIV/结核等，三态 status）  
+  * *infectiousHistoryNote: 传染病史备注  
   * operationHistory: 手术史（对评估瘢痕子宫极重要）  
   * *operationHistoryNote: 手术史备注  
-  * *otherNote: 既往史其他补充
+  * *otherNote: 既往史其他补充（传染病史已迁至 infectiousHistory）
 
 #### **5\. 月经及婚育史 (8个字段)**
 

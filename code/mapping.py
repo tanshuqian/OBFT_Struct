@@ -54,6 +54,7 @@ SCHEMA_MAP = {
     "其他过敏史": "pmh.allergyOther",
     "输血史": "pmh.transfusionHistory",
     "手术史": "pmh.operationHistory",
+    "传染病史": "pmh.infectiousHistory",
     "其他既往史": "pmh.otherNote",
 
     # [FH] 家族史
@@ -400,7 +401,7 @@ def _build_status_detail(val: str, term_text: str, key: str, domain: str, field:
             details = details.replace("接触放射物质", "放射性物质接触")
             details = details.replace("接触过放射线", "放射性物质接触")
             details = details.replace("接触放射线", "放射性物质接触")
-    if domain == "pmh" and status == 0 and field in ("cardiacDisease", "hypertension", "diabetes", "operationHistory"):
+    if domain == "pmh" and status == 0 and field in ("cardiacDisease", "hypertension", "diabetes", "operationHistory", "infectiousHistory"):
         cleaned = details
         cleaned = cleaned.replace("既往", "").replace("本次妊娠期", "").replace("孕期", "")
         cleaned = cleaned.replace("病病史", "病史")
@@ -838,7 +839,7 @@ def route_and_transform(extracted_tags: list, dov: str) -> dict:
         "gravidity", "parity",
         "age", "eddAge", "systolic", "diastolic", "systolic2", "diastolic2",
         "systolic3", "diastolic3", "pulse", "heartrate", "fetalHeartRate",
-        "menarche", "menstrualCycle", "menstrualPeriod", "maritalYears",
+        "menarche", "menstrualPeriod", "maritalYears",
         "appointmentCycle"
     }
     float_fields = {"preheight", "preweight", "weight", "bmi", "fundalHeight", "waistHip"}
@@ -848,6 +849,7 @@ def route_and_transform(extracted_tags: list, dov: str) -> dict:
         ("pmh", "thyroidDisease"),
         ("pmh", "operationHistory"), ("pmh", "allergyDrug"), ("pmh", "allergyFood"),
         ("pmh", "allergyOther"), ("pmh", "transfusionHistory"),
+        ("pmh", "infectiousHistory"),
         ("fh", "hypertension"), ("fh", "diabetes"), ("fh", "birthdefects"),
         ("fh", "heritableDisease"),
         ("personal_history", "smoke"), ("personal_history", "alcohol"),
@@ -1079,6 +1081,28 @@ def route_and_transform(extracted_tags: list, dov: str) -> dict:
         if "未提及" in str(val) or "未提供" in str(val):
             continue
 
+        # 规则分块：传染病史统一写入 pmh.infectiousHistory（自 pmh.otherNote 迁出）
+        # 泛化否认会拆成多条同 key 标签，patch 内必须合并 details（_apply_status_with_note 是覆盖式）；
+        # 状态合并语义与 stage2_4._merge_status_detail 一致：同状态拼接、阳性优先。
+        infectious_terms = ("传染病", "乙肝", "丙肝", "肝炎", "梅毒", "HIV", "艾滋", "结核")
+        lab_like_terms = ("抗体", "抗原", "筛查", "检测", "结果", "试验", "化验", "五项", "两对半")
+        if _contains_any(key, infectious_terms) and not _contains_any(key, lab_like_terms):
+            incoming = _status_from_value(val, term_text or "传染病史", key, "pmh", "infectiousHistory")
+            existing = patch_data["pmh"].get("infectiousHistory")
+            if isinstance(existing, StatusDetail) and incoming.details:
+                if existing.status == incoming.status:
+                    patch_data["pmh"]["infectiousHistory"] = StatusDetail(
+                        status=existing.status,
+                        details=_append_text(existing.details, incoming.details),
+                    )
+                elif existing.status == 1 and incoming.status in (0, -1):
+                    pass  # 阳性优先，后续否认不覆盖
+                else:
+                    patch_data["pmh"]["infectiousHistory"] = incoming
+            else:
+                patch_data["pmh"]["infectiousHistory"] = incoming
+            continue
+
         # [特殊规则] 胎心
         if "胎心" in key:
             index = _resolve_fetus_index(key, dynamic_fetus_idx)
@@ -1243,13 +1267,6 @@ def route_and_transform(extracted_tags: list, dov: str) -> dict:
             number = _parse_int_or_range(val)
             if number is not None:
                 patch_data[domain][field] = number
-            elif domain == "additional_medical_history" and field == "menstrualCycle":
-                # 定性描述（如"规律"）写入 otherNote，而非丢弃
-                text = term_text or val
-                if text:
-                    norm_text = "月经规律" if ("月经周期规律" in str(text) or "月经规律" in str(text) or "月经周期规则" in str(text)) else str(text)
-                    patch_data[domain]["otherNote"] = _append_text(
-                        patch_data[domain].get("otherNote"), norm_text)
             continue
 
         if field in float_fields:
@@ -1369,9 +1386,21 @@ def route_and_transform(extracted_tags: list, dov: str) -> dict:
             else:
                 patch_data[domain][field] = _pick_value(val, term_text)
 
-    # 规则分块：OBH entries 合并输出
+    # 规则分块：OBH 合并输出 — patch["obh"] 恒为完整条目列表（下游 agent 按列表格式对齐）
     if patch_data["obh_entries"]:
-        patch_data["obh"]["entries"] = patch_data["obh_entries"]
+        obh_scalars = patch_data["obh"]
+        if obh_scalars:
+            # obh 级标量（本次胎数 fetalcount / 既往新生儿 children）并入首条目，
+            # 与旧 patch 在 _apply_patch 落表到 obh[0] 的语义一致
+            for k, v in obh_scalars.items():
+                patch_data["obh_entries"][0][k] = v
+        patch_data["obh"] = patch_data["obh_entries"]
+    elif patch_data["obh"]:
+        # 无既往孕产史条目、仅有 obh 级标量（如仅提及本次胎数）：
+        # 以单条目标量条目输出，是否落表由 _apply_patch 按 gravidity 门槛决定
+        patch_data["obh"] = [patch_data["obh"]]
+    else:
+        patch_data["obh"] = []
     patch_data.pop("obh_entries", None)
 
     gwov_val = patch_data["root"].get("gwov")
