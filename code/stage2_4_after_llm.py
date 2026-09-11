@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import List
 
 from mapping import route_and_transform
-from schemas import MedicalRecordState, StatusDetail, OBHChild, FetusExam
+from schemas import MedicalRecordState, StatusDetail, OBHChild, OBHEntry, FetusExam
 
 
 class PostStructureStage24:
@@ -52,32 +52,33 @@ class PostStructureStage24:
             return incoming
 
         gravidity_val = patch.get("root", {}).get("gravidity", state.gravidity)
-        obh_entries = None
-        if isinstance(patch.get("obh"), dict) and "entries" in patch["obh"]:
-            obh_entries = patch["obh"].pop("entries")
-        has_obh_entries = bool(obh_entries)
+        obh_patch = patch.get("obh")
+        if isinstance(obh_patch, dict) and "entries" in obh_patch:
+            # 兼容旧 patch 形态（{"entries": [...]}）
+            obh_entries = obh_patch.get("entries") or []
+        elif isinstance(obh_patch, list):
+            obh_entries = obh_patch
+        else:
+            obh_entries = []
+
+        # 真实孕产史条目（带 gravidityindex）与标量条目（仅本次胎数/新生儿情况）区分：
+        # 首次妊娠（gravidity<2 或未提取）时标量条目不落表，维持旧 gravidity 门槛跳过 obh domain 的语义
+        real_entries = [e for e in obh_entries
+                        if isinstance(e, dict) and e.get("gravidityindex") is not None]
 
         if gravidity_val is None or gravidity_val < 2:
-            if not has_obh_entries:
-                state.obh = []
-
-        if has_obh_entries:
-            from schemas import OBHEntry
+            state.obh = [OBHEntry(**entry) for entry in real_entries]
+        elif obh_entries:
             state.obh = [OBHEntry(**entry) for entry in obh_entries]
 
         for domain in [
             "obh", "hpi", "pmh", "additional_medical_history", "personal_history",
             "fh", "physicalExamination", "gynecologicalExamination", "advice"
         ]:
-            if domain == "obh" and (gravidity_val is None or gravidity_val < 2) and not has_obh_entries:
-                continue
+            if domain == "obh":
+                continue  # obh 已在上方按完整列表整体落表
             if domain in patch and patch[domain]:
                 domain_model = getattr(state, domain)
-                if domain == "obh" and isinstance(domain_model, list):
-                    if not domain_model:
-                        from schemas import OBHEntry
-                        domain_model.append(OBHEntry())
-                    domain_model = domain_model[0]
                 for field, value in patch[domain].items():
                     if value is not None and value != []:
                         try:
@@ -150,7 +151,12 @@ class PostStructureStage24:
                 for field in delivery_markers
             )
 
-        obh_entries = state.obh if isinstance(state.obh, list) else []
+        # 仅真实孕产史条目（带 gravidityindex）参与孕次/产次推导，
+        # 排除仅含本次胎数等标量的条目，避免 len+1 重复计数
+        obh_entries = [
+            e for e in (state.obh if isinstance(state.obh, list) else [])
+            if getattr(e, "gravidityindex", None) is not None
+        ]
         a_count = _sum_abortion(obh_entries)
         delivery_count = sum(1 for entry in obh_entries if _is_delivery_entry(entry))
 

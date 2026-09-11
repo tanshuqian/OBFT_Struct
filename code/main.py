@@ -90,14 +90,19 @@ class PostStructureEngine:
             return incoming
 
         gravidity_val = patch.get("root", {}).get("gravidity", state.gravidity)
+
+        obh_patch = patch.get("obh")
+        if isinstance(obh_patch, dict) and "entries" in obh_patch:
+            # 兼容旧 patch 形态（{"entries": [...]}）
+            obh_entries = obh_patch.get("entries") or []
+        elif isinstance(obh_patch, list):
+            obh_entries = obh_patch
+        else:
+            obh_entries = []
+
         if gravidity_val is None or gravidity_val < 2:
             state.obh = []
-
-        obh_entries = None
-        if isinstance(patch.get("obh"), dict) and "entries" in patch["obh"]:
-            obh_entries = patch["obh"].pop("entries")
-
-        if obh_entries and gravidity_val is not None and gravidity_val >= 2:
+        elif obh_entries:
             from schemas import OBHEntry
             state.obh = [OBHEntry(**entry) for entry in obh_entries]
 
@@ -106,15 +111,10 @@ class PostStructureEngine:
             "obh", "hpi", "pmh", "additional_medical_history", "personal_history",
             "fh", "physicalExamination", "gynecologicalExamination", "advice"
         ]:
-            if domain == "obh" and (gravidity_val is None or gravidity_val < 2):
-                continue
+            if domain == "obh":
+                continue  # obh 已在上方按完整列表整体落表
             if domain in patch and patch[domain]:
                 domain_model = getattr(state, domain)
-                if domain == "obh" and isinstance(domain_model, list):
-                    if not domain_model:
-                        from schemas import OBHEntry
-                        domain_model.append(OBHEntry())
-                    domain_model = domain_model[0]
                 for field, value in patch[domain].items():
                     if value is not None and value != []:
                         try:
