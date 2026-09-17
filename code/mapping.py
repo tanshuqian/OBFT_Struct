@@ -901,8 +901,9 @@ def route_and_transform(extracted_tags: list, dov: str) -> dict:
                 _apply_status_with_note(patch_data, "physicalExamination", "edema", sd)
             continue
 
-        # 规则分块：胎儿体重估计 → 体格检查备注
-        if key in ("新生儿情况", "胎儿体重估计") or "胎儿体重估计" in str(term_text) or "预估胎儿体重" in str(term_text):
+        # 规则分块：胎儿体重估计（本次妊娠估重）→ 体格检查备注
+        # 注：新生儿情况已迁出，见下方"既往新生儿信息 → OBH child"规则，防止性别/体重语义被本规则吞掉
+        if key in ("胎儿体重估计",) or "胎儿体重估计" in str(term_text) or "预估胎儿体重" in str(term_text):
             note_val = val or term_text or raw_text
             if note_val:
                 note_text = str(note_val)
@@ -925,6 +926,27 @@ def route_and_transform(extracted_tags: list, dov: str) -> dict:
             weight_value = val or raw_text or term_text
             _update_obh_child(patch_data, {"neonateWeight": str(weight_value)})
             continue
+
+        # 规则分块：既往新生儿信息（key=新生儿情况）→ OBH child
+        # - 性别语义 → childGender（1=男 2=女，与 Java DTO 编码对齐）
+        # - 出生体重语义 → neonateWeight（value 为状态占位词时取 term/raw 内嵌值）
+        if "新生儿" in key:
+            combined = f"{term_text} {raw_text}"
+            child_updates = {}
+            has_male = "男" in combined
+            has_female = "女" in combined
+            if has_male and not has_female:
+                child_updates["childGender"] = 1
+            elif has_female and not has_male:
+                child_updates["childGender"] = 2
+            weight_source = val if val and str(val) not in ("存在", "否认", "可能", "未提及") else None
+            if not weight_source and ("体重" in combined or _contains_any(combined, ("kg", "g", "斤"))):
+                weight_source = term_text or raw_text
+            if weight_source:
+                child_updates["neonateWeight"] = str(weight_source)
+            if child_updates:
+                _update_obh_child(patch_data, child_updates)
+                continue
 
         # 规则分块：孕产时间 → 仅为最新 OBH 条目补充 year/month，不创建新条目
         if key == "孕产时间":

@@ -30,9 +30,9 @@ KEY_SYNONYMS = {
                               "HIV", "hiv", "艾滋病", "结核", "结核病史", "肺结核"],
 
     "additional_medical_history.menarche": ["初潮", "月经初潮", "初潮年龄"],
-    "additional_medical_history.menstrualCycle": ["月经周期", "经期周期"],
+    "additional_medical_history.menstrualCycle": ["月经周期", "经期周期",""],
     "additional_medical_history.otherNote": ["月经规律", "月经规律性", "月经"],
-    "additional_medical_history.menstrualPeriod": ["行经期", "经期", "月经经期", "行经天数"],
+    "additional_medical_history.menstrualPeriod": ["行经期时长", "经期", "月经经期", "行经天数"],
     "additional_medical_history.menstrualVolume": ["月经量", "经量", "月经量评估"],
     "additional_medical_history.dysmenorrhea": ["痛经", "痛经史"],
     "additional_medical_history.maritalStatus": ["婚姻状况", "婚姻状态"],
@@ -49,7 +49,7 @@ KEY_SYNONYMS = {
     "fh.diabetes": ["家族糖尿病", "家族糖尿病史"],
     "fh.hypertension": ["家族高血压", "家族高血压史"],
     "fh.birthdefects": ["出生缺陷史", "家族出生缺陷", "家族畸形", "出生缺陷"],
-    "fh.heritableDisease": ["遗传病史", "遗传性疾病", "遗传病"],
+    "fh.heritableDisease": ["家族遗传","家族遗传史","遗传病史", "遗传性疾病", "遗传病"],
     "fh.otherNote": ["家族史补充", "家族史其他", "家族史备注"],
 
     "physicalExamination.systolic": ["收缩压"],
