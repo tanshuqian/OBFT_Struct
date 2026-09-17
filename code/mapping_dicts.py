@@ -49,7 +49,7 @@ KEY_SYNONYMS = {
     "fh.diabetes": ["家族糖尿病", "家族糖尿病史"],
     "fh.hypertension": ["家族高血压", "家族高血压史"],
     "fh.birthdefects": ["出生缺陷史", "家族出生缺陷", "家族畸形", "出生缺陷"],
-    "fh.heritableDisease": ["家族遗传","家族遗传史","遗传病史", "遗传性疾病", "遗传病"],
+    "fh.heritableDisease": ["家族遗传","家族遗传病","家族遗传史","遗传病史", "遗传性疾病", "遗传病"],
     "fh.otherNote": ["家族史补充", "家族史其他", "家族史备注"],
 
     "physicalExamination.systolic": ["收缩压"],

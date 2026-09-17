@@ -1068,8 +1068,10 @@ def route_and_transform(extracted_tags: list, dov: str) -> dict:
             continue
 
         # 规则分块：贫血（仅写入 HPI 备注）
+        # 注：地中海贫血（地贫）是遗传病，不属于本规则，交由家族史/遗传病路径处理
         anemia_terms = ("贫血",)
-        if _contains_any(normalized_text, anemia_terms) and not _is_negated(normalized_text):
+        is_thalassemia = "地中海贫血" in normalized_text or "地贫" in normalized_text
+        if _contains_any(normalized_text, anemia_terms) and not is_thalassemia and not _is_negated(normalized_text):
             detail = term_text or key
             if val and val not in ("存在", "否认"):
                 detail = f"{detail}（{val}）"
@@ -1303,7 +1305,31 @@ def route_and_transform(extracted_tags: list, dov: str) -> dict:
 
         # [状态字段] StatusDetail
         if (domain, field) in status_fields:
-            _apply_status_with_note(patch_data, domain, field, _status_from_value(val, term_text, key, domain, field))
+            incoming = _status_from_value(val, term_text, key, domain, field)
+            # 规则：家族史域"筛查/检测"类动作且无明确结果时不构成疾病事实（如"配偶已进行地贫筛查"），
+            # 退化写入 fh.otherNote，防止筛查动作被当成家族遗传病史阳性；
+            # 需同时含动作词（进行/做了/已做/抽血/查了/未出），避免误伤"父亲检测出高血压"等真阳性
+            if (domain == "fh" and _contains_any(str(term_text or ""), ("筛查", "检测"))
+                    and _contains_any(str(term_text or ""), ("进行", "做了", "已做", "抽血", "查了", "未出"))
+                    and not _contains_any(str(term_text or ""), ("阳性", "携带", "确诊", "结果", "患有", "存在"))):
+                patch_data["fh"]["otherNote"] = _append_text(
+                    patch_data["fh"].get("otherNote"), str(term_text or key))
+                continue
+            # 同字段多条标签（泛化否认拆分/逐成员拆分）在 patch 内合并：
+            # 语义与 stage2_4._merge_status_detail 一致 —— 同状态拼接 details、阳性优先
+            existing = patch_data[domain].get(field)
+            if isinstance(existing, StatusDetail) and incoming.details:
+                if existing.status == incoming.status:
+                    patch_data[domain][field] = StatusDetail(
+                        status=existing.status,
+                        details=_append_text(existing.details, incoming.details),
+                    )
+                elif existing.status == 1 and incoming.status in (0, -1):
+                    pass  # 阳性优先，后续否认不覆盖
+                else:
+                    patch_data[domain][field] = incoming
+            else:
+                _apply_status_with_note(patch_data, domain, field, incoming)
             # 联动规则1：产科问卷中"接触有害化学物质或放射线"是合并问题，
             # 否认有害物质时也应联动否认放射性接触
             if domain == "personal_history" and field == "hazardoussubstances":
