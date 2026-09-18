@@ -245,6 +245,7 @@ def _normalize_medical_terms(text: str) -> str:
 def _normalize_patch_notes(patch_data: dict) -> None:
     note_paths = (
         ("hpi", "otherNote"),
+        ("hpi", "hpiNote"),
         ("pmh", "otherNote"),
         ("fh", "otherNote"),
         ("physicalExamination", "otherNote"),
@@ -443,12 +444,27 @@ def _parse_int_or_range(value: str) -> int | None:
 
 
 def _parse_fetal_count(val: str, term_text: str) -> int | None:
-    """胎数类型校验+转换："第一胎"→1、"双胎/双胞胎"→2、纯数字直转；无法解析返回 None。"""
+    """胎数类型校验+转换："第一胎"→1、"双胎/双胞胎"→2、纯数字直转；无法解析返回 None。
+
+    注："二胎/第二胎/三胎/头胎/首胎"是孕产次序数（第几次妊娠），不是本次妊娠
+    胎儿数，一律不解析（"二胎"是第二次妊娠而非双胎，避免误写 fetalcount=2）。"""
     text = f"{term_text or ''} {val or ''}"
-    cn_map = {"一": 1, "单": 1, "双": 2, "两": 2, "二": 2, "三": 3, "四": 4, "五": 5, "六": 6}
+    cn_map = {"一": 1, "单": 1, "双": 2, "两": 2, "三": 3, "四": 4, "五": 5, "六": 6}
+    # 1) 无歧义的胎儿数表达：N胞胎 / N个宝宝 / N个胎儿（如"这是二胎，双胞胎"→2，计数优先）
     for cn, num in cn_map.items():
-        if f"{cn}胎" in text or f"{cn}胞胎" in text or f"{cn}个宝宝" in text or f"{cn}个胎儿" in text:
+        if f"{cn}胞胎" in text or f"{cn}个宝宝" in text or f"{cn}个胎儿" in text:
             return num
+    # 2) 裸"X胎"仅保留胎儿数语义（一/单/双/两），如"这是二胎，本次双胎"→2
+    for cn, num in (("一", 1), ("单", 1), ("双", 2), ("两", 2)):
+        if f"{cn}胎" in text:
+            return num
+    # 3) 孕产次序数排除：头胎/首胎/二胎~六胎/第N胎(N≠一)——不解析为胎儿数
+    #    （"第一胎"不在排除之列，保留既有约定 →1）
+    if any(t in text for t in ("头胎", "首胎", "二胎", "三胎", "四胎", "五胎", "六胎")):
+        return None
+    if re.search(r"第[二三四五六七八九十\d]+胎", text):
+        return None
+    # 4) 纯数字兜底
     number = _parse_number(str(val))
     if number is not None:
         n = int(number)
@@ -1416,7 +1432,7 @@ def route_and_transform(extracted_tags: list, dov: str) -> dict:
                 patch_data[domain][field] = float(number) if number is not None else None
             elif field in ("prescription", "exam"):
                 patch_data[domain][field] = _append_text(patch_data[domain].get(field), _format_value_term(val, term_text))
-            elif field == "otherNote":
+            elif field in ("otherNote", "hpiNote"):
                 # *Note 只保留 term（term 已内嵌全部描述与状态），去除冗余的 value
                 display = str(term_text or key)
                 # 仅当 value 为否定且 term 未含否定语义时，前置"否认"防止语义反转

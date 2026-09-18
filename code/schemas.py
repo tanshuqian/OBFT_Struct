@@ -61,6 +61,8 @@ class HPI(BaseModel):
     conceiveModeNote: Optional[str] = None
     chiefcomplaint: Optional[str] = None
     otherNote: Optional[str] = None
+    # 现病史备注：消费端 Java @JsonProperty("hpiNote")，血红蛋白/铁蛋白等血液指标落此字段
+    hpiNote: Optional[str] = None
 
 
 class PMH(BaseModel):
