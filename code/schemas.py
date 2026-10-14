@@ -93,7 +93,7 @@ class AdditionalHistory(BaseModel):
     menarche: Optional[int] = None
     menstrualCycle: Optional[str] = None
     otherNote: Optional[str] = None
-    menstrualPeriod: Optional[int] = None
+    menstrualPeriod: Optional[str] = None
     menstrualVolume: Optional[str] = None
     dysmenorrhea: StatusDetail = Field(default_factory=StatusDetail)
     dysmenorrheaNote: Optional[str] = None

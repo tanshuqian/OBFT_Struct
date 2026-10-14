@@ -855,7 +855,7 @@ def route_and_transform(extracted_tags: list, dov: str) -> dict:
         "gravidity", "parity",
         "age", "eddAge", "systolic", "diastolic", "systolic2", "diastolic2",
         "systolic3", "diastolic3", "pulse", "heartrate", "fetalHeartRate",
-        "menarche", "menstrualPeriod", "maritalYears",
+        "menarche", "maritalYears",
         "appointmentCycle"
     }
     float_fields = {"preheight", "preweight", "weight", "bmi", "fundalHeight", "waistHip"}
